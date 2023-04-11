@@ -1,0 +1,66 @@
+.resume_button {
+  position: relative;
+
+  z-index: 100;
+  padding: 0.7rem 1.5rem;
+  margin: 0 0.2rem;
+
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #1f242b;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  .menu {
+    position: absolute;
+    margin: 1.3rem 0;
+    padding: 0;
+
+    border: none;
+    outline: 1px solid #9c9c9c66;
+    box-shadow: 0 0 1rem #89898933;
+    border-radius: 0.3rem;
+    width: 120px;
+
+    .menu_item {
+      margin: 0;
+
+      background-color: #fff;
+
+      &:hover {
+        background-color: #f9f9f9;
+      }
+
+      button {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+
+        padding: 0.6rem 1rem;
+        margin: 0 0.3rem;
+
+        background: none;
+
+        border-radius: 0.3rem;
+        border: none;
+        outline: none;
+
+        font-size: 1rem;
+        font-weight: 500;
+
+        color: #15161d;
+
+        transition: 0.4s;
+        cursor: pointer;
+      }
+    }
+  }
+}
