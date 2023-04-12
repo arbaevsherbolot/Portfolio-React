@@ -48,12 +48,15 @@ export const Contact = () => {
     errEmail.innerText = "";
 
     try {
-      await axios.post("https://blush-dhole-shoe.cyclic.app/api/sendToDataBase", {
-        name,
-        email,
-        subject,
-        message,
-      });
+      await axios.post(
+        "https://blush-dhole-shoe.cyclic.app/api/sendToDataBase",
+        {
+          name,
+          email,
+          subject,
+          message,
+        }
+      );
     } catch (err) {
       console.log(err);
     }
@@ -72,49 +75,54 @@ export const Contact = () => {
   return (
     <>
       <div className={styles.contact_page}>
-        <form onSubmit={sendData} className={styles.form}>
-          <div className={styles.label}>Name*</div>
-          <input
-            required
-            className={styles.input}
-            type="text"
-            value={name}
-            placeholder="Type your Full Name"
-            onChange={handleChangeName}
-          />
-          <span id="errName"></span>
+        <div className={styles.form_wrapper}>
+          <div>
+            <div className={styles.box_img}>Contact me</div>
+          </div>
+          <form onSubmit={sendData} className={styles.form}>
+            <div className={styles.label}>Name*</div>
+            <input
+              required
+              className={styles.input}
+              type="text"
+              value={name}
+              placeholder="Type your Full Name"
+              onChange={handleChangeName}
+            />
+            <span id="errName"></span>
 
-          <div className={styles.label}>E-mail*</div>
-          <input
-            required
-            className={styles.input}
-            type="text"
-            value={email}
-            placeholder="Type your E-mail adress"
-            onChange={handleChangeEmail}
-          />
-          <span id="errEmail"></span>
+            <div className={styles.label}>E-mail*</div>
+            <input
+              required
+              className={styles.input}
+              type="text"
+              value={email}
+              placeholder="Type your E-mail adress"
+              onChange={handleChangeEmail}
+            />
+            <span id="errEmail"></span>
 
-          <div className={styles.label}>Subject*</div>
-          <input
-            required
-            className={styles.input}
-            type="text"
-            value={subject}
-            onChange={handleChangeSubject}
-          />
+            <div className={styles.label}>Subject*</div>
+            <input
+              required
+              className={styles.input}
+              type="text"
+              value={subject}
+              onChange={handleChangeSubject}
+            />
 
-          <div className={styles.label}>Message</div>
-          <textarea
-            rows={8}
-            className={styles.textarea}
-            value={message}
-            onChange={handleChangeMessage}></textarea>
+            <div className={styles.label}>Message</div>
+            <textarea
+              rows={8}
+              className={styles.textarea}
+              value={message}
+              onChange={handleChangeMessage}></textarea>
 
-          <button className={styles.form_btn} type="submit">
-            Submit
-          </button>
-        </form>
+            <button className={styles.form_btn} type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );
