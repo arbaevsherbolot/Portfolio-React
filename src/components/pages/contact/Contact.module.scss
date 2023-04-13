@@ -12,7 +12,7 @@
           rgba(9, 16, 25, 0.321),
           rgba(9, 16, 25, 0.705)
         ),
-        url("https://i0.wp.com/media0.giphy.com/media/3o7aCTfyhYawdOXcFW/giphy.gif?resize=640%2C640&ssl=1&crop=1")
+        url("https://trvlland.com/wp-content/uploads/2021/02/kyrgyzstan_issykkul_winter.jpg")
           no-repeat center/cover;
       display: flex;
       align-items: center;
@@ -119,6 +119,7 @@
 
 @media (max-width: 837px) {
   .contact_page {
+    margin-top: 6rem;
     .form_wrapper {
       grid-template-columns: 1fr;
       margin: 0;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Resume } from "./header_components/resume/Resume";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logo.webp";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
