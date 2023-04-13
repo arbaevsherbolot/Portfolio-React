@@ -90,7 +90,7 @@ export const Contact = () => {
     <>
       <div className={styles.contact_page}>
         <div className={styles.form_wrapper}>
-          <div>
+          <div className={styles.box}>
             <div className={styles.box_img}>Contact me</div>
           </div>
           <form onSubmit={sendData} className={styles.form}>
