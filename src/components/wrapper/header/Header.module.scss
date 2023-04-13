@@ -67,7 +67,7 @@
     left: 0;
 
     width: 100vw;
-    padding: 0.6rem 10%;
+    padding: 0 10%;
 
     display: flex;
     justify-content: space-between;
@@ -79,12 +79,12 @@
 
     border-bottom: 0.8px solid #5656563f;
 
-    .nav_right {
-      display: none;
+    .logo {
+      width: 90px;
     }
 
-    .burger_menu {
-      display: block;
+    .nav_right {
+      display: none;
     }
   }
 }
