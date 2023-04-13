@@ -10,7 +10,7 @@ export const Main = () => {
   return (
     <>
       <Routes>
-        <Route element={<Admin />} path="/adminsher" />
+        <Route element={<Admin />} path="/adminsheradminpagesecret" />
         <Route element={<Home />} path="/" />
         <Route element={<About />} path="/about" />
         <Route element={<Contact />} path="/contact" />
