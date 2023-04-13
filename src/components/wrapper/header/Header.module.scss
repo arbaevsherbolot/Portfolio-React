@@ -5,7 +5,7 @@
     left: 0;
 
     width: 100vw;
-    padding: 1rem 10%;
+    padding: 0 10%;
 
     display: flex;
     justify-content: space-between;
@@ -16,6 +16,10 @@
     -webkit-backdrop-filter: blur(4px);
 
     border-bottom: 1px solid #5656563f;
+
+    .logo {
+      width: 90px;
+    }
 
     .nav_right {
       display: flex;

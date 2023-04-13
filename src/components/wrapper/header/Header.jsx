@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Resume } from "./header_components/resume/Resume";
-import logo from "../../../assets/logo.svg";
+import logo from "../../../assets/logo.png";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
@@ -9,7 +9,7 @@ export const Header = () => {
     <>
       <div className={styles.navbar}>
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img className={styles.logo} src={logo} alt="logo" />
         </Link>
         <div className={styles.nav_right}>
           <div className={styles.links}>
