@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "./Contact.module.scss";
 
 export const Contact = () => {
@@ -22,6 +24,19 @@ export const Contact = () => {
 
   const handleChangeMessage = (e) => {
     setMessage(e.target.value);
+  };
+
+  const notify = () => {
+    toast.success("Your form has been submitted successfully!", {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   async function sendData(e) {
@@ -118,9 +133,21 @@ export const Contact = () => {
               value={message}
               onChange={handleChangeMessage}></textarea>
 
-            <button className={styles.form_btn} type="submit">
+            <button onClick={notify} className={styles.form_btn} type="submit">
               Submit
             </button>
+            <ToastContainer
+              position="bottom-center"
+              autoClose={6000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+            />
           </form>
         </div>
       </div>

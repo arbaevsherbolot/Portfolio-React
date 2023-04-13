@@ -17,9 +17,12 @@
     grid-gap: 64px;
 
     .box_img {
-      background: linear-gradient(rgba(0, 0, 0, 0.271), rgba(14, 14, 14, 0.679)),
-        url("https://media2.giphy.com/media/HmO7FZjok6mhW/giphy.gif") no-repeat
-          center/cover;
+      background: linear-gradient(
+          rgba(9, 16, 25, 0.321),
+          rgba(9, 16, 25, 0.705)
+        ),
+        url("https://www.reactiongifs.us/wp-content/uploads/2018/06/giphy-2-1.gif")
+          no-repeat center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
