@@ -64,7 +64,7 @@ export const Contact = () => {
 
     try {
       await axios.post(
-        "https://blush-dhole-shoe.cyclic.app/api/sendToDataBase",
+        "https://blush-dhole-shoe.cyclic.app/api/sendData",
         {
           name,
           email,

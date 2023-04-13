@@ -1,0 +1,36 @@
+.table_container {
+  margin: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .table {
+    table-layout: auto;
+    width: 100%;
+
+    th,
+    td {
+      text-align: left;
+      outline: 1px solid #6c788633;
+      padding: 0.8rem 1.3rem;
+      font-size: 1.3rem;
+      color: #5303f1;
+    }
+
+    td {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #151d26;
+
+      a {
+        color: #151d26;
+        transition: 0.4s;
+
+        &:hover {
+          color: #5303f1;
+        }
+      }
+    }
+  }
+}
