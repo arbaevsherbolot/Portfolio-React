@@ -62,16 +62,15 @@ export const Contact = () => {
     errName.innerText = "";
     errEmail.innerText = "";
 
+    notify();
+
     try {
-      await axios.post(
-        "https://blush-dhole-shoe.cyclic.app/api/sendData",
-        {
-          name,
-          email,
-          subject,
-          message,
-        }
-      );
+      await axios.post("https://blush-dhole-shoe.cyclic.app/api/sendData", {
+        name,
+        email,
+        subject,
+        message,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -133,7 +132,7 @@ export const Contact = () => {
               value={message}
               onChange={handleChangeMessage}></textarea>
 
-            <button onClick={notify} className={styles.form_btn} type="submit">
+            <button className={styles.form_btn} type="submit">
               Submit
             </button>
             <ToastContainer
