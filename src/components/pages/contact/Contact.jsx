@@ -65,7 +65,7 @@ export const Contact = () => {
     notify();
 
     try {
-      await axios.post("https://blush-dhole-shoe.cyclic.app/api/sendData", {
+      await axios.post("https://blush-dho-shoe.cyclic.app/api/sendData", {
         name,
         email,
         subject,

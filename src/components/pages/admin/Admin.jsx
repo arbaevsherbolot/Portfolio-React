@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styles from "./Admin.module.scss";
 
 export const Admin = () => {
   const [data, setData] = useState(null);
 
+  const API_URL = "https://blush-dhole-shoe.cyclic.app/api";
+
   useEffect(() => {
-    fetch(`https://blush-dhole-shoe.cyclic.app/api/getData`)
-      .then((response) => response.json())
-      .then((data) => setData(data));
+    fetchUsers();
   }, []);
+
+  const fetchUsers = async () => {
+    const response = await axios.get(API_URL);
+    const data = response.data;
+    setData(data);
+  };
+
   return (
     <>
       <div className="page_wrapper">

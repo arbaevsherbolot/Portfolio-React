@@ -1,175 +1,63 @@
-@media (min-width: 860px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    width: 100vw;
-    padding: 0 10%;
+  width: 100vw;
+  padding: 0 10%;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    background: rgba(255, 255, 255, 0.939);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.939);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
-    border-bottom: 1px solid #5656563f;
+  border-bottom: 1px solid #5656563f;
 
-    .logo {
-      width: 90px;
-    }
-
-    .nav_right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .links {
-      text-align: center;
-
-      .link,
-      .active_link {
-        padding: 0.7rem 1.5rem;
-        margin: 0 0.2rem;
-
-        border-radius: 0.3rem;
-
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #12171b;
-
-        transition: 0.5s;
-      }
-
-      .link:hover {
-        background-color: #b6b6b62c;
-      }
-
-      .active_link {
-        outline: 1px solid #9c9c9c66;
-        color: #4209ed;
-      }
-    }
+  .logo {
+    width: 90px;
   }
-  .burger_menu {
-    display: none;
+
+  .nav_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    text-align: center;
+
+    .link,
+    .active_link {
+      padding: 0.7rem 1.5rem;
+      margin: 0 0.2rem;
+
+      border-radius: 0.3rem;
+
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #12171b;
+
+      transition: 0.5s;
+    }
+
+    .link:hover {
+      background-color: #b6b6b62c;
+    }
+
+    .active_link {
+      outline: 1px solid #9c9c9c66;
+      color: #4209ed;
+    }
   }
 }
 
+.burger_menu {
+  display: none;
+}
+
 @media (max-width: 860px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    padding: 0 10%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(255, 255, 255, 0.939);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    border-bottom: 0.8px solid #5656563f;
-
-    .logo {
-      width: 70px;
-    }
-
-    .links {
-      display: none;
-    }
-
-    .links_open {
-      position: absolute;
-      right: 1rem;
-      top: 4.5rem;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      background: #fff;
-      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.196);
-
-      border-radius: 1rem;
-      outline: 0.8px solid #5656563f;
-
-      max-width: 200px;
-      padding: 1.2rem 0;
-
-      .link,
-      .active_link {
-        padding: 0.7rem 4rem;
-        margin: 0.2rem 0;
-
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #12171b;
-
-        transition: 0.5s;
-      }
-
-      .link:hover {
-        background-color: #b6b6b62c;
-      }
-
-      .active_link {
-        color: #4209ed;
-      }
-    }
-
-    .burger_menu {
-      display: block;
-      position: relative;
-
-      cursor: pointer;
-
-      span {
-        display: block;
-        background-color: #4209ed;
-        height: 4px;
-        width: 27px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        transform: rotate(0deg);
-        opacity: 1;
-
-        &:nth-child(1),
-        &:nth-child(3) {
-          transition: transform 0.35s ease-in-out;
-        }
-      }
-
-      .open {
-        position: relative;
-
-        &:nth-child(1) {
-          position: absolute;
-          left: 0px;
-          top: 10px;
-          transform: rotate(135deg);
-          opacity: 0.9;
-        }
-        &:nth-child(2) {
-          height: 23px;
-          visibility: hidden;
-          background-color: transparent;
-        }
-        &:nth-child(3) {
-          position: absolute;
-          left: 0px;
-          top: 10px;
-          transform: rotate(-135deg);
-          opacity: 0.9;
-        }
-      }
-    }
-  }
+  
 }

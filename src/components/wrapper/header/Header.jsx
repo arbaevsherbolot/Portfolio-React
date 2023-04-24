@@ -6,6 +6,7 @@ import styles from "./Header.module.scss";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div className={styles.navbar}>
@@ -13,9 +14,8 @@ export const Header = () => {
           <img className={styles.logo} src={logo} alt="logo" />
         </Link>
         <div className={styles.nav_right}>
-          <div className={isOpen ? styles.links_open : styles.links}>
+          <div className={styles.links}>
             <NavLink
-              onClick={() => setIsOpen(!isOpen)}
               to="/"
               className={({ isActive }) =>
                 isActive ? styles.active_link : styles.link
@@ -24,7 +24,6 @@ export const Header = () => {
             </NavLink>
 
             <NavLink
-              onClick={() => setIsOpen(!isOpen)}
               to="/about"
               className={({ isActive }) =>
                 isActive ? styles.active_link : styles.link
@@ -33,7 +32,6 @@ export const Header = () => {
             </NavLink>
 
             <NavLink
-              onClick={() => setIsOpen(!isOpen)}
               to="/contact"
               className={({ isActive }) =>
                 isActive ? styles.active_link : styles.link
@@ -42,7 +40,6 @@ export const Header = () => {
             </NavLink>
 
             <a
-              onClick={() => setIsOpen(!isOpen)}
               className={styles.link}
               href="https://github.com/Sherbo1ot"
               target="_blank">
