@@ -10,11 +10,33 @@
 }
 
 body {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
   min-height: 100vh;
 
   font-family: "Proxima Nova", sans-serif;
+  
+  // font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+:root {
+  --nav-bg: rgba(255, 255, 255, 0.939);
+  --nav-text-bg-active: #e2e2e22c;
+  --nav-text-color: #12171ba8;
+  --nav-text-accent-color: #4209ed;
+  --nav-text-active-color: #0d1318;
+  --nav-border-color: #5656563f;
+  --nav-outline-color: #d9d9d945;
+}
+
+.page_wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  h1 {
+    font-size: 1rem;
+  }
 }

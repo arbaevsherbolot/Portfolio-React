@@ -100,7 +100,6 @@ export const Contact = () => {
               className={styles.input}
               type="text"
               value={name}
-              placeholder="Type your Full Name"
               onChange={handleChangeName}
             />
             <span id="errName"></span>
@@ -111,7 +110,6 @@ export const Contact = () => {
               className={styles.input}
               type="text"
               value={email}
-              placeholder="Type your E-mail adress"
               onChange={handleChangeEmail}
             />
             <span id="errEmail"></span>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Resume } from "./header_components/resume/Resume";
+import Resume from "./header_components/resume/Resume";
 import logo from "../../../assets/logo.webp";
 import styles from "./Header.module.scss";
 
@@ -41,7 +41,7 @@ export const Header = () => {
 
             <a
               className={styles.link}
-              href="https://github.com/Sherbo1ot"
+              href="https://github.com/arbaevsherbolot"
               target="_blank">
               Github
             </a>
