@@ -162,17 +162,17 @@
 
         transition: 0.3s;
 
-        .link,
-        .active_link {
-          padding: 0.7rem 40%;
-          margin: 0.3rem 0;
-        }
-
         .links {
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
+
+          .link,
+          .active_link {
+            padding: 0.7rem 40%;
+            margin: 0.3rem 0;
+          }
 
           .link:hover {
             background-color: var(--nav-bg-active);

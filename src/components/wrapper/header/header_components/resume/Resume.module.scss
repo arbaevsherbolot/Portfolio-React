@@ -57,3 +57,23 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 900px) {
+  .resume_wrapper {
+    .button {
+      padding: 0.7rem 5rem;
+
+      .dropdown_menu {
+        left: 11%;
+
+        pre {
+          font-size: 1rem;
+          font-weight: 500;
+          color: #12171b;
+
+          padding: 0.6rem 3rem;
+        }
+      }
+    }
+  }
+}
