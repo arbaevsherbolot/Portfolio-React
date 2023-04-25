@@ -77,7 +77,7 @@
         height: 70px;
         cursor: pointer;
 
-        .checkbox {
+        .button {
           display: block;
           width: 100%;
           height: 100%;
@@ -88,6 +88,7 @@
           position: absolute;
           opacity: 0;
         }
+
         div {
           margin: auto;
           position: absolute;
@@ -98,6 +99,7 @@
           width: 30px;
           height: 12px;
         }
+
         span {
           position: absolute;
           display: block;
@@ -114,8 +116,9 @@
             bottom: 0;
           }
         }
+
         &.active,
-        .checkbox:checked + div {
+        .button.active + div {
           span {
             &:first-of-type {
               transform: rotate(45deg);
@@ -130,8 +133,8 @@
 
         &.active:hover span:first-of-type,
         &.active:hover span:last-of-type,
-        &:hover .checkbox:checked + div span:first-of-type,
-        &:hover .checkbox:checked + div span:last-of-type {
+        &:hover .button.active + div span:first-of-type,
+        &:hover .button.active + div span:last-of-type {
           width: 30px;
         }
       }

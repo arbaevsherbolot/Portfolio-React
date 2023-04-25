@@ -50,8 +50,16 @@ export const Header = () => {
         </div>
 
         <div className={styles.burger_menu}>
-          <div className={styles.menu_icon} onClick={() => setIsOpen(!isOpen)}>
-            <input className={styles.checkbox} type="checkbox" />
+          <div className={styles.menu_icon}>
+            <input
+              className={
+                isOpen
+                  ? `${styles.button} ${styles.active}`
+                  : `${styles.button}`
+              }
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+            />
             <div>
               <span></span>
               <span></span>
