@@ -49,10 +49,54 @@ export const Header = () => {
           <Resume />
         </div>
 
-        <div className={styles.burger_menu} onClick={() => setIsOpen(!isOpen)}>
-          <span className={isOpen ? styles.open : ""} />
-          <span className={isOpen ? styles.open : ""} />
-          <span className={isOpen ? styles.open : ""} />
+        <div className={styles.burger_menu}>
+          <div className={styles.menu_icon} onClick={() => setIsOpen(!isOpen)}>
+            <input className={styles.checkbox} type="checkbox" />
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div
+            className={
+              isOpen ? `${styles.menu} ${styles.active}` : `${styles.menu}`
+            }>
+            <div className={styles.links}>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? styles.active_link : styles.link
+                }>
+                Home
+              </NavLink>
+
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? styles.active_link : styles.link
+                }>
+                About
+              </NavLink>
+
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? styles.active_link : styles.link
+                }>
+                Contact
+              </NavLink>
+
+              <a
+                className={styles.link}
+                href="https://github.com/arbaevsherbolot"
+                target="_blank">
+                Github
+              </a>
+
+              <Resume />
+            </div>
+          </div>
         </div>
       </div>
     </>
