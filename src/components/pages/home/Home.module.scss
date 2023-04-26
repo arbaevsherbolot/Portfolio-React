@@ -19,7 +19,8 @@
 
       margin: 1rem;
 
-      background: url("../../../assets/background.jpg") no-repeat center/cover;
+      background-color: #111928;
+
       border-radius: 0.5rem;
 
       &:last-child {
@@ -29,13 +30,21 @@
       }
 
       .box_title {
-        padding: 3rem 0 3rem 4rem;
+        padding: 3rem 0 3rem 3rem;
+        line-height: 1.2;
 
         h3 {
-          color: #fff;
-          width: 80%;
-          font-size: 3rem;
+          color: #f6f6f6;
+          font-size: 2.5rem;
           font-weight: 600;
+        }
+
+        p {
+          padding-top: 1rem;
+          color: #f6f6f6;
+          font-size: 1rem;
+          width: 70%;
+          font-weight: 500;
         }
       }
     }
@@ -51,7 +60,7 @@
 
       .box {
         min-width: 300px;
-        height: 350px;
+        height: 100%;
 
         &:last-child {
           max-width: 900px;
@@ -60,8 +69,6 @@
         }
 
         .box_title {
-          padding: 3rem 0 3rem 3rem;
-
           h3 {
             color: #fff;
             width: 90%;
