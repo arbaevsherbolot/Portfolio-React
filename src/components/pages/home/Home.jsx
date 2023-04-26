@@ -30,7 +30,7 @@ export const Home = () => {
                   multiTextDealy={1000}
                   typeSpeed={50}
                   multiTextLoop
-                />{" "}
+                />
               </h3>
               <p>
                 I develop the user interface, Web page development, I create UX
