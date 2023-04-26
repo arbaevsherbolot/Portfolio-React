@@ -148,13 +148,13 @@
         padding: 1rem;
         margin-right: 3rem;
 
-        border-radius: 10px;
+        border-radius: 0.5rem;
 
         visibility: hidden;
         opacity: 0;
         transform: scale(0);
 
-        background: #ffffffee;
+        background: #fffffff4;
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
         box-shadow: 0 0 1rem #12171b26;
@@ -179,8 +179,8 @@
           }
 
           .active_link {
-            background-color: rgb(85, 73, 255);
-            color: #fff;
+            color: rgb(85, 73, 255);
+            outline: none;
           }
         }
       }
