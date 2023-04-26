@@ -10,6 +10,19 @@ export const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  const TOKEN = "6251110774:AAENSV5zQS3Avog_97IvhgyvU-9go3AdfXs";
+  const CHAT_ID = "-1001957930860";
+  const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+  const messageModel = () => {
+    let messageTG = `<b>Name: ${name}</b>\n`;
+    messageTG += `<b>Email: ${email}</b>\n`;
+    messageTG += `<b>Subject: ${subject}</b>\n`;
+    messageTG += `<b>Message: ${message}</b>\n`;
+
+    return messageTG;
+  };
+
   const handleChangeName = (e) => {
     setName(e.target.value);
   };
@@ -65,11 +78,10 @@ export const Contact = () => {
     notify();
 
     try {
-      await axios.post("https://blush-dho-shoe.cyclic.app/api/sendData", {
-        name,
-        email,
-        subject,
-        message,
+      await axios.post(API_URL, {
+        chat_id: CHAT_ID,
+        parse_mode: "html",
+        text: messageModel(),
       });
     } catch (err) {
       console.log(err);
