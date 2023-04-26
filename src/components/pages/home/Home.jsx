@@ -3,14 +3,6 @@ import TypeWriterEffect from "react-typewriter-effect";
 import scss from "./Home.module.scss";
 
 export const Home = () => {
-  const text = [
-    "Sherbolot Arbaev 👋🏻",
-    "Full-Stack developer 🧑🏻‍💻",
-    "Software Engineer 😎",
-    "Graphic designer 🧑🏻‍🎨",
-    "UI-UX designer 🧑🏻‍🎨",
-    "Student 👨🏻‍🎓",
-  ];
   return (
     <>
       <div className={scss.page_wrapper}>
@@ -27,7 +19,14 @@ export const Home = () => {
                   }}
                   cursorColor="#f6f6f6"
                   startDelay={200}
-                  multiText={text}
+                  multiText={[
+                    "Sherbolot Arbaev 👋🏻",
+                    "Full-Stack developer 🧑🏻‍💻",
+                    "Software Engineer 😎",
+                    "Graphic designer 🧑🏻‍🎨",
+                    "UI-UX designer 🧑🏻‍🎨",
+                    "Student 👨🏻‍🎓",
+                  ]}
                   multiTextDealy={1000}
                   typeSpeed={50}
                   multiTextLoop
