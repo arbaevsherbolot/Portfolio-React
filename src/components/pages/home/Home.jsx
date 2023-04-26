@@ -1,5 +1,5 @@
 import React from "react";
-import { TypeWriterEffect } from "react-typewriter-effect";
+import TypeWriterEffect from "react-typewriter-effect";
 import scss from "./Home.module.scss";
 
 export const Home = () => {
