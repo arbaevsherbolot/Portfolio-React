@@ -1,5 +1,5 @@
 import React from "react";
-import TypeWriterEffect from "react-typewriter-effect";
+import Typical from "react-typical";
 import scss from "./Home.module.scss";
 
 export const Home = () => {
@@ -10,27 +10,25 @@ export const Home = () => {
           <div className={scss.box}>
             <div className={scss.box_title}>
               <h3>
-                Hey I'm
-                <span>
-                  <TypeWriterEffect
-                    textStyle={{
-                      color: "rgb(85, 73, 255)",
-                      fontWeight: "700",
-                      fontSize: "3.3rem",
-                    }}
-                    cursorColor="#f6f6f6"
-                    startDelay={"200"}
-                    multiText={[
+                Hey I'm <br />
+                <span className={scss.type}>
+                  <Typical
+                    loop={Infinity}
+                    wrapper="b"
+                    steps={[
                       "Sherbolot Arbaev 👋🏻",
+                      1000,
                       "Full-Stack developer 🧑🏻‍💻",
+                      1000,
                       "Software Engineer 😎",
+                      1000,
                       "Graphic designer 🧑🏻‍🎨",
+                      1000,
                       "UI-UX designer 🧑🏻‍🎨",
+                      1000,
                       "Student 👨🏻‍🎓",
+                      1000,
                     ]}
-                    multiTextDealy={"1000"}
-                    typeSpeed={"50"}
-                    multiTextLoop
                   />
                 </span>
               </h3>
