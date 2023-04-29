@@ -1,6 +1,6 @@
 .page_wrapper {
   width: 100vw;
-  max-width: 1500px;
+  max-width: 1200px;
   margin-top: 8rem;
   margin-left: auto;
   margin-right: auto;
@@ -28,15 +28,19 @@
 
     .box_container {
       display: flex;
+      flex-direction: column;
+
+      margin: 1rem;
       gap: 1rem;
 
       .box {
         width: 100vw;
-        min-width: 680px;
-        max-width: 900px;
-        height: 600px;
 
-        margin: 1rem;
+        max-width: 100%;
+
+        padding: 1rem 1rem;
+
+        display: flex;
 
         position: relative;
         overflow: hidden;
@@ -45,22 +49,30 @@
 
         border-radius: 2rem;
 
-        &:last-child {
-          max-width: 450px;
-          min-width: 200px;
-          background: url("../../../assets/sherbolot.jpg") no-repeat
-            center/cover;
+        .box_image {
+          width: 700px;
+          height: 100%;
+
+          img {
+            width: 100%;
+            border-radius: 2rem;
+          }
         }
 
         .box_title {
-          padding: 3rem 0 3rem 3rem;
+          width: 1000px;
+          padding: 1rem 1rem 3rem 3rem;
           line-height: 1.2;
 
+          h3 {
+            font-size: 3rem;
+            color: #fff;
+          }
+
           p {
-            padding-top: 1rem;
             color: #f6f6f6;
-            font-size: 1rem;
-            width: 70%;
+            padding-top: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 500;
           }
         }
@@ -74,21 +86,6 @@
     margin-top: 6rem;
 
     .container {
-      .box_container {
-        flex-wrap: wrap-reverse;
-
-        .box {
-          min-width: 300px;
-          height: 100%;
-
-          &:last-child {
-            max-width: 900px;
-
-            height: 350px;
-          }
-        }
-      }
-
       .home_content {
         min-height: 25vh;
         .home_title {
@@ -99,6 +96,30 @@
 
             .type {
               font-size: 2.5rem;
+            }
+          }
+        }
+      }
+
+      .box_container {
+        .box {
+          flex-direction: column-reverse;
+
+          .box_image {
+            width: 100%;
+          }
+
+          .box_title {
+            width: 100%;
+            padding: 1rem 1rem 2rem 1rem;
+
+            h3 {
+              font-size: 2.5rem;
+            }
+
+            p {
+              padding-top: 1rem;
+              font-size: 1rem;
             }
           }
         }
