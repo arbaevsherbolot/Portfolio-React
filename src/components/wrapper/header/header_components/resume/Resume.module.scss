@@ -2,6 +2,8 @@
   .button {
     position: relative;
 
+    cursor: pointer;
+
     padding: 0.7rem 1.5rem;
     background-color: #12171b;
 
@@ -14,16 +16,13 @@
     color: #fff;
   }
 
-  .dropdown_menu {
+  .dropdown_menu,
+  .dropdown_menu.active {
     position: absolute;
     left: -7px;
     top: 50px;
 
     border-radius: 0.5rem;
-
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(0);
 
     background-color: #fff;
     box-shadow: 0 0 1rem #12171b26;
@@ -33,7 +32,7 @@
     cursor: pointer;
     line-height: 1.3rem;
 
-    transition: 0.5s;
+    transition: 0.3s;
 
     pre {
       font-size: 1rem;
@@ -51,7 +50,13 @@
     }
   }
 
-  &:hover .dropdown_menu {
+  .dropdown_menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .dropdown_menu.active {
     visibility: visible;
     opacity: 1;
     transform: scale(1);

@@ -11,7 +11,9 @@
       align-items: center;
       justify-content: center;
 
-      min-height: 40vh;
+      min-height: 45vh;
+
+      margin: 0 2rem;
 
       .home_title {
         h3 {
@@ -38,7 +40,7 @@
 
         max-width: 100%;
 
-        padding: 1rem 1rem;
+        padding: 1rem;
 
         display: flex;
 
@@ -47,21 +49,21 @@
 
         background-color: #111928;
 
-        border-radius: 2rem;
+        border-radius: 1rem;
 
         .box_image {
-          width: 700px;
-          height: 100%;
+          width: 600px;
 
           img {
             width: 100%;
-            border-radius: 2rem;
+            height: 100%;
+            border-radius: 1rem;
           }
         }
 
         .box_title {
           width: 1000px;
-          padding: 1rem 1rem 3rem 3rem;
+          padding: 1rem 1rem 1rem 3rem;
           line-height: 1.2;
 
           h3 {
@@ -87,10 +89,9 @@
 
     .container {
       .home_content {
-        min-height: 25vh;
-        .home_title {
-          margin: 1.8rem 1rem;
+        min-height: 30vh;
 
+        .home_title {
           h3 {
             font-size: 2.5rem;
 

@@ -10,6 +10,8 @@ export const Home = () => {
       <div className={scss.page_wrapper}>
         <div className={scss.container}>
           <div className={scss.home_content}>
+            <div className={scss.home_image}></div>
+
             <div className={scss.home_title}>
               <h3>
                 Hi, I'm Sherbolot
@@ -29,11 +31,13 @@ export const Home = () => {
               </h3>
             </div>
           </div>
+
           <div className={scss.box_container}>
             <div className={scss.box}>
               <div className={scss.box_image}>
                 <img src={aboutImage} alt="Sherbolot Arbaev" />
               </div>
+
               <div className={scss.box_title}>
                 <h3>About Me</h3>
                 <p>
@@ -55,10 +59,12 @@ export const Home = () => {
                 </p>
               </div>
             </div>
+
             <div className={scss.box}>
               <div className={scss.box_image}>
                 <img src={projectImage} alt="Project" />
               </div>
+
               <div className={scss.box_title}>
                 <h3>Project</h3>
                 <p>
