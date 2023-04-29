@@ -1,5 +1,5 @@
 import React from "react";
-import Typical from "react-typical";
+import { Typewriter } from "react-simple-typewriter";
 import scss from "./Home.module.scss";
 
 export const Home = () => {
@@ -7,39 +7,38 @@ export const Home = () => {
     <>
       <div className={scss.page_wrapper}>
         <div className={scss.container}>
-          <div className={scss.box}>
-            <div className={scss.box_title}>
+          <div className={scss.home_content}>
+            <div className={scss.home_title}>
               <h3>
-                Hey I'm <br />
+                Hi, I'm Sherbolot
+                <br />I
                 <span className={scss.type}>
-                  <Typical
-                    loop={Infinity}
-                    wrapper="b"
-                    steps={[
-                      "Sherbolot Arbaev 👋🏻",
-                      1000,
-                      "Full-Stack developer 🧑🏻‍💻",
-                      1000,
-                      "Software Engineer 😎",
-                      1000,
-                      "Graphic designer 🧑🏻‍🎨",
-                      1000,
-                      "UI-UX designer 🧑🏻‍🎨",
-                      1000,
-                      "Student 👨🏻‍🎓",
-                      1000,
-                    ]}
+                  <Typewriter
+                    words={[" develop", " design", " create"]}
+                    loop={true}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={80}
+                    deleteSpeed={10}
+                    delaySpeed={1000}
                   />
                 </span>
+                user-friendly products.
               </h3>
-              <p>
-                I develop the user interface, Web page development, I create UX
-                element interactions, Design and mockups of products for
-                companies.
-              </p>
             </div>
           </div>
-          <div className={scss.box}></div>
+          <div className={scss.box_container}>
+            <div className={scss.box}>
+              <div className={scss.box_title}>
+                <p>
+                  I develop the user interface, Web page development, I create
+                  UX element interactions, Design and mockups of products for
+                  companies.
+                </p>
+              </div>
+            </div>
+            <div className={scss.box}></div>
+          </div>
         </div>
       </div>
     </>
