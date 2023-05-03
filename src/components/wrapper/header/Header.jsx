@@ -24,14 +24,6 @@ export const Header = () => {
             </NavLink>
 
             <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? styles.active_link : styles.link
-              }>
-              About
-            </NavLink>
-
-            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? styles.active_link : styles.link
@@ -78,15 +70,6 @@ export const Header = () => {
                 }
                 onClick={() => setIsOpen(!isOpen)}>
                 Home
-              </NavLink>
-
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive ? styles.active_link : styles.link
-                }
-                onClick={() => setIsOpen(!isOpen)}>
-                About
               </NavLink>
 
               <NavLink

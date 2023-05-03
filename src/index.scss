@@ -9,34 +9,28 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
 
   font-family: "Proxima Nova", sans-serif;
-  
+
+  background: linear-gradient(#0d111700, #0d1117),
+    url("https://miro.medium.com/v2/resize:fit:1400/0*4VdbVGeSFcn1Jv2J")
+      no-repeat center/cover;
+
   // font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 :root {
-  --nav-bg: rgba(255, 255, 255, 0.939);
+  --nav-bg: #161b22e7;
   --nav-text-bg-active: #e2e2e22c;
-  --nav-text-color: #12171ba8;
+  --nav-text-color: #ffffffa8;
   --nav-text-accent-color: #4209ed;
-  --nav-text-active-color: #0d1318;
+  --nav-text-active-color: #ffffff;
   --nav-border-color: #5656563f;
-  --nav-outline-color: #d9d9d945;
-}
-
-.page_wrapper {
-  width: 100%;
-  max-width: 1170px;
-  margin-top: 8rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  h1 {
-    font-size: 1rem;
-  }
+  --nav-outline-color: #d9d9d92e;
 }

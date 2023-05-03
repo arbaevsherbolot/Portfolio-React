@@ -5,9 +5,17 @@
     cursor: pointer;
 
     padding: 0.7rem 1.5rem;
-    background-color: #12171b;
+    background: none;
 
-    border-radius: 0.5rem;
+    box-shadow: #bc8cff 0 0 0 1px inset;
+
+    border-radius: 0.375rem;
+
+    transition: 0.4s;
+
+    &:hover {
+      background: rgb(145, 67, 255);
+    }
   }
 
   .title {

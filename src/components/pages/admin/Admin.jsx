@@ -5,17 +5,17 @@ import styles from "./Admin.module.scss";
 export const Admin = () => {
   const [data, setData] = useState(null);
 
-  const API_URL = "https://blush-dhole-shoe.cyclic.app/api";
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  const API_URL = "http://localhost:3898/api/getData";
 
   const fetchUsers = async () => {
     const response = await axios.get(API_URL);
     const data = response.data;
     setData(data);
   };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
 
   return (
     <>
