@@ -16,21 +16,22 @@ export const About = () => {
               <div className={scss.box_title}>
                 <h3>About Me</h3>
                 <p>
-                  My name is Sherbolot Arbaev, I am a student Full-Stack
-                  software engineer. Develop and maintained full stack web
-                  applications using Node.js, React, SCSS, MySQL, and
-                  TypeScript. Collaborated with cross-functional teams including
-                  designers, product managers, and QA engineers to deliver
-                  high-quality software solutions. Designed and implemented
-                  RESTful APIs for seamless integration between front-end and
-                  back-end systems. Implemented responsive user interfaces using
-                  modern front-end libraries and frameworks. Conducted code
-                  reviews and provided constructive feedback to peers to
-                  maintain code quality and best practices. Participated in
-                  agile development processes, including sprint planning, daily
-                  stand-ups, and retrospective meetings. Assisted in
-                  troubleshooting and resolving production issues in a timely
-                  manner. Mentored and provided guidance to junior developers.
+                  My name is <span>Sherbolot Arbaev</span>, I am a student
+                  <span> Full-Stack software engineer</span>. Develop and
+                  maintained full stack web applications using
+                  <span> Node.js, React, SCSS, MySQL, and TypeScript. </span>
+                  Collaborated with cross-functional teams including designers,
+                  product managers, and QA engineers to deliver high-quality
+                  software solutions. Designed and implemented <span>RESTful APIs </span> for
+                  seamless integration between <span>front-end</span> and <span>back-end</span> systems.
+                  Implemented responsive user interfaces using modern <span>front-end
+                  libraries</span> and <span>frameworks</span>. Conducted code reviews and provided
+                  constructive feedback to peers to maintain code quality and
+                  best practices. Participated in agile development processes,
+                  including sprint planning, daily stand-ups, and retrospective
+                  meetings. Assisted in troubleshooting and resolving production
+                  issues in a timely manner. <span>Mentored and provided </span>
+                  guidance to junior developers.
                 </p>
               </div>
             </div>

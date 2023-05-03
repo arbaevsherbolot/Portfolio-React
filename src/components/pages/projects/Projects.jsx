@@ -16,8 +16,8 @@ export const Projects = () => {
               <div className={scss.box_title}>
                 <h3>Project</h3>
                 <p>
-                  I develop the user interface, Web page development, I create
-                  UX element interactions, Design and mockups of products for
+                  I <span>develop</span> the user interface, <span>Web page development</span>, I create
+                  <span> UX element</span> interactions, Design and mockups of <span>products</span> for
                   companies.
                 </p>
               </div>
