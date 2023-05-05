@@ -15,8 +15,6 @@
         url("https://marketpedia.ca/wp-content/uploads/2021/10/gif-01-brent-rambo-b25.gif")
           no-repeat center/cover;
 
-      filter: drop-shadow(0 0 2em #646cffaa);
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,8 +31,6 @@
     .form {
       min-height: 650px;
 
-      filter: drop-shadow(0 0 2em #646cffaa);
-
       padding: 0.5rem 1.5rem;
 
       display: flex;
@@ -46,6 +42,12 @@
       border: 1px solid var(--nav-outline-color);
 
       outline: none;
+
+      transition: 0.4s;
+
+      &:hover {
+        filter: drop-shadow(0 0 2em #646cffaa);
+      }
 
       .label {
         padding: 0.8rem 0.5rem;
