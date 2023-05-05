@@ -145,19 +145,19 @@ export const Contact = () => {
             <button className={styles.form_btn} type="submit">
               Submit
             </button>
-            <ToastContainer
-              position="bottom-center"
-              autoClose={6000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="colored"
-            />
           </form>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={6000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+          />
         </div>
       </div>
     </>
