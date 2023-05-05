@@ -17,11 +17,12 @@ body {
   min-height: 100vh;
 
   font-family: "Proxima Nova", sans-serif;
-
-  background-color: #161b22;
+  background: #161b22;
+  
   background-image: radial-gradient(#ffffff1c, 0.8px, transparent 0);
   background-size: 20px 20px;
 
+  // background-image: radial-gradient(#ffffff1c, 0.8px, transparent 0);
   // font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 

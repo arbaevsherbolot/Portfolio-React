@@ -1,29 +1,40 @@
 .page_wrapper {
   width: 100vw;
   max-width: 1300px;
-  margin-top: 8rem;
+  margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
 
   .container {
     .home_content {
       display: flex;
-      align-items: center;
+      align-items: start;
       justify-content: center;
 
-      min-height: 45vh;
+      flex-direction: column;
+
+      min-height: 60vh;
 
       margin: 0 2rem;
+
+      .home_image {
+        width: 135px;
+        padding-bottom: 2rem;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
 
       .home_title {
         h3 {
           color: #fff;
-          font-size: 3.5rem;
+          font-size: 3.8rem;
           font-weight: 700;
 
           .type {
-            color: rgb(85, 73, 255);
-            text-shadow: 0 0 px rgba(85, 73, 255, 0.638);
+            color: rgb(151, 143, 255);
           }
         }
       }
@@ -45,7 +56,11 @@
 
     .container {
       .home_content {
-        min-height: 30vh;
+        min-height: 40vh;
+
+        .home_image {
+          width: 120px;
+        }
 
         .home_title {
           h3 {

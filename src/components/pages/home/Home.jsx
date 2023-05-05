@@ -2,6 +2,7 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { About } from "../about/About";
 import { Projects } from "../projects/Projects";
+import logo from "../../../assets/IOS_Boy.jpg";
 import scss from "./Home.module.scss";
 
 export const Home = () => {
@@ -10,7 +11,9 @@ export const Home = () => {
       <div className={scss.page_wrapper}>
         <div className={scss.container}>
           <div className={scss.home_content}>
-            <div className={scss.home_image}></div>
+            <div className={scss.home_image}>
+              <img src={logo} alt="IOS" />
+            </div>
 
             <div className={scss.home_title}>
               <h3>
