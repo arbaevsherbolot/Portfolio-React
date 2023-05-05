@@ -121,14 +121,8 @@
           .box {
             border-radius: 0 0 0 0;
 
-            .box_image {
-              img {
-                border-radius: 0 0 0 0;
-              }
-            }
-
             &:last-child {
-              border-radius: 0 0 0 0;
+              border-radius: 0 0 0.75rem 0.75rem;
             }
           }
         }
