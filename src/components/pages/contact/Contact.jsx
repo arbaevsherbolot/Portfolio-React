@@ -10,6 +10,8 @@ export const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  const [isSend, setIsSend] = useState(false);
+
   const TOKEN = "6251110774:AAENSV5zQS3Avog_97IvhgyvU-9go3AdfXs";
   const CHAT_ID = "-1001957930860";
   const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
@@ -83,6 +85,12 @@ export const Contact = () => {
         parse_mode: "html",
         text: messageModel(),
       });
+
+      setIsSend(!isSend);
+
+      setInterval(() => {
+        setIsSend(isSend);
+      }, 6000);
     } catch (err) {
       console.log(err);
     }
@@ -103,7 +111,9 @@ export const Contact = () => {
       <div className={styles.contact_page}>
         <div className={styles.form_wrapper}>
           <div className={styles.box}>
-            <div className={styles.box_img}>Contact me</div>
+            <div className={isSend ? styles.box_img_send : styles.box_img}>
+              Contact me
+            </div>
           </div>
           <form onSubmit={sendData} className={styles.form}>
             <div className={styles.label}>Name*</div>

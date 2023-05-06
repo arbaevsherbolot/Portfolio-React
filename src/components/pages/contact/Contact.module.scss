@@ -7,13 +7,14 @@
     grid-gap: 60px;
     margin: 2rem;
 
-    .box_img {
+    .box_img,
+    .box_img_send {
       background: linear-gradient(
           rgba(9, 16, 25, 0.321),
           rgba(9, 16, 25, 0.705)
         ),
-        url("https://marketpedia.ca/wp-content/uploads/2021/10/gif-01-brent-rambo-b25.gif")
-          no-repeat center/cover;
+        url("https://media.tenor.com/jYqfbfE5wU4AAAAM/yay-yes.gif") no-repeat
+          center/cover;
 
       display: flex;
       align-items: center;
@@ -26,6 +27,15 @@
       font-size: 2rem;
       font-weight: 600;
       letter-spacing: 0.01rem;
+    }
+
+    .box_img_send {
+      background: linear-gradient(
+          rgba(9, 16, 25, 0.321),
+          rgba(9, 16, 25, 0.705)
+        ),
+        url("https://marketpedia.ca/wp-content/uploads/2021/10/gif-01-brent-rambo-b25.gif")
+          no-repeat center/cover;
     }
 
     .form {
