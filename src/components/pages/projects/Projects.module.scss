@@ -140,6 +140,7 @@
 
           .box {
             border-radius: 0 0 0 0;
+            filter: none;
 
             &:last-child {
               border-radius: 0 0 0.75rem 0.75rem;
