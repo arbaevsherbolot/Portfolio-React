@@ -34,7 +34,15 @@
           font-weight: 700;
 
           .type {
-            color: #6459ff;
+            background: -webkit-linear-gradient(
+              -70deg,
+              #a2facf 0%,
+              #0077ff 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, 0);
+            -webkit-box-decoration-break: clone;
           }
         }
       }
