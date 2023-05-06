@@ -1,8 +1,8 @@
 import React from "react";
 import scss from "./Projects.module.scss";
-import projectImage from "../../../assets/Image-Project.png";
-import projectImageLitle1 from "../../../assets/Image-Project.png";
-import projectImageLitle2 from "../../../assets/Image-Project.png";
+// import projectImage from "../../../assets/Image-Project.png";
+// import projectImageLitle1 from "../../../assets/Image-Project.png";
+// import projectImageLitle2 from "../../../assets/Image-Project.png";
 
 export const Projects = () => {
   return (
@@ -22,20 +22,29 @@ export const Projects = () => {
               </div>
 
               <div className={scss.box_image}>
-                <img src={projectImage} alt="Project" />
+                <img
+                  src="https://unblast.com/wp-content/uploads/2020/05/Website-Mockup.jpg "
+                  alt="Project"
+                />
               </div>
             </div>
 
             <div className={scss.litle_boxes}>
               <div className={scss.box}>
                 <div className={scss.box_image}>
-                  <img src={projectImageLitle1} alt="Project" />
+                  <img
+                    src="https://assets.wesayhowhigh.com/media/Blog/A%20Mobile%20First%20Approach/limitless-final61.gif"
+                    alt="Project"
+                  />
                 </div>
               </div>
 
               <div className={scss.box}>
                 <div className={scss.box_image}>
-                  <img src={projectImageLitle2} alt="Project" />
+                  <img
+                    src="https://assets.justinmind.com/wp-content/uploads/2020/08/travel-ecommerce-app-mockup.png"
+                    alt="Project"
+                  />
                 </div>
               </div>
             </div>
