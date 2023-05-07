@@ -17,10 +17,10 @@ export const Contact = () => {
   const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   const messageModel = () => {
-    let messageTG = `<b>Name: ${name}</b>\n`;
-    messageTG += `<b>Email: ${email}</b>\n`;
-    messageTG += `<b>Subject: ${subject}</b>\n`;
-    messageTG += `<b>Message: ${message}</b>\n`;
+    let messageTG = `Name: <b>${name}</b>\n`;
+    messageTG += `Email: <b>${email}</b>\n`;
+    messageTG += `Subject: <b>${subject}</b>\n`;
+    messageTG += `Message: <b>${message}</b>\n`;
 
     return messageTG;
   };
