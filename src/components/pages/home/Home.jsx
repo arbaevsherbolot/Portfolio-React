@@ -7,6 +7,8 @@ import logo from "../../../assets/IOS_Boy.jpg";
 import scss from "./Home.module.scss";
 
 export const Home = () => {
+  document.title = "Sherbolot Arbaev | Portfolio";
+
   return (
     <>
       <div className={scss.page_wrapper}>

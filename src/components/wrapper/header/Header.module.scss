@@ -182,6 +182,45 @@
             outline: 1px solid var(--nav-outline-color);
             color: var(--nav-text-active-color);
           }
+
+          .resume_btn {
+            padding: 0.7rem 3rem;
+            margin: 0.2rem 0.2rem;
+
+            border-radius: 0.3rem;
+            background: -webkit-linear-gradient(
+              -70deg,
+              #a2facf 0%,
+              #0077ff 100%
+            );
+
+            cursor: pointer;
+
+            font-size: 1.1rem;
+            font-weight: 600;
+
+            font-family: "Proxima Nova", sans-serif;
+
+            transition: 0.5s;
+
+            &:last-child {
+              background: transparent;
+
+              pre {
+                font-family: "Proxima Nova", sans-serif;
+
+                background: -webkit-linear-gradient(
+                  -70deg,
+                  #a2facf 0%,
+                  #0077ff 100%
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: rgba(0, 0, 0, 0);
+                -webkit-box-decoration-break: clone;
+              }
+            }
+          }
         }
       }
 

@@ -2,10 +2,18 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Resume from "./header_components/resume/Resume";
 import logo from "../../../assets/logo.webp";
+import { Modal } from "./header_components/modal/Modal";
+import resume_pdf from "../../../assets/resume.pdf";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const quickView = () => {
+    setOpenModal(true);
+  };
 
   return (
     <>
@@ -88,9 +96,19 @@ export const Header = () => {
                 Github
               </a>
 
-              <Resume />
+              <pre className={styles.resume_btn} onClick={quickView}>
+                Quick View CV
+              </pre>
+
+              <a
+                className={styles.resume_btn}
+                href={resume_pdf}
+                target="_blank">
+                <pre>Download CV</pre>
+              </a>
             </div>
           </div>
+          <Modal open={openModal} close={() => setOpenModal(false)} />
         </div>
       </div>
     </>

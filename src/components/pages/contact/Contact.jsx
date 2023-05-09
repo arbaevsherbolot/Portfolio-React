@@ -5,6 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "./Contact.module.scss";
 
 export const Contact = () => {
+  document.title = "Sherbolot Arbaev | Contact";
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
