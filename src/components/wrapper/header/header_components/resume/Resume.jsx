@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "../modal/Modal";
-import resume_pdf from "../../../../../assets/resume.pdf";
+import resume_pdf from "../../../../../assets/Sherbolot Arbaev - Resume.pdf";
 import scss from "./Resume.module.scss";
 
 const Resume = () => {

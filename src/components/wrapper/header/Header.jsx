@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import Resume from "./header_components/resume/Resume";
 import logo from "../../../assets/logo.webp";
 import { Modal } from "./header_components/modal/Modal";
-import resume_pdf from "../../../assets/resume.pdf";
+import resume_pdf from "../../../assets/Sherbolot Arbaev - Resume.pdf";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
