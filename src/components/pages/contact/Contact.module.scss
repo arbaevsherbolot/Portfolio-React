@@ -110,7 +110,8 @@
         margin-bottom: 1rem;
       }
 
-      .form_btn {
+      .form_btn,
+      .form_btn_send {
         width: 100%;
         padding: 1.2rem;
         margin-top: auto;
@@ -135,6 +136,10 @@
         &:hover {
           background: rgb(145, 67, 255);
         }
+      }
+
+      .form_btn_send {
+        background: rgb(199, 160, 254);
       }
     }
   }

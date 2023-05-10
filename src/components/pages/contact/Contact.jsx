@@ -14,6 +14,8 @@ export const Contact = () => {
 
   const [isSend, setIsSend] = useState(false);
 
+  const [sendButton, setSendButton] = useState(false);
+
   const TOKEN = "6251110774:AAENSV5zQS3Avog_97IvhgyvU-9go3AdfXs";
   const CHAT_ID = "-1001957930860";
   const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
@@ -81,6 +83,8 @@ export const Contact = () => {
 
     notify();
 
+    setSendButton(!sendButton);
+
     try {
       await axios.post(API_URL, {
         chat_id: CHAT_ID,
@@ -93,6 +97,8 @@ export const Contact = () => {
       setInterval(() => {
         setIsSend(isSend);
       }, 6000);
+
+      setSendButton(sendButton);
     } catch (err) {
       console.log(err);
     }
@@ -154,8 +160,10 @@ export const Contact = () => {
               value={message}
               onChange={handleChangeMessage}></textarea>
 
-            <button className={styles.form_btn} type="submit">
-              Submit
+            <button
+              className={sendButton ? styles.form_btn_send : styles.form_btn}
+              type="submit">
+              {sendButton ? "Sending..." : "Submit"}
             </button>
           </form>
           <ToastContainer
