@@ -1,8 +1,5 @@
 import React from "react";
 import scss from "./Projects.module.scss";
-// import projectImage from "../../../assets/Image-Project.png";
-// import projectImageLitle1 from "../../../assets/Image-Project.png";
-// import projectImageLitle2 from "../../../assets/Image-Project.png";
 
 export const Projects = () => {
   return (

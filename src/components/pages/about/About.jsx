@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../../assets/sherbolot.jpg";
+import aboutImage from "../../../assets/sherbolot.webp";
 import scss from "./About.module.scss";
 
 export const About = () => {

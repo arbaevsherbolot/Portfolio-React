@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { About } from "../about/About";
 import { Projects } from "../projects/Projects";
 import { Skills } from "../skills/Skills";
-import logo from "../../../assets/IOS_Boy.jpg";
+import logo from "../../../assets/IOS_Boy.webp";
 import scss from "./Home.module.scss";
 
 export const Home = () => {
