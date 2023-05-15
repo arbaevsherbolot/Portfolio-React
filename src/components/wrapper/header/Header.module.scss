@@ -70,7 +70,8 @@
 }
 
 @media (max-width: 900px) {
-  .navbar {
+  .navbar,
+  .navbar_active {
     height: 70px;
 
     .nav_right {
