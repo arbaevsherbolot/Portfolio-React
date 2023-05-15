@@ -1,4 +1,3 @@
-import React from "react";
 import scss from "./Projects.module.scss";
 
 export const Projects = () => {

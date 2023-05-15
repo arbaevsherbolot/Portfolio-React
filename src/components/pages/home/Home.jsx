@@ -1,4 +1,3 @@
-import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { About } from "../about/About";
 import { Projects } from "../projects/Projects";
