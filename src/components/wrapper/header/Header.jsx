@@ -8,16 +8,26 @@ import styles from "./Header.module.scss";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const [openModal, setOpenModal] = useState(false);
+  const [activeHeader, setActiveHeader] = useState(false);
 
   const quickView = () => {
     setOpenModal(true);
   };
 
+  const activeHeaderScroll = () => {
+    if (window.scrollY >= 70) {
+      setActiveHeader(true);
+    } else {
+      setActiveHeader(false);
+    }
+  };
+
+  window.addEventListener("scroll", activeHeaderScroll);
+
   return (
     <>
-      <div className={styles.navbar}>
+      <div className={!activeHeader ? styles.navbar : styles.navbar_active}>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="logo" />
         </Link>
