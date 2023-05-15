@@ -16,8 +16,8 @@ export const Contact = () => {
 
   const [sendButton, setSendButton] = useState(false);
 
-  const TOKEN = "6251110774:AAENSV5zQS3Avog_97IvhgyvU-9go3AdfXs";
-  const CHAT_ID = "-1001957930860";
+  const TOKEN = "6041880464:AAGK4k-f1Ym0eK1RK67wwE0AQ5Xh2VTBy2s";
+  const CHAT_ID = "-1001509773637";
   const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   const messageModel = () => {
