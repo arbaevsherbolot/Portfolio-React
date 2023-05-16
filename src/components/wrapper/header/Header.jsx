@@ -27,6 +27,7 @@ export const Header = () => {
 
   return (
     <>
+      <div className={styles.navbar_top}>Web site is under construction!</div>
       <div className={!activeHeader ? styles.navbar : styles.navbar_active}>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="logo" />

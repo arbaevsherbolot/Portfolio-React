@@ -1,7 +1,28 @@
+.navbar_top {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 400;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 30px;
+
+  background-color: #fff;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #161b22;
+}
+
 .navbar,
 .navbar_active {
   position: fixed;
-  top: 0;
+  top: 30px;
   left: 0;
 
   z-index: 400;
