@@ -17,9 +17,17 @@
     filter: drop-shadow(0 0 2em #646cffaa);
   }
 
+  @media (max-width: 790px) {
+    padding: 0.8rem;
+  }
+
   .title {
     padding: 1rem 1rem 1rem 3rem;
     line-height: 1.2;
+
+    @media (max-width: 790px) {
+      padding: 1rem 1rem 1rem 1rem;
+    }
 
     h1 {
       font-size: 3rem;
