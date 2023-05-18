@@ -1,6 +1,7 @@
 import scss from "./Skills.module.scss";
 import html_icon from "../../../assets/svg/html.svg";
 import css_icon from "../../../assets/svg/css.svg";
+import git_icon from "../../../assets/svg/git.svg";
 import tailwind_icon from "../../../assets/svg/tailwind.svg";
 import javascript_icon from "../../../assets/svg/javascript.svg";
 import typescript_icon from "../../../assets/svg/typescript.svg";
@@ -60,6 +61,10 @@ export const Skills = () => {
 
             <div className={scss.icon}>
               <img className={scss.icon_img} src={node_icon} alt="Node JS" />
+            </div>
+
+            <div className={scss.icon}>
+              <img className={scss.icon_img} src={git_icon} alt="Git" />
             </div>
           </div>
         </div>
