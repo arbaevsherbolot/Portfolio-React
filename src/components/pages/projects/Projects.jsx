@@ -1,5 +1,5 @@
-import link_icon from "../../../assets/link_icon.svg";
-import github_icon from "../../../assets/github_icon.svg";
+import link_icon from "../../../assets/svg/link_icon.svg";
+import github_icon from "../../../assets/svg/github_icon.svg";
 import scss from "./Projects.module.scss";
 
 export const Projects = () => {

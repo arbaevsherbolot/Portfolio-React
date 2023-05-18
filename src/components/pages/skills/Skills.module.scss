@@ -41,4 +41,29 @@
       }
     }
   }
+
+  .icons {
+    padding-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .icon {
+      width: 50px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 710px) {
+        width: 35px;
+      }
+
+      .icon_img {
+        width: 100%;
+      }
+    }
+  }
 }
