@@ -102,6 +102,68 @@
             }
           }
         }
+
+        @media (max-width: 950px) {
+          .box_bottom {
+            left: 87%;
+            bottom: 15%;
+
+            .icons {
+              gap: 0.8rem;
+
+              .icon {
+                width: 30px;
+                height: 30px;
+
+                .icon_img {
+                  width: 20px;
+                }
+              }
+            }
+          }
+        }
+
+        @media (max-width: 790px) {
+          .box_bottom {
+            left: 86%;
+            bottom: 17%;
+          }
+        }
+
+        @media (max-width: 695px) {
+          .box_bottom {
+            left: 84%;
+            bottom: 19%;
+          }
+        }
+
+        @media (max-width: 605px) {
+          .box_bottom {
+            left: 82%;
+            bottom: 22%;
+          }
+        }
+
+        @media (max-width: 565px) {
+          .box_bottom {
+            left: 80%;
+            bottom: 25%;
+          }
+        }
+
+        @media (max-width: 485px) {
+          .box_bottom {
+            left: 78%;
+            bottom: 28%;
+          }
+        }
+
+        @media (max-width: 436px) {
+          .box_bottom {
+            left: 74%;
+            bottom: 32%;
+          }
+        }
       }
 
       .litle_boxes {
