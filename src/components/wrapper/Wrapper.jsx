@@ -7,15 +7,15 @@ import "./Wrapper.scss";
 export const Wrapper = () => {
   return (
     <div className="wrapper">
-      {/* <header>
+      <header>
         <Header />
-      </header> */}
+      </header>
       <main>
         <Main />
       </main>
-      <footer>
+      {/* <footer>
         <Footer />
-      </footer>
+      </footer> */}
     </div>
   );
 };
