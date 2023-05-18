@@ -1,3 +1,5 @@
+import link_icon from "../../../assets/link_icon.svg";
+import github_icon from "../../../assets/github_icon.svg";
 import scss from "./Projects.module.scss";
 
 export const Projects = () => {
@@ -22,6 +24,32 @@ export const Projects = () => {
                   src="https://unblast.com/wp-content/uploads/2020/05/Website-Mockup.jpg "
                   alt="Project"
                 />
+              </div>
+
+              <div className={scss.box_bottom}>
+                <div className={scss.icons}>
+                  <a href="https://next-dentist911.vercel.app/" target="_blank">
+                    <div className={scss.icon}>
+                      <img
+                        className={scss.icon_img}
+                        src={link_icon}
+                        alt="Icon"
+                      />
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/arbaevsherbolot?tab=repositories"
+                    target="_blank">
+                    <div className={scss.icon}>
+                      <img
+                        className={scss.icon_img}
+                        src={github_icon}
+                        alt="Icon"
+                      />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
 
