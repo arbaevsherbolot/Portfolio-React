@@ -13,9 +13,9 @@ export const Wrapper = () => {
       <main>
         <Main />
       </main>
-      {/* <footer>
+      <footer>
         <Footer />
-      </footer> */}
+      </footer>
     </div>
   );
 };
