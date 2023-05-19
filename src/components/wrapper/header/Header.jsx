@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Resume from "./header_components/resume/Resume";
 import logo from "../../../assets/logo.webp";
@@ -10,24 +10,41 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [activeHeader, setActiveHeader] = useState(false);
+  const [loadEffect, setLoadEffect] = useState(0);
 
   const quickView = () => {
     setOpenModal(true);
   };
 
   const activeHeaderScroll = () => {
-    if (window.scrollY >= 70) {
+    if (window.scrollY >= 55) {
       setActiveHeader(true);
     } else {
       setActiveHeader(false);
     }
   };
 
-  window.addEventListener("scroll", activeHeaderScroll);
+  const onLoadEffect = () => {
+    const windowScroll = document.documentElement.scrollTop;
+    const windowHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const scrolled = (windowScroll / windowHeight) * 100;
+
+    setLoadEffect(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", activeHeaderScroll);
+    window.addEventListener("scroll", onLoadEffect);
+  }, []);
 
   return (
     <>
-      <div className={styles.navbar_top}>Web site is under construction!</div>
+      <div
+        className={styles.navbar_top}
+        style={{ width: `${loadEffect}%` }}></div>
       <div className={!activeHeader ? styles.navbar : styles.navbar_active}>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="logo" />

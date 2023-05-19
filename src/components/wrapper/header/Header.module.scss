@@ -1,28 +1,22 @@
 .navbar_top {
   position: fixed;
-  top: 0;
+  top: 88px;
   left: 0;
 
-  z-index: 400;
+  z-index: 405;
+  height: 1px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #a2facfd9;
 
-  width: 100vw;
-  height: 30px;
-
-  background-color: #fff;
-
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #161b22;
+  @media (max-width: 900px) {
+    top: 69px;
+  }
 }
 
 .navbar,
 .navbar_active {
   position: fixed;
-  top: 30px;
+  top: 0;
   left: 0;
 
   z-index: 400;
