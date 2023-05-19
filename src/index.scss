@@ -7,6 +7,11 @@
 
   text-decoration: none;
   list-style: none;
+
+  &::selection {
+    color: #ffffff;
+    background-color: #8bdcff56;
+  }
 }
 
 html {
