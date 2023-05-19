@@ -21,7 +21,7 @@ export const Projects = () => {
 
               <div className={scss.box_image}>
                 <img
-                  src="https://unblast.com/wp-content/uploads/2020/05/Website-Mockup.jpg "
+                  src="https://seo-x.ru/images/sayt3d2-removebg-preview%20(1).png"
                   alt="Project"
                 />
               </div>
@@ -57,7 +57,7 @@ export const Projects = () => {
               <div className={scss.box}>
                 <div className={scss.box_image}>
                   <img
-                    src="https://assets.wesayhowhigh.com/media/Blog/A%20Mobile%20First%20Approach/limitless-final61.gif"
+                    src="https://cdn.dribbble.com/users/1346196/screenshots/6176280/attachments/1324203/web_mockup.png"
                     alt="Project"
                   />
                 </div>
