@@ -16,10 +16,59 @@ export const Skills = () => {
           <h1>Skills</h1>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            magnam nemo dolorum numquam ut asperiores excepturi. Eos voluptate
-            ratione, esse est non placeat reprehenderit sapiente culpa quis
-            natus, eaque velit.
+            As a <span>full-stack developer</span>, I have a variety of
+            <span> skills </span>
+            that allow me to handle both the <span>front-end</span> and
+            <span>back-end</span>
+            aspects of web development. These skills allow me to create
+            comprehensive and interactive <span>web applications</span> from
+            start to finish.
+            <br />
+            <br />I am proficient in several <span>programming languages </span>
+            such as
+            <span> JavaScript </span>,<span> TypeScript</span>, and
+            <span> Node JS</span>. This versatility allows me to adapt to
+            different project requirements and choose the best language for each
+            task.
+            <br />
+            <br />
+            Having knowledge in <span>front-end</span> technologies such as
+            <span> JavaScript</span>, <span>React</span>,
+            <span> TypeScript</span>,<span> HTML5</span>, <span> CSS3</span>,
+            <span> SCSS</span>,<span> Tailwind</span>, <span>Bootstrap</span>,
+            <span> Material-UI</span>, <span>Figma</span>. I can create
+            <span> intuitive user interfaces</span> and <span>responsive</span>
+            web designs. I have a keen eye for
+            <span> design aesthetics</span>, which ensures that the
+            <span> user experience</span> is fluid and visually appealing.
+            <br />
+            <br />I am well versed in <span>back-end</span> technologies such as
+            <span> Node.js</span>, <span>Express</span>,
+            <span> RESTful APIs</span>, and <span>GraphQL</span>. This knowledge
+            allows me to <span>design</span> and implement
+            <span> server-side logic</span>, manage <span>data storage </span>
+            and retrieval, and create robust APIs to ensure seamless
+            communication between <span>external</span> and
+            <span> internal</span> systems.
+            <br />
+            <br />I have experience with various database systems such as
+            <span> MySQL</span>,<span> PostgreSQL</span>, <span>MongoDB</span>.
+            I can efficiently <span>design</span> and <span>optimize</span>
+            <span> database schemas</span>, write complex queries, ensure data
+            <span> integrity</span> and <span>security</span>.
+            <br />
+            <br />I am able to use <span>Git</span> and other version control
+            tools to effectively <span>manage code</span> repositories. This
+            allows me to <span>collaborate</span> with other
+            <span> developers</span>, easily integrate <span>code</span>, and
+            track changes throughout the <span>development process</span>.
+            <br />
+            <br />I am well-versed in <span>testing frameworks</span> such as
+            <span> Jest</span>, and <span>Selenium</span> to ensure high
+            <span> quality code</span>. I have experience with Continuous
+            Integration and Deployment <span>(CI/CD)</span> pipelines using
+            tools like <span>Jenkins</span>, <span>Travis CI</span> or
+            <span> GitLab CI</span>.
           </p>
 
           <div className={scss.icons}>
