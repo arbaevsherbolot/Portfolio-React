@@ -15,6 +15,52 @@ export const Skills = () => {
         <div className={scss.title}>
           <h1>Skills</h1>
 
+          <div className={scss.icons}>
+            <div className={scss.icon}>
+              <img className={scss.icon_img} src={html_icon} alt="HTML" />
+            </div>
+
+            <div className={scss.icon}>
+              <img className={scss.icon_img} src={css_icon} alt="CSS" />
+            </div>
+
+            <div className={scss.icon}>
+              <img
+                className={scss.icon_img}
+                src={tailwind_icon}
+                alt="Tailwind"
+              />
+            </div>
+
+            <div className={scss.icon}>
+              <img
+                className={scss.icon_img}
+                src={javascript_icon}
+                alt="JavaScript"
+              />
+            </div>
+
+            <div className={scss.icon}>
+              <img
+                className={scss.icon_img}
+                src={typescript_icon}
+                alt="TypeScript"
+              />
+            </div>
+
+            <div className={scss.icon}>
+              <img className={scss.icon_img} src={react_icon} alt="React" />
+            </div>
+
+            <div className={scss.icon}>
+              <img className={scss.icon_img} src={node_icon} alt="Node JS" />
+            </div>
+
+            <div className={scss.icon}>
+              <img className={scss.icon_img} src={git_icon} alt="Git" />
+            </div>
+          </div>
+
           <p>
             As a <span>full-stack developer</span>, I have a variety of
             <span> skills </span>
@@ -73,52 +119,6 @@ export const Skills = () => {
             tools like <span>Jenkins</span>, <span>Travis CI</span> or
             <span> GitLab CI</span>.
           </p>
-
-          <div className={scss.icons}>
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={html_icon} alt="HTML" />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={css_icon} alt="CSS" />
-            </div>
-
-            <div className={scss.icon}>
-              <img
-                className={scss.icon_img}
-                src={tailwind_icon}
-                alt="Tailwind"
-              />
-            </div>
-
-            <div className={scss.icon}>
-              <img
-                className={scss.icon_img}
-                src={javascript_icon}
-                alt="JavaScript"
-              />
-            </div>
-
-            <div className={scss.icon}>
-              <img
-                className={scss.icon_img}
-                src={typescript_icon}
-                alt="TypeScript"
-              />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={react_icon} alt="React" />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={node_icon} alt="Node JS" />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={git_icon} alt="Git" />
-            </div>
-          </div>
         </div>
       </div>
     </>
