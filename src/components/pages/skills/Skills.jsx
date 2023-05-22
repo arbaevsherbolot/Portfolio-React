@@ -37,7 +37,7 @@ export const Skills = () => {
             <span> TypeScript</span>,<span> HTML5</span>, <span> CSS3</span>,
             <span> SCSS</span>,<span> Tailwind</span>, <span>Bootstrap</span>,
             <span> Material-UI</span>, <span>Figma</span>. I can create
-            <span> intuitive user interfaces</span> and <span>responsive</span>
+            <span> intuitive user interfaces</span> and <span>responsive </span>
             web designs. I have a keen eye for
             <span> design aesthetics</span>, which ensures that the
             <span> user experience</span> is fluid and visually appealing.
@@ -47,17 +47,19 @@ export const Skills = () => {
             <span> RESTful APIs</span>, and <span>GraphQL</span>. This knowledge
             allows me to <span>design</span> and implement
             <span> server-side logic</span>, manage <span>data storage </span>
-            and retrieval, and create robust APIs to ensure seamless
-            communication between <span>external</span> and
+            and retrieval, and create robust <span>APIs</span> to ensure
+            seamless communication between <span>external</span> and
             <span> internal</span> systems.
             <br />
-            <br />I have experience with various database systems such as
+            <br />I have experience with various <span>database systems </span>
+            such as
             <span> MySQL</span>,<span> PostgreSQL</span>, <span>MongoDB</span>.
             I can efficiently <span>design</span> and <span>optimize</span>
             <span> database schemas</span>, write complex queries, ensure data
             <span> integrity</span> and <span>security</span>.
             <br />
-            <br />I am able to use <span>Git</span> and other version control
+            <br />I am able to use <span>Git</span> and other
+            <span> version control </span>
             tools to effectively <span>manage code</span> repositories. This
             allows me to <span>collaborate</span> with other
             <span> developers</span>, easily integrate <span>code</span>, and
