@@ -22,12 +22,14 @@ body {
   min-height: 100vh;
 
   font-family: "Proxima Nova", sans-serif;
-  background: #161b22;
+  background: url("https://giffiles.alphacoders.com/215/215837.gif") no-repeat
+    center/cover;
 
-  background-image: radial-gradient(#ffffff54, 0.5px, transparent 0);
-  background-size: 20px 20px;
+  // background: #161b22;
 
-  // background-image: radial-gradient(#ffffff1c, 0.8px, transparent 0);
+  // background-image: radial-gradient(#ffffff54, 0.5px, transparent 0);
+  // background-size: 20px 20px;
+
   // font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 

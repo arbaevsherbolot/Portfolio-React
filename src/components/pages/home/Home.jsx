@@ -34,6 +34,8 @@ export const Home = () => {
                 </span>
                 user-friendly products.
               </h3>
+              {/* 
+              <button className={scss.btn}>Contact me</button> */}
             </div>
           </div>
 

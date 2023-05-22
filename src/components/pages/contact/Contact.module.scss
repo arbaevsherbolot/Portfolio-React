@@ -42,18 +42,21 @@
       display: flex;
       flex-direction: column;
 
-      background-color: #0d1117;
+      background-color: #0e161e7a;
+
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
 
       border-radius: 12px;
       border: 1px solid var(--nav-outline-color);
 
       outline: none;
 
-      transition: 0.4s;
+      // transition: 0.4s;
 
-      &:hover {
-        filter: drop-shadow(0 0 2em #649dffaa);
-      }
+      // &:hover {
+      //   filter: drop-shadow(0 0 2em #649dffaa);
+      // }
 
       .label {
         padding: 0.8rem 0.5rem;
@@ -75,7 +78,7 @@
 
         background: none;
 
-        background-color: #ffffff08;
+        background-color: transparent;
         box-shadow: #ffffff51 0 0 0 1px inset;
 
         border-radius: 0.5rem;
@@ -121,7 +124,8 @@
         font-weight: 600;
         letter-spacing: 0.04rem;
 
-        background: #7b00ff;
+        box-shadow: #bc8cff 0 0 0 1px inset;
+        background: rgba(145, 67, 255, 0.401);
 
         color: #ffffff;
 
@@ -130,7 +134,7 @@
         transition: all 0.4s;
 
         &:hover {
-          background: rgb(145, 67, 255);
+          background: rgba(116, 43, 217, 0.937);
         }
       }
 

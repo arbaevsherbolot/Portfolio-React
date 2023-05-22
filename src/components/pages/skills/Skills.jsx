@@ -111,13 +111,6 @@ export const Skills = () => {
             allows me to <span>collaborate</span> with other
             <span> developers</span>, easily integrate <span>code</span>, and
             track changes throughout the <span>development process</span>.
-            <br />
-            <br />I am well-versed in <span>testing frameworks</span> such as
-            <span> Jest</span>, and <span>Selenium</span> to ensure high
-            <span> quality code</span>. I have experience with Continuous
-            Integration and <span>Deployment (CI/CD)</span> pipelines using
-            tools like <span>Jenkins</span>, <span>Travis CI</span> or
-            <span> GitLab CI</span>.
           </p>
         </div>
       </div>

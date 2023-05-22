@@ -28,6 +28,10 @@
       }
 
       .home_title {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
         h3 {
           color: #fff;
           font-size: 3.8rem;
@@ -45,6 +49,29 @@
             -webkit-box-decoration-break: clone;
           }
         }
+
+        // .btn {
+        //   padding: 1.3rem;
+
+        //   width: 200px;
+
+        //   border: none;
+        //   border-radius: 0.75rem;
+        //   outline: none;
+
+        //   box-shadow: #bc8cff 0 0 0 1px inset;
+        //   background: rgba(145, 67, 255, 0.401);
+
+        //   color: #fff;
+        //   font-size: 1rem;
+        //   font-weight: 600;
+
+        //   transition: 0.4s;
+
+        //   &:hover {
+        //     background: rgba(145, 67, 255, 0.677);
+        //   }
+        // }
       }
     }
 
