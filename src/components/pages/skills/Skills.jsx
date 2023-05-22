@@ -19,7 +19,7 @@ export const Skills = () => {
             As a <span>full-stack developer</span>, I have a variety of
             <span> skills </span>
             that allow me to handle both the <span>front-end</span> and
-            <span>back-end</span>
+            <span> back-end </span>
             aspects of web development. These skills allow me to create
             comprehensive and interactive <span>web applications</span> from
             start to finish.
