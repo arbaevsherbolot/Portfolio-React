@@ -11,7 +11,6 @@
         display: flex;
 
         position: relative;
-        overflow: hidden;
 
         background-color: #0d1117;
 
@@ -22,6 +21,76 @@
 
         &:hover {
           filter: drop-shadow(0 0 2em #649dffaa);
+        }
+
+        .box_circle {
+          position: absolute;
+          top: -60px;
+          right: -50px;
+
+          z-index: 1;
+
+          width: 130px;
+          height: 130px;
+
+          padding: 0.5rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background-color: #13162178;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(6.9px);
+          -webkit-backdrop-filter: blur(6.9px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+
+          @media (max-width: 1325px) {
+            top: -50px;
+            right: -15px;
+
+            width: 100px;
+            height: 100px;
+          }
+
+          .ios_man {
+            width: 60px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .box_circle__image {
+            width: 120px;
+            height: auto;
+
+            border-radius: 50%;
+
+            animation: rotate 9s linear infinite;
+
+            @media (max-width: 1325px) {
+              width: 90px;
+            }
+
+            img {
+              width: 100%;
+
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            @keyframes rotate {
+              100% {
+                -webkit-transform: rotate(1turn);
+                transform: rotate(1turn);
+              }
+            }
+          }
         }
 
         .box_image {
@@ -68,7 +137,7 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1325px) {
   .page_wrapper {
     .page_content {
       .box_container {

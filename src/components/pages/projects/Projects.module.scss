@@ -105,6 +105,26 @@
           }
         }
 
+        @media (max-width: 1325px) {
+          .box_bottom {
+            left: 88%;
+            bottom: 15%;
+
+            .icons {
+              gap: 0.8rem;
+
+              .icon {
+                width: 40px;
+                height: 40px;
+
+                .icon_img {
+                  width: 20px;
+                }
+              }
+            }
+          }
+        }
+
         @media (max-width: 950px) {
           .box_bottom {
             left: 87%;
@@ -208,7 +228,7 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1325px) {
   .page_wrapper {
     .page_content {
       .box_container {

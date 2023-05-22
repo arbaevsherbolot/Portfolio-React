@@ -1,4 +1,6 @@
 import aboutImage from "../../../assets/sherbolot.webp";
+import aboutElementImage from "../../../assets/about-element.png";
+import aboutElementIcon from "../../../assets/ios_programmer.png";
 import scss from "./About.module.scss";
 
 export const About = () => {
@@ -8,6 +10,14 @@ export const About = () => {
         <div className={scss.page_content}>
           <div className={scss.box_container}>
             <div className={scss.box}>
+              <div className={scss.box_circle}>
+                <div className={scss.box_circle__image}>
+                  <img src={aboutElementImage} alt="Icon" />
+                </div>
+
+                <img className={scss.ios_man} src={aboutElementIcon} alt="Icon" />
+              </div>
+
               <div className={scss.box_image}>
                 <img src={aboutImage} alt="Sherbolot Arbaev" />
               </div>
