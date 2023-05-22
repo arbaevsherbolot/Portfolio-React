@@ -20,16 +20,16 @@ export const Skills = () => {
             <span> skills </span>
             that allow me to handle both the <span>front-end</span> and
             <span> back-end </span>
-            aspects of web development. These skills allow me to create
-            comprehensive and interactive <span>web applications</span> from
-            start to finish.
+            aspects of web development. These <span>skills</span> allow me to
+            create comprehensive and interactive <span>web applications </span>
+            from start to finish.
             <br />
             <br />I am proficient in several <span>programming languages </span>
             such as
             <span> JavaScript </span>,<span> TypeScript</span>, and
             <span> Node JS</span>. This versatility allows me to adapt to
-            different project requirements and choose the best language for each
-            task.
+            different <span>project requirements</span> and choose the best
+            language for each task.
             <br />
             <br />
             Having knowledge in <span>front-end</span> technologies such as
@@ -51,7 +51,8 @@ export const Skills = () => {
             seamless communication between <span>external</span> and
             <span> internal</span> systems.
             <br />
-            <br />I have experience with various <span>database systems </span>
+            <br />I have <span>experience</span> with various
+            <span> database systems </span>
             such as
             <span> MySQL</span>,<span> PostgreSQL</span>, <span>MongoDB</span>.
             I can efficiently <span>design</span> and <span>optimize</span>
@@ -68,7 +69,7 @@ export const Skills = () => {
             <br />I am well-versed in <span>testing frameworks</span> such as
             <span> Jest</span>, and <span>Selenium</span> to ensure high
             <span> quality code</span>. I have experience with Continuous
-            Integration and Deployment <span>(CI/CD)</span> pipelines using
+            Integration and <span>Deployment (CI/CD)</span> pipelines using
             tools like <span>Jenkins</span>, <span>Travis CI</span> or
             <span> GitLab CI</span>.
           </p>
