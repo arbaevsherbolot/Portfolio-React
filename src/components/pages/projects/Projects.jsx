@@ -72,6 +72,96 @@ export const Projects = () => {
                 </div>
               </div>
             </div>
+
+            <div className={scss.second_box}>
+              <div className={scss.box_title}>
+                <h3>Project</h3>
+                <p>
+                  I <span>develop</span> the user interface,
+                  <span> Web page development</span>, I create
+                  <span> UX element</span> interactions, Design and mockups of
+                  <span> products</span> for companies.
+                </p>
+              </div>
+
+              <div className={scss.box_image}>
+                <img
+                  src="https://www.pixeden.com/media/k2/galleries/1876/001-tablet-ipad-pro-landscape-app-ui-app-scene-presentation-showcase-web-graphic-design-psd-mockup-pixeden.jpg"
+                  alt="Project"
+                />
+              </div>
+
+              <div className={scss.box_bottom}>
+                <div className={scss.icons}>
+                  <a href="https://next-dentist911.vercel.app/" target="_blank">
+                    <div className={scss.icon}>
+                      <img
+                        className={scss.icon_img}
+                        src={link_icon}
+                        alt="Icon"
+                      />
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/arbaevsherbolot?tab=repositories"
+                    target="_blank">
+                    <div className={scss.icon}>
+                      <img
+                        className={scss.icon_img}
+                        src={github_icon}
+                        alt="Icon"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className={scss.third_box}>
+              <div className={scss.box_title}>
+                <h3>Project</h3>
+                <p>
+                  I <span>develop</span> the user interface,
+                  <span> Web page development</span>, I create
+                  <span> UX element</span> interactions, Design and mockups of
+                  <span> products</span> for companies.
+                </p>
+              </div>
+
+              <div className={scss.box_image}>
+                <img
+                  src="https://www.pixeden.com/media/k2/galleries/1876/001-tablet-ipad-pro-landscape-app-ui-app-scene-presentation-showcase-web-graphic-design-psd-mockup-pixeden.jpg"
+                  alt="Project"
+                />
+              </div>
+
+              <div className={scss.box_bottom}>
+                <div className={scss.icons}>
+                  <a href="https://next-dentist911.vercel.app/" target="_blank">
+                    <div className={scss.icon}>
+                      <img
+                        className={scss.icon_img}
+                        src={link_icon}
+                        alt="Icon"
+                      />
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/arbaevsherbolot?tab=repositories"
+                    target="_blank">
+                    <div className={scss.icon}>
+                      <img
+                        className={scss.icon_img}
+                        src={github_icon}
+                        alt="Icon"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
