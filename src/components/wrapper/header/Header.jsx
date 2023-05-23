@@ -42,9 +42,9 @@ export const Header = () => {
 
   return (
     <>
-      <div
+      {/* <div
         className={styles.navbar_top}
-        style={{ width: `${loadEffect}%` }}></div>
+        style={{ width: `${loadEffect}%` }}></div> */}
       <div className={!activeHeader ? styles.navbar : styles.navbar_active}>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="logo" />

@@ -86,7 +86,7 @@ export const Projects = () => {
 
               <div className={scss.box_image}>
                 <img
-                  src="https://www.pixeden.com/media/k2/galleries/1876/001-tablet-ipad-pro-landscape-app-ui-app-scene-presentation-showcase-web-graphic-design-psd-mockup-pixeden.jpg"
+                  src="https://cdn.dribbble.com/users/5693896/screenshots/14832331/screens_iso-preview_4x.jpg"
                   alt="Project"
                 />
               </div>
@@ -131,7 +131,7 @@ export const Projects = () => {
 
               <div className={scss.box_image}>
                 <img
-                  src="https://www.pixeden.com/media/k2/galleries/1876/001-tablet-ipad-pro-landscape-app-ui-app-scene-presentation-showcase-web-graphic-design-psd-mockup-pixeden.jpg"
+                  src="https://cdn.dribbble.com/users/5693896/screenshots/14832331/screens_iso-preview_4x.jpg"
                   alt="Project"
                 />
               </div>

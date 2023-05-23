@@ -17,7 +17,9 @@ export const Modal = ({ open, close }) => {
             alt="Sherbolot Arbaev CV"
           />
 
-          <div onClick={close} className={styles.close_btn}></div>
+          <button onClick={close} className={styles.close_btn}>
+            Close
+          </button>
         </div>
       </div>
     </>
