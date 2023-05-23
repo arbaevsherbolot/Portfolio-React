@@ -65,14 +65,14 @@ export const Contact = () => {
 
   const notify = () => {
     toast.success("Your form has been submitted successfully!", {
-      position: "bottom-center",
+      position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "colored",
+      theme: "dark",
     });
   };
 
@@ -104,27 +104,24 @@ export const Contact = () => {
       }));
     }
 
-    setData((prev) => ({
-      ...prev,
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    }));
-
-    errName.innerText = "";
-    errEmail.innerText = "";
-
-    notify();
-
-    setSendButton(!sendButton);
-
     try {
       await axios.post(API_URL, {
         chat_id: CHAT_ID,
         parse_mode: "html",
         text: messageModel(),
       });
+
+      setSendButton(!sendButton);
+
+      setData((prev) => ({
+        ...prev,
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      }));
+
+      notify();
 
       setIsSend(!isSend);
 
@@ -134,7 +131,7 @@ export const Contact = () => {
 
       setSendButton(sendButton);
     } catch (err) {
-      console.log(err);
+      alert(err.message);
     }
   }
 
