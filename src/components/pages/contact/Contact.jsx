@@ -7,42 +7,60 @@ import styles from "./Contact.module.scss";
 export const Contact = () => {
   document.title = "Sherbolot Arbaev | Contact";
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   const [isSend, setIsSend] = useState(false);
-
   const [sendButton, setSendButton] = useState(false);
+  const [errors, setErrors] = useState({
+    name: "",
+    status: false,
+    message: "",
+  });
 
   const TOKEN = "6041880464:AAGK4k-f1Ym0eK1RK67wwE0AQ5Xh2VTBy2s";
   const CHAT_ID = "-1001509773637";
   const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   const messageModel = () => {
-    let messageTG = `Name: <b>${name}</b>\n`;
-    messageTG += `Email: <b>${email}</b>\n`;
-    messageTG += `Subject: <b>${subject}</b>\n`;
-    messageTG += `Message: <b>${message}</b>\n`;
+    let messageTG = `Name: <b>${data.name}</b>\n`;
+    messageTG += `Email: <b>${data.email}</b>\n`;
+    messageTG += `Subject: <b>${data.subject}</b>\n`;
+    messageTG += `Message: <b>${data.message}</b>\n`;
 
     return messageTG;
   };
 
   const handleChangeName = (e) => {
-    setName(e.target.value);
+    setData((prev) => ({
+      ...prev,
+      name: e.target.value,
+    }));
   };
 
   const handleChangeEmail = (e) => {
-    setEmail(e.target.value);
+    setData((prev) => ({
+      ...prev,
+      email: e.target.value,
+    }));
   };
 
   const handleChangeSubject = (e) => {
-    setSubject(e.target.value);
+    setData((prev) => ({
+      ...prev,
+      subject: e.target.value,
+    }));
   };
 
   const handleChangeMessage = (e) => {
-    setMessage(e.target.value);
+    setData((prev) => ({
+      ...prev,
+      message: e.target.value,
+    }));
   };
 
   const notify = () => {
@@ -61,22 +79,38 @@ export const Contact = () => {
   async function sendData(e) {
     e.preventDefault();
 
-    if (!validateName(name)) {
-      errName.innerText = "Please enter a valid name!";
+    if (!validateName(data.name)) {
+      setErrors((prev) => ({
+        ...prev,
+        name: "Name",
+        status: true,
+        message: "Please enter a valid name!",
+      }));
       return;
-    } else if (!validateEmail(email)) {
-      errEmail.innerText = "Please enter a valid e-mail adress!";
-      errName.innerText = "";
+    } else if (!validateEmail(data.email)) {
+      setErrors((prev) => ({
+        ...prev,
+        name: "Email",
+        status: true,
+        message: "Please enter a valid e-mail adress!",
+      }));
       return;
     } else {
-      errName.innerText = "";
-      errEmail.innerText = "";
+      setErrors((prev) => ({
+        ...prev,
+        name: "",
+        status: false,
+        message: "",
+      }));
     }
 
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
+    setData((prev) => ({
+      ...prev,
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    }));
 
     errName.innerText = "";
     errEmail.innerText = "";
@@ -129,27 +163,32 @@ export const Contact = () => {
               required
               className={styles.input}
               type="text"
-              value={name}
+              value={data.name}
               onChange={handleChangeName}
             />
-            <span id="errName"></span>
+
+            {errors.name === "Name" && errors.status === true ? (
+              <span className={styles.error}>{errors.message}</span>
+            ) : null}
 
             <div className={styles.label}>E-mail*</div>
             <input
               required
               className={styles.input}
               type="text"
-              value={email}
+              value={data.email}
               onChange={handleChangeEmail}
             />
-            <span id="errEmail"></span>
+            {errors.name === "Email" && errors.status === true ? (
+              <span className={styles.error}>{errors.message}</span>
+            ) : null}
 
             <div className={styles.label}>Subject*</div>
             <input
               required
               className={styles.input}
               type="text"
-              value={subject}
+              value={data.subject}
               onChange={handleChangeSubject}
             />
 
@@ -157,7 +196,7 @@ export const Contact = () => {
             <textarea
               rows={8}
               className={styles.textarea}
-              value={message}
+              value={data.message}
               onChange={handleChangeMessage}></textarea>
 
             <button
@@ -166,18 +205,7 @@ export const Contact = () => {
               {sendButton ? "Sending..." : "Submit"}
             </button>
           </form>
-          <ToastContainer
-            position="bottom-center"
-            autoClose={6000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="colored"
-          />
+          <ToastContainer />
         </div>
       </div>
     </>

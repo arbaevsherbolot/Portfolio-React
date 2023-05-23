@@ -42,7 +42,7 @@
       display: flex;
       flex-direction: column;
 
-      background-color: #0e161e7a;
+      background-color: #0e161ecd;
 
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
@@ -59,14 +59,14 @@
       // }
 
       .label {
-        padding: 0.8rem 0.5rem;
+        padding: 1.3rem 0 0.7rem 0.4rem;
         font-size: 1.1rem;
         font-weight: 600;
-        color: #8b949e;
+        color: #afbac7;
       }
 
-      span {
-        padding: 1rem 0 0.5rem 0.2rem;
+      .error {
+        padding: 1rem 0 0 0.2rem;
         color: rgb(153, 255, 221);
       }
 
