@@ -19,7 +19,8 @@ export const Home = () => {
 
             <div className={scss.home_title}>
               <h3>
-                Hi, I'm Sherbolot <span>(Sher)</span>
+                Hi, I'm Sherbolot
+                <span className={scss.second_name}> (Sher)</span>
                 <br />I
                 <span className={scss.type}>
                   <Typewriter
