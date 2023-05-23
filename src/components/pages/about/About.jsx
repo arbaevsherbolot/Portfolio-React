@@ -1,4 +1,4 @@
-import aboutImage from "../../../assets/sherbolot.webp";
+import aboutImage from "../../../assets/sherbolot.png";
 import aboutElementImage from "../../../assets/about-element.png";
 import aboutElementIcon from "../../../assets/ios_programmer.png";
 import scss from "./About.module.scss";
