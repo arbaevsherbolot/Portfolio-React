@@ -120,7 +120,11 @@ export const Login = () => {
     <>
       <div className={styles.page}>
         <form onSubmit={sendData} className={styles.form}>
-          <h3 className={styles.title}>Admin Page</h3>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1053/1053614.png"
+            alt="Image"
+            className={styles.form_img}
+          />
 
           <input
             required
