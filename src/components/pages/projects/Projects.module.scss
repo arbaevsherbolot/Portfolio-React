@@ -133,6 +133,8 @@
       width: 50%;
       overflow: hidden;
 
+      border-radius: 0 0 0 0.75rem;
+
       @media (max-width: 1025px) {
         width: 100%;
       }
@@ -140,8 +142,6 @@
       img {
         width: 100%;
         height: 100%;
-
-        border-radius: 0 0 0 0.75rem;
 
         transition: 0.4s;
 
@@ -159,6 +159,8 @@
       width: 50%;
       overflow: hidden;
 
+      border-radius: 0 0 0.75rem 0;
+
       @media (max-width: 1025px) {
         width: 100%;
       }
@@ -166,8 +168,6 @@
       img {
         width: 100%;
         height: 100%;
-
-        border-radius: 0 0 0.75rem 0;
 
         transition: 0.4s;
 
@@ -281,6 +281,8 @@
       width: 50%;
       overflow: hidden;
 
+      border-radius: 0 0.75rem 0.75rem 0;
+
       @media (max-width: 1025px) {
         width: 100%;
       }
@@ -288,8 +290,6 @@
       img {
         width: 100%;
         height: 100%;
-
-        border-radius: 0 0.75rem 0.75rem 0;
 
         transition: 0.4s;
 
