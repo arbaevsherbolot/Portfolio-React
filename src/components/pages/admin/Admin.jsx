@@ -1,7 +1,5 @@
-import { useEffect } from "react";
 import { useAuthUser } from "react-auth-kit";
 import { useSignOut } from "react-auth-kit";
-import { useNavigate } from "react-router-dom";
 import icon from "../../../assets/ios_programmer.png";
 import post_img from "../../../assets/full-stack.jpg";
 import styles from "./Admin.module.scss";
@@ -10,25 +8,11 @@ export const Admin = () => {
   const auth = useAuthUser();
   const signOut = useSignOut();
 
-  const navigate = useNavigate();
-
   document.title = "Sherbolot Arbaev | Admin";
 
   const HandleSignOut = () => {
     signOut();
   };
-
-  useEffect(() => {
-    const HandleNavigate = () => {
-      if (auth()) {
-        navigate("/admin");
-      } else {
-        navigate("/login");
-      }
-    };
-
-    HandleNavigate();
-  });
 
   const posts = [
     {
