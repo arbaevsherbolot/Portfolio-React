@@ -30,6 +30,30 @@ export const Admin = () => {
     HandleNavigate();
   });
 
+  const posts = [
+    {
+      img: post_img,
+      title: "Sherbolot Arbaev",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam eos inventore vel distinctio nesciunt asperiores dolore nemo eveniet iusto nihil laborum velit amet magni,nostrum totam cupiditate accusamus similique eius?",
+      date: "25-05-2023",
+    },
+    {
+      img: post_img,
+      title: "Sherbolot Arbaev",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam eos inventore vel distinctio nesciunt asperiores dolore nemo eveniet iusto nihil laborum velit amet magni,nostrum totam cupiditate accusamus similique eius?",
+      date: "25-05-2023",
+    },
+    {
+      img: post_img,
+      title: "Sherbolot Arbaev",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam eos inventore vel distinctio nesciunt asperiores dolore nemo eveniet iusto nihil laborum velit amet magni,nostrum totam cupiditate accusamus similique eius?",
+      date: "25-05-2023",
+    },
+  ];
+
   return (
     <>
       {auth() ? (
@@ -52,107 +76,17 @@ export const Admin = () => {
           </div>
 
           <div className={styles.content}>
-            <div className={styles.post}>
-              <img src={post_img} alt="Post-Image" className={styles.img} />
+            {posts.map((post, i) => (
+              <div key={i} className={styles.post}>
+                <img src={post.img} alt="Post-Image" className={styles.img} />
 
-              <div className={styles.text}>
-                <span className={styles.date}>05.24.2023</span>
-                <h3 className={styles.title}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquam eos inventore vel distinctio nesciunt asperiores
-                  dolore nemo eveniet iusto nihil laborum velit amet magni,
-                  nostrum totam cupiditate accusamus similique eius?
-                </p>
+                <div className={styles.text}>
+                  <span className={styles.date}>{post.date}</span>
+                  <h3 className={styles.title}>{post.title}</h3>
+                  <p className={styles.desc}>{post.description}</p>
+                </div>
               </div>
-            </div>
-
-            <div className={styles.post}>
-              <img src={post_img} alt="Post-Image" className={styles.img} />
-
-              <div className={styles.text}>
-                <span className={styles.date}>05.24.2023</span>
-                <h3 className={styles.title}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquam eos inventore vel distinctio nesciunt asperiores
-                  dolore nemo eveniet iusto nihil laborum velit amet magni,
-                  nostrum totam cupiditate accusamus similique eius?
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.post}>
-              <img src={post_img} alt="Post-Image" className={styles.img} />
-
-              <div className={styles.text}>
-                <span className={styles.date}>05.24.2023</span>
-                <h3 className={styles.title}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquam eos inventore vel distinctio nesciunt asperiores
-                  dolore nemo eveniet iusto nihil laborum velit amet magni,
-                  nostrum totam cupiditate accusamus similique eius?
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.post}>
-              <img src={post_img} alt="Post-Image" className={styles.img} />
-
-              <div className={styles.text}>
-                <span className={styles.date}>05.24.2023</span>
-                <h3 className={styles.title}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquam eos inventore vel distinctio nesciunt asperiores
-                  dolore nemo eveniet iusto nihil laborum velit amet magni,
-                  nostrum totam cupiditate accusamus similique eius?
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.post}>
-              <img src={post_img} alt="Post-Image" className={styles.img} />
-
-              <div className={styles.text}>
-                <span className={styles.date}>05.24.2023</span>
-                <h3 className={styles.title}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquam eos inventore vel distinctio nesciunt asperiores
-                  dolore nemo eveniet iusto nihil laborum velit amet magni,
-                  nostrum totam cupiditate accusamus similique eius?
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.post}>
-              <img src={post_img} alt="Post-Image" className={styles.img} />
-
-              <div className={styles.text}>
-                <span className={styles.date}>05.24.2023</span>
-                <h3 className={styles.title}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquam eos inventore vel distinctio nesciunt asperiores
-                  dolore nemo eveniet iusto nihil laborum velit amet magni,
-                  nostrum totam cupiditate accusamus similique eius?
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       ) : null}
