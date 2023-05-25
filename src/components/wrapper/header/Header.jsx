@@ -10,7 +10,6 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [activeHeader, setActiveHeader] = useState(false);
-  const [loadEffect, setLoadEffect] = useState(0);
 
   const quickView = () => {
     setOpenModal(true);
@@ -24,27 +23,12 @@ export const Header = () => {
     }
   };
 
-  const onLoadEffect = () => {
-    const windowScroll = document.documentElement.scrollTop;
-    const windowHeight =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
-    const scrolled = (windowScroll / windowHeight) * 100;
-
-    setLoadEffect(scrolled);
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", activeHeaderScroll);
-    window.addEventListener("scroll", onLoadEffect);
   }, []);
 
   return (
     <>
-      {/* <div
-        className={styles.navbar_top}
-        style={{ width: `${loadEffect}%` }}></div> */}
       <div className={!activeHeader ? styles.navbar : styles.navbar_active}>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="logo" />

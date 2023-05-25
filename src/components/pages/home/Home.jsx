@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { About } from "../about/About";
 import { Projects } from "../projects/Projects";
@@ -8,10 +9,29 @@ import scss from "./Home.module.scss";
 export const Home = () => {
   document.title = "Sherbolot Arbaev | Portfolio";
 
+  const [loadEffect, setLoadEffect] = useState(0);
+
+  const onLoadEffect = () => {
+    const windowScroll = document.documentElement.scrollTop;
+    const windowHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const scrolled = (windowScroll / windowHeight) * 100;
+
+    setLoadEffect(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onLoadEffect);
+  }, []);
+
   return (
     <>
       <div className={scss.page_wrapper}>
         <div className={scss.container}>
+          <div className={scss.load} style={{ width: `${loadEffect}%` }}></div>
+
           <div className={scss.home_content}>
             <div className={scss.home_image}>
               <img src={logo} alt="IOS" />

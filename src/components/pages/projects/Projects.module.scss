@@ -19,10 +19,16 @@
     display: flex;
     gap: 1.5rem;
 
+    transition: 0.4s;
+
     @media (max-width: 1325px) {
       align-items: center;
       justify-content: center;
       flex-wrap: wrap-reverse;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 0 2em #649dffaa);
     }
 
     .box_content {
@@ -119,14 +125,13 @@
     display: flex;
     gap: 0.5rem;
 
-    overflow: hidden;
-
     @media (max-width: 1025px) {
       flex-wrap: wrap;
     }
 
     .left_content {
       width: 50%;
+      overflow: hidden;
 
       @media (max-width: 1025px) {
         width: 100%;
@@ -138,6 +143,12 @@
 
         border-radius: 0 0 0 0.75rem;
 
+        transition: 0.4s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
         @media (max-width: 1025px) {
           border-radius: 0;
         }
@@ -146,6 +157,7 @@
 
     .right_content {
       width: 50%;
+      overflow: hidden;
 
       @media (max-width: 1025px) {
         width: 100%;
@@ -156,6 +168,12 @@
         height: 100%;
 
         border-radius: 0 0 0.75rem 0;
+
+        transition: 0.4s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
 
         @media (max-width: 1025px) {
           border-radius: 0 0 0.75rem 0.75rem;
@@ -261,6 +279,7 @@
 
     .right_content {
       width: 50%;
+      overflow: hidden;
 
       @media (max-width: 1025px) {
         width: 100%;
@@ -271,6 +290,12 @@
         height: 100%;
 
         border-radius: 0 0.75rem 0.75rem 0;
+
+        transition: 0.4s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
 
         @media (max-width: 1025px) {
           border-radius: 0 0 0.75rem 0.75rem;

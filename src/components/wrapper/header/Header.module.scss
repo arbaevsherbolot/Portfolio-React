@@ -1,25 +1,10 @@
-.navbar_top {
-  position: fixed;
-  top: 88px;
-  left: 0;
-
-  z-index: 201;
-  height: 1px;
-
-  background-color: #a2facfd9;
-
-  @media (max-width: 900px) {
-    top: 69px;
-  }
-}
-
 .navbar,
 .navbar_active {
   position: fixed;
   top: 0;
   left: 0;
 
-  z-index: 200;
+  z-index: 100;
 
   width: 100vw;
   padding: 1.4rem 8%;

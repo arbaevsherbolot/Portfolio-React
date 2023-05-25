@@ -82,9 +82,19 @@ export const Projects = () => {
             </div>
 
             <div className={scss.box_icons}>
-              <img src={github_icon} alt="Github-Icon" className={scss.icon} />
+              <a
+                href="https://github.com/arbaevsherbolot?tab=repositories"
+                target="_blank">
+                <img
+                  src={github_icon}
+                  alt="Github-Icon"
+                  className={scss.icon}
+                />
+              </a>
 
-              <img src={link_icon} alt="Link-Icon" className={scss.icon} />
+              <a href="https://next-dentist911.vercel.app/" target="_blank">
+                <img src={link_icon} alt="Link-Icon" className={scss.icon} />
+              </a>
             </div>
           </div>
 
@@ -110,9 +120,19 @@ export const Projects = () => {
             </div>
 
             <div className={scss.box_icons}>
-              <img src={github_icon} alt="Github-Icon" className={scss.icon} />
+              <a
+                href="https://github.com/arbaevsherbolot?tab=repositories"
+                target="_blank">
+                <img
+                  src={github_icon}
+                  alt="Github-Icon"
+                  className={scss.icon}
+                />
+              </a>
 
-              <img src={link_icon} alt="Link-Icon" className={scss.icon} />
+              <a href="https://next-dentist911.vercel.app/" target="_blank">
+                <img src={link_icon} alt="Link-Icon" className={scss.icon} />
+              </a>
             </div>
           </div>
 
