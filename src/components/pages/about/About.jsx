@@ -15,7 +15,11 @@ export const About = () => {
                   <img src={aboutElementImage} alt="Icon" />
                 </div>
 
-                <img className={scss.ios_man} src={aboutElementIcon} alt="Icon" />
+                <img
+                  className={scss.ios_man}
+                  src={aboutElementIcon}
+                  alt="Icon"
+                />
               </div>
 
               <div className={scss.box_image}>
@@ -28,14 +32,14 @@ export const About = () => {
                   My name is <span>Sherbolot Arbaev</span>, I am a student
                   <span> Full-Stack software engineer</span>. Develop and
                   maintained full stack web applications using
-                  <span> Node.js, React, SCSS, MySQL, and TypeScript. </span>
+                  <span> JavaScript, TypeScript, Node.js, React, Next JS. </span>
                   Collaborated with cross-functional teams including designers,
                   product managers, and QA engineers to deliver high-quality
-                  software solutions. Designed and implemented{" "}
-                  <span>RESTful APIs </span> for seamless integration between{" "}
-                  <span>front-end</span> and <span>back-end</span> systems.
-                  Implemented responsive user interfaces using modern{" "}
-                  <span>front-end libraries</span> and <span>frameworks</span>.
+                  software solutions. Designed and implemented
+                  <span> RESTful APIs </span> for seamless integration between
+                  <span> front-end</span> and <span>back-end</span> systems.
+                  Implemented responsive user interfaces using modern
+                  <span> front-end libraries</span> and <span>frameworks</span>.
                   Conducted code reviews and provided constructive feedback to
                   peers to maintain code quality and best practices.
                   Participated in agile development processes, including sprint
