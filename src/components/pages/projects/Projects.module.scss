@@ -107,9 +107,11 @@
 
     .box_img {
       width: 50%;
+      padding-right: 2rem;
 
       @media (max-width: 1325px) {
         width: 100%;
+        padding-right: 0;
       }
 
       img {
