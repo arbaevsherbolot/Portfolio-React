@@ -14,31 +14,35 @@
 
     position: relative;
 
+    margin-bottom: 3rem;
+
     &::before,
     &::after {
       content: "";
       position: absolute;
       top: 0;
-      bottom: 0;
 
-      width: 10px;
+      width: 10rem;
+      height: 100%;
 
-      box-shadow: 0 0 13px #0e1116;
+      z-index: 20;
     }
 
     &::before {
-      left: -10px;
+      left: 0;
+      background: linear-gradient(to right, #161b22 0%, transparent 100%);
     }
 
     &::after {
-      right: -10px;
+      right: 0;
+      background: linear-gradient(to left, #161b22 0%, transparent 100%);
     }
 
     .title {
       padding: 0 15px;
 
       color: transparent;
-      -webkit-text-stroke: 1px rgba(0, 255, 208, 0.765);
+      -webkit-text-stroke: 1px rgba(0, 255, 208, 0.975);
       font-size: 3.6rem;
       font-weight: 800;
       text-transform: uppercase;
