@@ -37,7 +37,7 @@ export const Login = () => {
     setShowPassword(!showPassword);
   };
 
-  const server_url = "https://auth-node.up.railway.app/auth";
+  const server_url = "http://localhost:2006/auth";
 
   const notifySuccess = () => {
     return toast.success("Successfully logged in", {
