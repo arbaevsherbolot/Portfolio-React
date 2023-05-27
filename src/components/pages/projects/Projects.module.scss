@@ -1,8 +1,63 @@
 .boxes_container {
+  padding-top: 6rem;
+
   display: flex;
   flex-direction: column;
 
   gap: 0.5rem;
+
+  .page_title {
+    width: 100%;
+
+    display: flex;
+    overflow: hidden;
+
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      width: 10px;
+
+      box-shadow: 0 0 13px #0e1116;
+    }
+
+    &::before {
+      left: -10px;
+    }
+
+    &::after {
+      right: -10px;
+    }
+
+    .title {
+      padding: 0 15px;
+
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(0, 255, 208, 0.765);
+      font-size: 3.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+
+      animation: anim 6s linear infinite;
+
+      @keyframes anim {
+        from {
+          transform: translateZ(0);
+        }
+        to {
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+    }
+  }
 
   .big_box {
     width: 100%;

@@ -9,6 +9,16 @@ export const Projects = () => {
   return (
     <>
       <div className={scss.boxes_container}>
+        <div className={scss.page_title}>
+          <h2 className={scss.title}>Projects</h2>
+          <h2 className={scss.title}>Projects</h2>
+          <h2 className={scss.title}>Projects</h2>
+          <h2 className={scss.title}>Projects</h2>
+          <h2 className={scss.title}>Projects</h2>
+          <h2 className={scss.title}>Projects</h2>
+          <h2 className={scss.title}>Projects</h2>
+        </div>
+
         <div className={scss.big_box}>
           <div className={scss.box_content}>
             <div className={scss.box_text}>
