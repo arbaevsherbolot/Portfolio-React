@@ -68,6 +68,10 @@
       .error {
         padding: 1rem 0 0 0.2rem;
         color: rgb(153, 255, 221);
+
+        @media (max-width: 1325px) {
+          font-size: 0.9rem;
+        }
       }
 
       .input,

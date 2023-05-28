@@ -84,7 +84,7 @@ export const Contact = () => {
         ...prev,
         name: "Name",
         status: true,
-        message: "Please enter a valid name!",
+        message: "Please enter a valid name! example: (Sherbolot Arbaev)",
       }));
       return;
     } else if (!validateEmail(data.email)) {
@@ -92,7 +92,8 @@ export const Contact = () => {
         ...prev,
         name: "Email",
         status: true,
-        message: "Please enter a valid e-mail adress!",
+        message:
+          "Please enter a valid e-mail adress! example: (example@example.com)",
       }));
       return;
     } else {
@@ -136,7 +137,7 @@ export const Contact = () => {
   }
 
   const validateName = (nameS) => {
-    const regex = /^[\w\s]{2,30}$/;
+    const regex = /^[a-zA-Z]+ [a-zA-Z]+$/;
     return regex.test(nameS);
   };
 
@@ -155,7 +156,7 @@ export const Contact = () => {
             </div>
           </div>
           <form onSubmit={sendData} className={styles.form}>
-            <div className={styles.label}>Name*</div>
+            <div className={styles.label}>Full Name*</div>
             <input
               required
               className={styles.input}
