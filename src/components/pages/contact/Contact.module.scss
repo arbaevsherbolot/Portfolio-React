@@ -105,6 +105,7 @@
       .textarea {
         max-width: 480px;
         min-height: 3.3rem;
+        max-height: 600px;
         min-width: 3.3rem;
         font-family: "Proxima Nova", sans-serif;
         margin-bottom: 1.5rem;
@@ -140,6 +141,7 @@
 
       .form_btn_send {
         background: rgb(199, 160, 254);
+        cursor: not-allowed;
       }
     }
   }

@@ -65,7 +65,7 @@ export const Contact = () => {
 
   const notify = () => {
     toast.success("Your form has been submitted successfully!", {
-      position: "bottom-right",
+      position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -104,14 +104,14 @@ export const Contact = () => {
       }));
     }
 
+    setSendButton(!sendButton);
+
     try {
       await axios.post(API_URL, {
         chat_id: CHAT_ID,
         parse_mode: "html",
         text: messageModel(),
       });
-
-      setSendButton(!sendButton);
 
       setData((prev) => ({
         ...prev,
@@ -197,6 +197,7 @@ export const Contact = () => {
               onChange={handleChangeMessage}></textarea>
 
             <button
+              disabled={sendButton}
               className={sendButton ? styles.form_btn_send : styles.form_btn}
               type="submit">
               {sendButton ? "Sending..." : "Submit"}
