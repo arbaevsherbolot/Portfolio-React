@@ -93,7 +93,7 @@ export const Contact = () => {
         name: "Email",
         status: true,
         message:
-          "Please enter a valid e-mail adress! example: (example@example.com)",
+          "Please enter a valid email adress! example: (example@example.com)",
       }));
       return;
     } else {
@@ -169,7 +169,7 @@ export const Contact = () => {
               <span className={styles.error}>{errors.message}</span>
             ) : null}
 
-            <div className={styles.label}>E-mail*</div>
+            <div className={styles.label}>Email*</div>
             <input
               required
               className={styles.input}
