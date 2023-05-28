@@ -48,7 +48,7 @@
       -webkit-backdrop-filter: blur(4px);
 
       border-radius: 12px;
-      border: 1px solid var(--nav-outline-color);
+      border: 1px solid #232930;
 
       outline: none;
 
@@ -79,7 +79,7 @@
         background: none;
 
         background-color: transparent;
-        box-shadow: #ffffff51 0 0 0 1px inset;
+        box-shadow: #232930 0 0 0 1px inset;
 
         border-radius: 0.5rem;
         border: none;
@@ -92,6 +92,7 @@
 
         &:focus {
           outline: none;
+          box-shadow: #414d5a 0 0 0 1px inset;
         }
 
         &::placeholder {
