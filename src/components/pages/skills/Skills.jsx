@@ -1,12 +1,4 @@
 import scss from "./Skills.module.scss";
-import html_icon from "../../../assets/svg/html.svg";
-import css_icon from "../../../assets/svg/css.svg";
-import git_icon from "../../../assets/svg/git.svg";
-import tailwind_icon from "../../../assets/svg/tailwind.svg";
-import javascript_icon from "../../../assets/svg/javascript.svg";
-import typescript_icon from "../../../assets/svg/typescript.svg";
-import react_icon from "../../../assets/svg/react.svg";
-import node_icon from "../../../assets/svg/node.svg";
 
 export const Skills = () => {
   return (
@@ -14,52 +6,6 @@ export const Skills = () => {
       <div className={scss.container}>
         <div className={scss.title}>
           <h1>Skills</h1>
-
-          <div className={scss.icons}>
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={html_icon} alt="HTML" />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={css_icon} alt="CSS" />
-            </div>
-
-            <div className={scss.icon}>
-              <img
-                className={scss.icon_img}
-                src={tailwind_icon}
-                alt="Tailwind"
-              />
-            </div>
-
-            <div className={scss.icon}>
-              <img
-                className={scss.icon_img}
-                src={javascript_icon}
-                alt="JavaScript"
-              />
-            </div>
-
-            <div className={scss.icon}>
-              <img
-                className={scss.icon_img}
-                src={typescript_icon}
-                alt="TypeScript"
-              />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={react_icon} alt="React" />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={node_icon} alt="Node JS" />
-            </div>
-
-            <div className={scss.icon}>
-              <img className={scss.icon_img} src={git_icon} alt="Git" />
-            </div>
-          </div>
 
           <p>
             As a <span>full-stack developer</span>, I have a variety of
@@ -69,15 +15,9 @@ export const Skills = () => {
             aspects of web development. These <span>skills</span> allow me to
             create comprehensive and interactive <span>web applications </span>
             from start to finish.
-            <br />
-            <br />I am proficient in several <span>programming languages </span>
-            such as
-            <span> JavaScript </span>,<span> TypeScript</span>, and
-            <span> Node JS</span>. This versatility allows me to adapt to
-            different <span>project requirements</span> and choose the best
-            language for each task.
-            <br />
-            <br />
+          </p>
+
+          <p>
             Having knowledge in <span>front-end</span> technologies such as
             <span> JavaScript</span>, <span>React</span>,
             <span> TypeScript</span>,<span> HTML5</span>, <span> CSS3</span>,
@@ -87,8 +27,19 @@ export const Skills = () => {
             web designs. I have a keen eye for
             <span> design aesthetics</span>, which ensures that the
             <span> user experience</span> is fluid and visually appealing.
-            <br />
-            <br />I am well versed in <span>back-end</span> technologies such as
+          </p>
+
+          <p>
+            I am proficient in several <span>programming languages </span>
+            such as
+            <span> JavaScript </span>,<span> TypeScript</span>, and
+            <span> Node JS</span>. This versatility allows me to adapt to
+            different <span>project requirements</span> and choose the best
+            language for each task.
+          </p>
+
+          <p>
+            I am well versed in <span>back-end</span> technologies such as
             <span> Node.js</span>, <span>Express</span>,
             <span> RESTful APIs</span>, and <span>GraphQL</span>. This knowledge
             allows me to <span>design</span> and implement
@@ -96,21 +47,25 @@ export const Skills = () => {
             and retrieval, and create robust <span>APIs</span> to ensure
             seamless communication between <span>external</span> and
             <span> internal</span> systems.
-            <br />
-            <br />I have <span>experience</span> with various
+          </p>
+
+          <p>
+            I am able to use <span>Git</span> and other
+            <span> version control </span>
+            tools to effectively <span>manage code</span> repositories. This
+            allows me to <span>collaborate</span> with other
+            <span> developers</span>, easily integrate <span>code</span>, and
+            track changes throughout the <span>development process</span>.
+          </p>
+
+          <p>
+            I have <span>experience</span> with various
             <span> database systems </span>
             such as
             <span> MySQL</span>,<span> PostgreSQL</span>, <span>MongoDB</span>.
             I can efficiently <span>design</span> and <span>optimize</span>
             <span> database schemas</span>, write complex queries, ensure data
             <span> integrity</span> and <span>security</span>.
-            <br />
-            <br />I am able to use <span>Git</span> and other
-            <span> version control </span>
-            tools to effectively <span>manage code</span> repositories. This
-            allows me to <span>collaborate</span> with other
-            <span> developers</span>, easily integrate <span>code</span>, and
-            track changes throughout the <span>development process</span>.
           </p>
         </div>
       </div>

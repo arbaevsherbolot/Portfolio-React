@@ -26,7 +26,7 @@ export const Projects = () => {
 
               <p className={scss.desc}>
                 I created a <span>ChatGPT bot</span> in <span>Telegram </span>
-                using <span>Node.js</span> and the <br />
+                using <span>Node.js</span> and the
                 <span> node-telegram-bot-api </span>
                 library. By connecting it to the <span>Telegram API</span> and
                 integrating the <span>GPT-3.5</span> model, I developed an
