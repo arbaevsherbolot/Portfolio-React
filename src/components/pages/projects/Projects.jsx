@@ -3,6 +3,8 @@ import github_icon from "../../../assets/svg/github_icon.svg";
 import project_img from "../../../assets/ChatGPT-Telegram-Project.jpg";
 import project_img2 from "../../../assets/ChatGPT-Telegram.png";
 import project_img3 from "../../../assets/ChatGPT-Telegram-Mockup.png";
+import project_img4 from "../../../assets/ortodont_project.png";
+import project_img5 from "../../../assets/matrade_project.png";
 import scss from "./Projects.module.scss";
 
 export const Projects = () => {
@@ -111,7 +113,7 @@ export const Projects = () => {
         <div className={scss.box}>
           <div className={scss.left_content}>
             <div className={scss.box_text}>
-              <h3 className={scss.title}>Project</h3>
+              <h3 className={scss.title}>M-A Trade</h3>
 
               <p className={scss.desc}>
                 I <span>develop</span> the user interface,
@@ -139,10 +141,7 @@ export const Projects = () => {
           </div>
 
           <div className={scss.right_content}>
-            <img
-              src="https://cdn.dribbble.com/users/5693896/screenshots/14832331/screens_iso-preview_4x.jpg"
-              alt="Project-Image"
-            />
+            <img src={project_img5} alt="Project-Image" />
           </div>
         </div>
       </div>
