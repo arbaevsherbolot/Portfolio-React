@@ -19,10 +19,6 @@
 
         transition: 0.4s;
 
-        &:hover {
-          filter: drop-shadow(0 0 2em #649dffaa);
-        }
-
         .box_circle {
           position: absolute;
           top: -60px;
@@ -162,8 +158,6 @@
       .box_container {
         .box {
           flex-direction: column-reverse;
-
-          filter: drop-shadow(0 0 2em #649dffaa);
 
           .box_image {
             width: 100%;

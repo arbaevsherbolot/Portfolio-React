@@ -78,18 +78,10 @@
     display: flex;
     gap: 1.5rem;
 
-    transition: 0.4s;
-
     @media (max-width: 1325px) {
       align-items: center;
       justify-content: center;
       flex-wrap: wrap-reverse;
-
-      filter: drop-shadow(0 0 2em #649dffaa);
-    }
-
-    &:hover {
-      filter: drop-shadow(0 0 2em #649dffaa);
     }
 
     .box_content {
@@ -264,18 +256,10 @@
       border: 1px solid #232930;
       border-radius: 0.75rem 0 0 0.75rem;
 
-      transition: 0.4s;
-
       @media (max-width: 1025px) {
         width: 100%;
 
         border-radius: 0.75rem 0.75rem 0 0;
-
-        filter: drop-shadow(0 0 2em #649dffaa);
-      }
-
-      &:hover {
-        filter: drop-shadow(0 0 2em #649dffaa);
       }
 
       .box_text {
