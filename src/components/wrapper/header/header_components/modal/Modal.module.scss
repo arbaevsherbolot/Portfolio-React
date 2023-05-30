@@ -35,6 +35,12 @@
 
       background-color: #ff2525;
       color: #fff;
+
+      transition: 0.4s;
+
+      &:hover {
+        background-color: #f50b0b;
+      }
     }
   }
 }

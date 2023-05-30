@@ -84,7 +84,7 @@
 
         background-color: transparent;
 
-        border-radius: 0.5rem;
+        border-radius: 10px;
         border: 1px solid #232930;
 
         outline: none;
@@ -95,13 +95,13 @@
 
         &:focus {
           outline: none;
-          box-shadow: #414d5a 0 0 0 1px inset;
+          border: 1px solid #414d5a;
         }
 
         &::placeholder {
           font-size: 1.1rem;
           font-weight: 500;
-          color: #bdbdbd;
+          color: transparent;
         }
       }
 

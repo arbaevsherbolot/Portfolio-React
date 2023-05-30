@@ -58,7 +58,7 @@ export const Projects = () => {
           </div>
 
           <div className={scss.box_img}>
-            <img src={project_img3} alt="Project" />
+            <img src={project_img3} alt="ChatGPT-Telegram" />
           </div>
         </div>
 
@@ -68,7 +68,7 @@ export const Projects = () => {
           </div>
 
           <div className={scss.right_content}>
-            <img src={project_img} alt="Project-Image" />
+            <img src={project_img} alt="ChatGPT-Telegram" />
           </div>
         </div>
 
@@ -125,7 +125,7 @@ export const Projects = () => {
 
             <div className={scss.box_icons}>
               <a
-                href="https://github.com/arbaevsherbolot?tab=repositories"
+                href="https://github.com/arbaevsherbolot/M-A-trade-website"
                 target="_blank">
                 <img
                   src={github_icon}
@@ -134,14 +134,14 @@ export const Projects = () => {
                 />
               </a>
 
-              <a href="https://next-dentist911.vercel.app/" target="_blank">
+              <a href="https://ma-trade.netlify.app/" target="_blank">
                 <img src={link_icon} alt="Link-Icon" className={scss.icon} />
               </a>
             </div>
           </div>
 
           <div className={scss.right_content}>
-            <img src={project_img5} alt="Project-Image" />
+            <img src={project_img5} alt="M-A Trade" />
           </div>
         </div>
       </div>

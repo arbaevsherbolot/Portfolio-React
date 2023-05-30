@@ -161,6 +161,7 @@ export const Contact = () => {
               required
               className={styles.input}
               type="text"
+              placeholder="Name"
               value={data.name}
               onChange={handleChangeName}
             />
@@ -174,6 +175,7 @@ export const Contact = () => {
               required
               className={styles.input}
               type="text"
+              placeholder="Email"
               value={data.email}
               onChange={handleChangeEmail}
             />
@@ -186,6 +188,7 @@ export const Contact = () => {
               required
               className={styles.input}
               type="text"
+              placeholder="Subject"
               value={data.subject}
               onChange={handleChangeSubject}
             />

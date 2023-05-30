@@ -25,6 +25,7 @@
 
     h1 {
       font-size: 3rem;
+      font-family: "PP Neue Machina, Ultrabold";
       background: -webkit-linear-gradient(-70deg, #a2facf 0%, #0077ff 100%);
       -webkit-background-clip: text;
       background-clip: text;
@@ -35,6 +36,7 @@
     p {
       color: #8b949e;
       padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
       font-size: 1.2rem;
       font-weight: 500;
 
@@ -44,6 +46,10 @@
 
       @media (max-width: 1325px) {
         font-size: 1rem;
+      }
+
+      &:hover {
+        background-color: #9d9d9d12;
       }
 
       span {

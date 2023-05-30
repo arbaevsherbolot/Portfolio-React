@@ -19,22 +19,15 @@ export const Admin = () => {
       img: post_img,
       title: "Sherbolot Arbaev",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam eos inventore vel distinctio nesciunt asperiores dolore nemo eveniet iusto nihil laborum velit amet magni,nostrum totam cupiditate accusamus similique eius?",
+        "Sherbolot, a talented developer, received an offer from Meta, the renowned technology company. Impressed by his skills, Meta invited him for an interview. After showcasing his expertise and sharing his vision, Sherbolot was thrilled to receive an email congratulating him on being hired as a senior software engineer. He eagerly accepted the offer, ready to contribute to Meta's groundbreaking projects and shape the future of technology.",
       date: "25-05-2023",
     },
     {
-      img: post_img,
-      title: "Sherbolot Arbaev",
+      img: "https://digitalmagazine.pt/wp-content/uploads/2023/01/STUDIO23-Blog-DesignTrend.png",
+      title: "Design Trends",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam eos inventore vel distinctio nesciunt asperiores dolore nemo eveniet iusto nihil laborum velit amet magni,nostrum totam cupiditate accusamus similique eius?",
-      date: "25-05-2023",
-    },
-    {
-      img: post_img,
-      title: "Sherbolot Arbaev",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam eos inventore vel distinctio nesciunt asperiores dolore nemo eveniet iusto nihil laborum velit amet magni,nostrum totam cupiditate accusamus similique eius?",
-      date: "25-05-2023",
+        "In the ever-evolving world of design, 2023 promises to be an exciting year marked by fresh ideas, innovative approaches, and a blend of traditional and futuristic elements. This year's design trends showcase a harmonious balance between simplicity and complexity, sustainability and technological advancements, as well as a celebration of diverse cultural influences. ",
+      date: "30-05-2023",
     },
   ];
 
