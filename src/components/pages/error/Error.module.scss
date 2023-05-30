@@ -11,6 +11,8 @@
 
   position: relative;
 
+  overflow: hidden;
+
   .img {
     width: 500px;
 
@@ -35,7 +37,7 @@
     color: #ffffffab;
 
     span {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 }

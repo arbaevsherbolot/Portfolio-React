@@ -1,6 +1,9 @@
 import scss from "./Error.module.scss";
+import { useLocation } from "react-router-dom";
 
 export const Error = () => {
+  const errlocation = useLocation();
+
   return (
     <>
       <div className={scss.page}>
@@ -10,7 +13,8 @@ export const Error = () => {
           alt="img"
         />
         <h3 className={scss.title}>
-          404 <br /> <span>Nothing here...</span>
+          404 <br />
+          <span> Nothing was found by the query: {errlocation.pathname}</span>
         </h3>
       </div>
     </>
