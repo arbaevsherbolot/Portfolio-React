@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Wrapper } from "./components/wrapper/Wrapper";
+import { PreLoader } from "./components/pre-loader/PreLoader";
 import "./App.scss";
 
 export const App = () => {
@@ -16,24 +17,5 @@ export const App = () => {
   //   window.onload = () => setLoading(false);
   // }, []);
 
-  return (
-    <>
-      {loading ? (
-        <div
-          style={{
-            color: "#00ffbbeb",
-            height: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "200px",
-            fontFamily: "PP Neue Machina, Ultrabold",
-          }}>
-          loading...
-        </div>
-      ) : (
-        <Wrapper />
-      )}
-    </>
-  );
+  return <>{loading ? <PreLoader /> : <Wrapper />}</>;
 };
