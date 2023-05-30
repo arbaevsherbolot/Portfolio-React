@@ -14,7 +14,9 @@ export const Error = () => {
         />
         <h3 className={scss.title}>
           404 <br />
-          <span> Nothing was found by the query: {errlocation.pathname}</span>
+          <span>
+            Nothing was found by the query: {errlocation.pathname.split("/")}
+          </span>
         </h3>
       </div>
     </>
