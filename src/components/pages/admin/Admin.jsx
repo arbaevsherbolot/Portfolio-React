@@ -19,15 +19,22 @@ export const Admin = () => {
       img: post_img,
       title: "Sherbolot Arbaev",
       description:
-        "Sherbolot, a talented developer, received an offer from Meta, the renowned technology company. Impressed by his skills, Meta invited him for an interview. After showcasing his expertise and sharing his vision, Sherbolot was thrilled to receive an email congratulating him on being hired as a senior software engineer. He eagerly accepted the offer, ready to contribute to Meta's groundbreaking projects and shape the future of technology.",
+        "Sherbolot, a talented developer, received an offer from Meta.",
       date: "25-05-2023",
     },
     {
-      img: "https://digitalmagazine.pt/wp-content/uploads/2023/01/STUDIO23-Blog-DesignTrend.png",
-      title: "Design Trends",
+      img: post_img,
+      title: "Sherbolot Arbaev",
       description:
-        "In the ever-evolving world of design, 2023 promises to be an exciting year marked by fresh ideas, innovative approaches, and a blend of traditional and futuristic elements. This year's design trends showcase a harmonious balance between simplicity and complexity, sustainability and technological advancements, as well as a celebration of diverse cultural influences. ",
-      date: "30-05-2023",
+        "Sherbolot, a talented developer, received an offer from Meta.",
+      date: "25-05-2023",
+    },
+    {
+      img: post_img,
+      title: "Sherbolot Arbaev",
+      description:
+        "Sherbolot, a talented developer, received an offer from Meta.",
+      date: "25-05-2023",
     },
   ];
 
@@ -35,7 +42,7 @@ export const Admin = () => {
     <>
       {auth() ? (
         <div className="page_wrapper">
-          <h3 className={styles.title_page}>Admin Page</h3>
+          <h3 className={styles.title_page}>Home › Admin</h3>
 
           <div className={styles.profile}>
             <img src={icon} alt="Icon" className={styles.user_img} />
@@ -55,12 +62,18 @@ export const Admin = () => {
           <div className={styles.content}>
             {posts.map((post, i) => (
               <div key={i} className={styles.post}>
-                <img src={post.img} alt="Post-Image" className={styles.img} />
+                <div className={styles.image_wrapper}>
+                  <img src={post.img} alt="Post-Image" className={styles.img} />
+                </div>
 
-                <div className={styles.text}>
-                  <span className={styles.date}>{post.date}</span>
-                  <h3 className={styles.title}>{post.title}</h3>
-                  <p className={styles.desc}>{post.description}</p>
+                <div className={styles.post_content}>
+                  <span className={styles.span}>New</span>
+
+                  <div className={styles.text}>
+                    <h3 className={styles.title}>{post.title}</h3>
+                    <span className={styles.date}>{post.date}</span>
+                    <p className={styles.desc}>{post.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
