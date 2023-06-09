@@ -181,8 +181,8 @@
 
           .link,
           .active_link {
-            padding: 0.7rem 40%;
-            margin: 0.3rem 0;
+            width: 100%;
+            margin: 0.2rem 0;
           }
 
           .link:hover {
@@ -190,7 +190,8 @@
           }
 
           .active_link {
-            outline: 1px solid var(--nav-outline-color);
+            border-radius: 0.3rem;
+            border: 1px solid var(--nav-border-color);
             color: var(--nav-text-active-color);
           }
 

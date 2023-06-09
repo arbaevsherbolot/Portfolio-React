@@ -43,12 +43,12 @@ export const Login = () => {
     return toast.success("Successfully logged in", {
       position: "top-center",
       autoClose: 5000,
-      hideProgressBar: false,
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "dark",
+      theme: "colored",
     });
   };
 
@@ -58,12 +58,12 @@ export const Login = () => {
     return toast.error(msg ? `${msg}` : defaultMessage, {
       position: "top-center",
       autoClose: 5000,
-      hideProgressBar: false,
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "dark",
+      theme: "colored",
     });
   };
 

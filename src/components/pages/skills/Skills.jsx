@@ -40,9 +40,10 @@ export const Skills = () => {
 
           <p>
             I am well versed in <span>back-end</span> technologies such as
-            <span> Node.js</span>, <span>Express</span>,
-            <span> RESTful APIs</span>, and <span>GraphQL</span>. This knowledge
-            allows me to <span>design</span> and implement
+            <span> Node.js</span>, <span>Express</span>, <span> Fastify</span>,
+            <span> RESTful APIs</span>, <span> Prisma</span>, and
+            <span> GraphQL</span>. This knowledge allows me to
+            <span> design</span> and implement
             <span> server-side logic</span>, manage <span>data storage </span>
             and retrieval, and create robust <span>APIs</span> to ensure
             seamless communication between <span>external</span> and
