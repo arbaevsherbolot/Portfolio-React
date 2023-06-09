@@ -1,3 +1,4 @@
+import React from "react";
 import scss from "./PreLoader.module.scss";
 import load_svg from "../../assets/svg/loader.svg";
 

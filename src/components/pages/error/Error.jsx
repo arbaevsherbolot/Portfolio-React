@@ -1,3 +1,4 @@
+import React from 'react';
 import scss from "./Error.module.scss";
 import { useLocation } from "react-router-dom";
 

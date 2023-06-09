@@ -1,3 +1,4 @@
+import React from 'react';
 import scss from "./Skills.module.scss";
 
 export const Skills = () => {
