@@ -125,7 +125,7 @@ export const Login = () => {
       <div className={styles.page}>
         <form onSubmit={sendData} className={styles.form}>
           <img
-            src="https://cdn-icons-png.flaticon.com/512/1053/1053614.png"
+            src="https://cdn3d.iconscout.com/3d/premium/thumb/gamers-5266580-4403854.png"
             alt="Image"
             className={styles.form_img}
           />
