@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
 import { useSignOut } from "react-auth-kit";
-import icon from "../../../assets/ios_programmer.png";
+import { Post } from "./post/Post";
+import icon from "../../../assets/sherbolot.png";
 import post_img from "../../../assets/full-stack.jpg";
 import styles from "./Blog.module.scss";
 
@@ -26,10 +28,9 @@ export const Blog = () => {
 
   const posts = [
     {
-      username: "admin",
-      user_logo:
-        "https://seeklogo.com/images/M/microsoft-account-logo-2E31F79058-seeklogo.com.png",
-      user_email: "admin@admin.co",
+      username: "@thearbaev",
+      user_logo: icon,
+      user_email: "sherbolot@wedevx.co",
       img: post_img,
       title: "New offer from Meta",
       description:
@@ -38,10 +39,9 @@ export const Blog = () => {
       type: "Development",
     },
     {
-      username: "admin",
-      user_logo:
-        "https://seeklogo.com/images/M/microsoft-account-logo-2E31F79058-seeklogo.com.png",
-      user_email: "admin@admin.co",
+      username: "@thearbaev",
+      user_logo: icon,
+      user_email: "sherbolot@wedevx.co",
       img: "https://mubert.com/blog/wp-content/uploads/2022/01/How-To-Use-Copyrighted-Music-On-nstagram_cover-1080x1080.png",
       title: "Instagram Copy",
       description:
@@ -50,15 +50,15 @@ export const Blog = () => {
       type: "Development",
     },
     {
-      username: "admin",
-      user_logo:
-        "https://seeklogo.com/images/M/microsoft-account-logo-2E31F79058-seeklogo.com.png",
-      user_email: "admin@admin.co",
-      img: "https://wallpapercave.com/wp/wp3788190.png",
-      title: "Salaaaam",
-      description: "Just for fun 😅",
-      date: "10-06-2023",
-      type: "Just for fun",
+      username: "@apple",
+      user_logo: "https://img.freepik.com/free-icon/mac-os_318-10374.jpg",
+      user_email: "apple@info.com",
+      img: "https://www.apple.com/v/apple-vision-pro/a/images/overview/hero/portrait_base__bwsgtdddcl7m_large.jpg",
+      title: "Apple Vision Pro",
+      description:
+        "Apple Vision Pro seamlessly blends digital content with your physical space.",
+      date: "09-06-2023",
+      type: "News",
     },
   ];
 
@@ -69,18 +69,22 @@ export const Blog = () => {
           <h3 className={styles.title_page}>Home › Blog</h3>
 
           <div className={styles.profile}>
-            <img src={icon} alt="Icon" className={styles.user_img} />
+            <h3 className={styles.title}>Profile</h3>
 
-            <div className={styles.user_data}>
-              <h1 className={styles.username}>{auth().username}</h1>
-              <a href={`mailto:${auth().email}`}>
-                <p className={styles.email}>{auth().email}</p>
-              </a>
+            <div className={styles.profile_content}>
+              <img src={icon} alt="Icon" className={styles.user_img} />
+
+              <div className={styles.user_data}>
+                <h1 className={styles.username}>{auth().username}</h1>
+                <a href={`mailto:${auth().email}`}>
+                  <p className={styles.email}>{auth().email}</p>
+                </a>
+              </div>
+
+              <button className={styles.btn} onClick={HandleSignOut}>
+                Sign Out
+              </button>
             </div>
-
-            <button className={styles.btn} onClick={HandleSignOut}>
-              Sign Out
-            </button>
           </div>
 
           <div className={styles.content}>
@@ -88,11 +92,15 @@ export const Blog = () => {
               <div key={i} className={styles.post}>
                 <div className={styles.image_wrapper}>
                   <img src={post.img} alt="Post-Image" className={styles.img} />
+
+                  <Link to="/blog/post">
+                    <span className={styles.link}>Read More</span>
+                  </Link>
                 </div>
 
                 <div className={styles.post_content}>
                   {post.date === date ? (
-                    <span className={styles.span}>New</span>
+                    <span className={styles.span}>Today</span>
                   ) : (
                     <span className={styles.span}>{post.type}</span>
                   )}
