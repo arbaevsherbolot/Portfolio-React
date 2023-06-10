@@ -1,6 +1,6 @@
 .page {
   width: 100vw;
-  min-height: 80vh;
+  min-height: 85vh;
 
   display: flex;
   align-items: center;
@@ -30,6 +30,14 @@
     .form_img {
       width: 130px;
       margin: 0 auto;
+    }
+
+    .desc {
+      text-align: center;
+
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #e2ebff8f;
     }
 
     .input {

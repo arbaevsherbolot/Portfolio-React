@@ -51,6 +51,14 @@ export const Header = () => {
               Contact
             </NavLink>
 
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                isActive ? styles.active_link : styles.link
+              }>
+              Blog
+            </NavLink>
+
             <a
               className={styles.link}
               href="https://github.com/arbaevsherbolot"
@@ -99,6 +107,14 @@ export const Header = () => {
                 }
                 onClick={() => setIsOpen(!isOpen)}>
                 Contact
+              </NavLink>
+
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  isActive ? styles.active_link : styles.link
+                }>
+                Blog
               </NavLink>
 
               <a

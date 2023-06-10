@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSignIn } from "react-auth-kit";
@@ -83,7 +82,7 @@ export const Login = () => {
             const username = res.data.data.username;
             const email = res.data.data.email;
 
-            signIn({
+            const createCookie = signIn({
               token: token,
               expiresIn: 3600,
               tokenType: "Bearer",
@@ -93,7 +92,11 @@ export const Login = () => {
               },
             });
 
-            navigate("/admin");
+            if (createCookie) {
+              axios.post(`${server_url}/profile`, createCookie);
+            }
+
+            navigate("/blog");
 
             notifySuccess();
 
@@ -157,6 +160,11 @@ export const Login = () => {
           <button type="submit" className={styles.button}>
             Log In
           </button>
+
+          <p className={styles.desc}>
+            The blog page is only available to the admin, since the site is
+            under development
+          </p>
         </form>
 
         <ToastContainer />
