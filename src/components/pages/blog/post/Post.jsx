@@ -32,6 +32,12 @@ export const Post = () => {
         <div className={styles.post}>
           <div className={styles.image_wrapper}>
             <img src={post[0].img} alt="Post-Image" className={styles.img} />
+
+            {post.date === date ? (
+              <span className={styles.span}>Today</span>
+            ) : (
+              <span className={styles.span}>{post[0].type}</span>
+            )}
           </div>
           <div className={styles.post_content}>
             <Link className={styles.link} to="/blog">
@@ -56,12 +62,6 @@ export const Post = () => {
               <span className={styles.date}>{post[0].date}</span>
               <div className={styles.title}>
                 <h3>{post[0].title}</h3>
-
-                {post.date === date ? (
-                  <span className={styles.span}>Today</span>
-                ) : (
-                  <span className={styles.span}>{post[0].type}</span>
-                )}
               </div>
 
               <p className={styles.desc}>{post[0].description}</p>
