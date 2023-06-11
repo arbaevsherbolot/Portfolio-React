@@ -41,7 +41,7 @@ export const Post = () => {
           </div>
           <div className={styles.post_content}>
             <Link className={styles.link} to="/blog">
-              ◀ Back to Blog
+              ◀ Back
             </Link>
 
             <div className={styles.user}>
