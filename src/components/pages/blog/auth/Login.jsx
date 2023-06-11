@@ -82,7 +82,7 @@ export const Login = () => {
             const username = res.data.data.username;
             const email = res.data.data.email;
 
-            const createCookie = signIn({
+            signIn({
               token: token,
               expiresIn: 3600,
               tokenType: "Bearer",
@@ -91,10 +91,6 @@ export const Login = () => {
                 email: email,
               },
             });
-
-            if (createCookie) {
-              axios.post(`${server_url}/profile`, createCookie);
-            }
 
             navigate("/blog");
 
