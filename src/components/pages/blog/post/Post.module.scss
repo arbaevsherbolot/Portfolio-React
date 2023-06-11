@@ -35,10 +35,13 @@
 
       .link {
         max-width: 110px;
-        cursor: none;
         color: #e2ebff8f;
         font-size: 1rem;
         padding-bottom: 1rem;
+
+        @media (max-width: 630px) {
+          cursor: none;
+        }
       }
 
       .user {
