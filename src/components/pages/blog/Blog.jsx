@@ -4,15 +4,16 @@ import axios from "axios";
 import { useAuthUser } from "react-auth-kit";
 import { useSignOut } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
-import icon from "../../../assets/sherbolot.png";
 import post_img from "../../../assets/full-stack.jpg";
 import styles from "./Blog.module.scss";
 
 export const Blog = () => {
   const auth = useAuthUser();
   const signOut = useSignOut();
-
   const [posts, setPosts] = useState([{}]);
+
+  const icon =
+    "https://cdn3d.iconscout.com/3d/premium/thumb/account-5590849-4652485.png?f=webp";
 
   document.title = "Sherbolot Arbaev | Blog";
 

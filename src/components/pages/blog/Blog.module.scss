@@ -24,9 +24,8 @@
   border-radius: 12px;
   border: 1px solid #c7daff52;
 
-  background: linear-gradient(rgba(8, 12, 21, 0.578), rgba(8, 12, 21, 0.879)),
-    url("https://animated-gif-creator.com/images/01/abstract-tunnel-4k-animation-3d-tunnel-vjloops-4k_51.gif")
-      no-repeat center/cover;
+  backdrop-filter: blur(4px);
+  background-color: #080d1728;
 
   display: flex;
   flex-direction: column;

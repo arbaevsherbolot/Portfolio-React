@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
-import icon from "../../../../assets/sherbolot.png";
 import back_icon from "../../../../assets/svg/back.svg";
 import styles from "./Post.module.scss";
 
@@ -11,6 +10,13 @@ export const Post = () => {
   const [post, setPost] = useState([{}]);
   const auth = useAuthUser();
   const navigate = useNavigate();
+
+  document.title = `Sherbolot Arbaev | ${
+    post[0].title ? post[0].title : `Blog`
+  }`;
+
+  const icon =
+    "https://cdn3d.iconscout.com/3d/premium/thumb/account-5590849-4652485.png?f=webp";
 
   const newDate = new Date();
   const months = [
@@ -33,8 +39,6 @@ export const Post = () => {
 
   const date = `${day} ${month}, ${year}`;
 
-  console.log(date);
-
   const server_url = `https://auth-node.up.railway.app/auth/post/${id}`;
 
   useEffect(() => {
@@ -54,10 +58,7 @@ export const Post = () => {
 
               <div className={styles.userdata}>
                 <div className={styles.user_logo}>
-                  <img
-                    src="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
-                    alt="User-Logo"
-                  />
+                  <img src={icon} alt="User-Logo" />
                 </div>
 
                 <div className={styles.user_info}>
