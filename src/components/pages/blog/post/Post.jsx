@@ -11,14 +11,29 @@ export const Post = () => {
   const [post, setPost] = useState([{}]);
   const auth = useAuthUser();
   const navigate = useNavigate();
+
   const newDate = new Date();
-  const date = `${
-    newDate.getDate() < 10 ? `0${newDate.getDate()}` : newDate.getDate()
-  }-${
-    newDate.getMonth() + 1 < 10
-      ? `0${newDate.getMonth() + 1}`
-      : newDate.getMonth() + 1
-  }-${newDate.getFullYear()}`;
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const day = newDate.getDate();
+  const month = months[newDate.getMonth()];
+  const year = newDate.getFullYear();
+
+  const date = `${day} ${month}, ${year}`;
+
+  console.log(date);
 
   const server_url = `https://auth-node.up.railway.app/auth/post/${id}`;
 
@@ -65,8 +80,10 @@ export const Post = () => {
               <div className={styles.header}>
                 <h3 className={styles.title}>{post[0].title}</h3>
 
-                {post.date === date ? (
-                  <span className={styles.span}>Today</span>
+                {post[0].date === date ? (
+                  <span className={`${styles.span} ${styles.today}`}>
+                    Today
+                  </span>
                 ) : (
                   <span className={styles.span}>#{post[0].type}</span>
                 )}

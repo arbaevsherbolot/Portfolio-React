@@ -83,7 +83,7 @@
 
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.4rem;
 
         @media (max-width: 515px) {
           margin-top: 1.6rem;
@@ -108,7 +108,7 @@
           text-align: center;
           text-transform: uppercase;
 
-          padding: 0.3rem 1.3rem;
+          padding: 0.4rem 1.5rem;
           font-size: 1rem;
           font-weight: 600;
           border-radius: 0.45rem;
@@ -116,7 +116,13 @@
 
           @media (max-width: 515px) {
             font-size: 0.9rem;
+            padding: 0.3rem 1.3rem;
           }
+        }
+
+        .today {
+          background: #f2f6ff;
+          color: #ff4000;
         }
       }
 
