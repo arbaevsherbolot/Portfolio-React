@@ -57,11 +57,10 @@ export const Blog = () => {
 
   return (
     <>
-      {auth() ? (
-        <div className="page_wrapper">
-          <h3 className={styles.title_page}>Home › Blog</h3>
+      <div className="page_wrapper">
+        <h3 className={styles.title_page}>Home › Blog</h3>
 
-          <div className={styles.profile}>
+        {/* <div className={styles.profile}>
             <h3 className={styles.title}>Profile</h3>
 
             <div className={styles.profile_content}>
@@ -78,59 +77,58 @@ export const Blog = () => {
                 Sign Out
               </button>
             </div>
-          </div>
+          </div> */}
 
-          <div className={styles.content}>
-            {posts
-              ? posts.map((post, i) => (
-                  <div key={i} className={styles.post}>
+        <div className={styles.content}>
+          {posts
+            ? posts.map((post, i) => (
+                <div key={i} className={styles.post}>
+                  <Link to={`/blog/post/${post.id}`}>
+                    <div className={styles.image_wrapper}>
+                      <img
+                        src={post.img}
+                        alt="Post-Image"
+                        className={styles.img}
+                      />
+
+                      <span className={styles.link}>Read More</span>
+                    </div>
+                  </Link>
+
+                  <div className={styles.post_content}>
+                    {post.date === date ? (
+                      <span className={styles.span}>Today</span>
+                    ) : (
+                      <span className={styles.span}>{post.type}</span>
+                    )}
+
+                    <div className={styles.user}>
+                      <div className={styles.logo}>
+                        <img src={icon} alt="User-Logo" />
+                      </div>
+
+                      <div className={styles.user_info}>
+                        <h3 className={styles.username}>Sherbolot Arbaev</h3>
+
+                        {/* <a href={`mailto:${auth().email}`}>
+                            <p className={styles.user_email}>{auth().email}</p>
+                          </a> */}
+                      </div>
+                    </div>
+
                     <Link to={`/blog/post/${post.id}`}>
-                      <div className={styles.image_wrapper}>
-                        <img
-                          src={post.img}
-                          alt="Post-Image"
-                          className={styles.img}
-                        />
-
-                        <span className={styles.link}>Read More</span>
+                      <div className={styles.text}>
+                        <span className={styles.date}>{post.date}</span>
+                        <h3 className={styles.title}>{post.title}</h3>
+                        <p className={styles.desc}>{post.short_desc}</p>
                       </div>
                     </Link>
-
-                    <div className={styles.post_content}>
-                      {post.date === date ? (
-                        <span className={styles.span}>Today</span>
-                      ) : (
-                        <span className={styles.span}>{post.type}</span>
-                      )}
-
-                      <div className={styles.user}>
-                        <div className={styles.logo}>
-                          <img src={icon} alt="User-Logo" />
-                        </div>
-
-                        <div className={styles.user_info}>
-                          <h3 className={styles.username}>{auth().username}</h3>
-
-                          <a href={`mailto:${auth().email}`}>
-                            <p className={styles.user_email}>{auth().email}</p>
-                          </a>
-                        </div>
-                      </div>
-
-                      <Link to={`/blog/post/${post.id}`}>
-                        <div className={styles.text}>
-                          <span className={styles.date}>{post.date}</span>
-                          <h3 className={styles.title}>{post.title}</h3>
-                          <p className={styles.desc}>{post.short_desc}</p>
-                        </div>
-                      </Link>
-                    </div>
                   </div>
-                ))
-              : null}
-          </div>
+                </div>
+              ))
+            : null}
         </div>
-      ) : null}
+      </div>
     </>
   );
 };
