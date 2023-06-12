@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
 import icon from "../../../../assets/sherbolot.png";
+import back_icon from "../../../../assets/svg/back.svg";
 import styles from "./Post.module.scss";
 
 export const Post = () => {
@@ -31,74 +32,64 @@ export const Post = () => {
       <div className={styles.post_page}>
         {post ? (
           <div className={styles.post}>
-            <div className={styles.post_content}>
-              <div className={styles.post_content_top}>
-                <Link className={styles.link} to="/blog">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg>
-                </Link>
+            <div className={styles.post_author}>
+              <Link to="/blog">
+                <img src={back_icon} alt="Back-Icon" />
+              </Link>
 
-                <div className={styles.user}>
-                  <div className={styles.logo}>
-                    <img src={icon} alt="User-Logo" />
-                  </div>
+              <div className={styles.userdata}>
+                <div className={styles.user_logo}>
+                  <img
+                    src="https://www.getillustrations.com/photos/pack/3d-avatar-male_lg.png"
+                    alt="User-Logo"
+                  />
+                </div>
 
-                  <div className={styles.user_info}>
-                    <h3 className={styles.username}>{auth().username}</h3>
+                <div className={styles.user_info}>
+                  <h3 className={styles.username}>Sherbolot Arbaev</h3>
 
-                    <a href={`mailto:${auth().email}`}>
-                      <p className={styles.user_email}>{auth().email}</p>
-                    </a>
-                  </div>
+                  <p className={styles.date}>{post[0].date}</p>
                 </div>
               </div>
+            </div>
 
+            <div className={styles.post_content}>
               <div className={styles.image_wrapper}>
                 <img
                   src={post[0].img}
-                  alt="Post-Image"
+                  alt={`${post[0].title}`}
                   className={styles.img}
                 />
+              </div>
+
+              <div className={styles.header}>
+                <h3 className={styles.title}>{post[0].title}</h3>
 
                 {post.date === date ? (
                   <span className={styles.span}>Today</span>
                 ) : (
-                  <span className={styles.span}>{post[0].type}</span>
+                  <span className={styles.span}>#{post[0].type}</span>
                 )}
               </div>
 
-              <div className={styles.post_content_bottom}>
-                <span className={styles.date}>{post[0].date}</span>
+              <p className={styles.desc}>{post[0].description}</p>
 
-                <h3 className={styles.title}>{post[0].title}</h3>
-                <p className={styles.desc}>{post[0].description}</p>
+              <h3 className={styles.subtitle}>1.{post[0].subtitle}</h3>
+              <p className={styles.desc}>{post[0].description2}</p>
 
-                <h3 className={styles.subtitle}>{post[0].subtitle}</h3>
-                <p className={styles.desc}>{post[0].description2}</p>
-
-                <div className={styles.image_wrapper2}>
-                  <img
-                    src={post[0].img2}
-                    alt="Post-Image2"
-                    className={styles.img}
-                  />
-                </div>
-
-                <h3 className={styles.subtitle}>{post[0].subtitle2}</h3>
-                <p className={styles.desc}>{post[0].description3}</p>
-
-                <h3 className={styles.subtitle}>{post[0].subtitle3}</h3>
-                <p className={styles.desc}>{post[0].description4}</p>
+              <div className={styles.image_wrapper}>
+                <img
+                  src={post[0].img2}
+                  alt={`${post[0].title}`}
+                  className={styles.img}
+                />
               </div>
+
+              <h3 className={styles.subtitle}>2.{post[0].subtitle2}</h3>
+              <p className={styles.desc}>{post[0].description3}</p>
+
+              <h3 className={styles.subtitle}>3.{post[0].subtitle3}</h3>
+              <p className={styles.desc}>{post[0].description4}</p>
             </div>
           </div>
         ) : null}
