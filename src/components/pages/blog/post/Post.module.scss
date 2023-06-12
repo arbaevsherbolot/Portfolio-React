@@ -1,6 +1,6 @@
 .post_page {
   width: 100vw;
-  max-width: 1300px;
+  max-width: 1000px;
 
   margin-top: 9rem;
   padding: 0 1rem 0 1rem;
@@ -10,13 +10,14 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    gap: 2rem;
+    gap: 1rem;
 
     @media (max-width: 630px) {
       gap: 1rem;
     }
 
-    .image_wrapper {
+    .image_wrapper,
+    .image_wrapper2 {
       width: 100%;
 
       display: flex;
@@ -47,7 +48,7 @@
         @media (max-width: 630px) {
           position: absolute;
           right: 0;
-          top: -80px;
+          top: -100px;
 
           font-size: 0.9rem;
           padding: 0.3rem 1.2rem;
@@ -59,76 +60,99 @@
       display: flex;
       flex-direction: column;
 
-      .link {
-        max-width: 110px;
-        color: #e2ebff8f;
-        font-size: 1rem;
-        padding-bottom: 1rem;
-
-        @media (max-width: 630px) {
-          cursor: none;
-        }
-      }
-
-      .user {
-        width: 100%;
-
+      .post_content_top {
         max-width: 310px;
+        margin-bottom: 2rem;
 
         display: flex;
-        gap: 0.6rem;
+        align-items: center;
+
+        gap: 1rem;
 
         @media (max-width: 630px) {
           max-width: 240px;
         }
 
-        .logo {
-          width: 70px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .link {
+          svg {
+            width: 35px;
+            height: 35px;
 
-          @media (max-width: 630px) {
-            width: 50px;
-          }
-
-          img {
-            width: 100%;
+            color: #e2ebff;
             border-radius: 50%;
-            object-fit: cover;
-          }
-        }
-
-        .user_info {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-
-          line-height: 1;
-
-          .username {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #fff;
 
             @media (max-width: 630px) {
-              font-size: 1rem;
+              cursor: none;
+
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+        .user {
+          display: flex;
+          gap: 0.6rem;
+
+          .logo {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: 630px) {
+              width: 50px;
+            }
+
+            @media (max-width: 385px) {
+              width: 40px;
+            }
+
+            img {
+              width: 100%;
+              border-radius: 50%;
+              object-fit: cover;
             }
           }
 
-          .user_email {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #fff;
+          .user_info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
 
-            @media (max-width: 630px) {
-              font-size: 0.9rem;
+            line-height: 1;
+
+            .username {
+              font-size: 1.6rem;
+              font-weight: 600;
+              color: #fff;
+
+              @media (max-width: 630px) {
+                font-size: 1rem;
+              }
+
+              @media (max-width: 385px) {
+                font-size: 0.9rem;
+              }
+            }
+
+            .user_email {
+              font-size: 1rem;
+              font-weight: 500;
+              color: #fff;
+
+              @media (max-width: 630px) {
+                font-size: 0.9rem;
+              }
+
+              @media (max-width: 385px) {
+                font-size: 0.8rem;
+              }
             }
           }
         }
       }
 
-      .text {
+      .post_content_bottom {
         display: flex;
         flex-direction: column;
 
@@ -141,62 +165,70 @@
 
         .date {
           margin-left: auto;
-          margin-bottom: 0.3rem;
+          margin-top: 0.3rem;
           font-size: 1.1rem;
           font-weight: 400;
           color: #e2ebff8f;
 
           @media (max-width: 630px) {
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
-            margin-left: 0;
+            font-size: 0.9rem;
+            margin-top: 1.2rem;
+            margin-right: 0.3rem;
           }
         }
 
         .title {
-          display: flex;
-          align-items: center;
+          font-size: 2.7rem;
+          font-weight: 700;
 
-          gap: 1.3rem;
+          background: -webkit-linear-gradient(-70deg, #a2facf 0%, #0077ff 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: rgba(0, 0, 0, 0);
+          -webkit-box-decoration-break: clone;
 
           @media (max-width: 630px) {
-            gap: 0;
+            font-size: 2rem;
           }
 
-          h3 {
-            font-size: 2.6rem;
-            font-weight: 700;
+          @media (max-width: 385px) {
+            font-size: 1.6rem;
+          }
+        }
 
-            background: -webkit-linear-gradient(
-              -70deg,
-              #a2facf 0%,
-              #0077ff 100%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: rgba(0, 0, 0, 0);
-            -webkit-box-decoration-break: clone;
+        .subtitle {
+          margin-top: 3rem;
+          font-size: 1.8rem;
+          font-weight: 700;
 
-            @media (max-width: 630px) {
-              font-size: 2rem;
-            }
+          color: #fff;
 
-            @media (max-width: 385px) {
-              font-size: 1.6rem;
-            }
+          @media (max-width: 630px) {
+            font-size: 1.3rem;
+            margin-top: 2.6rem;
+          }
+
+          @media (max-width: 385px) {
+            font-size: 1.2rem;
+            margin-top: 2.3rem;
           }
         }
 
         .desc {
-          margin-top: 0.8rem;
+          margin-top: 0.9rem;
 
-          font-size: 1rem;
+          font-size: 1.1rem;
           font-weight: 500;
           color: #fff;
 
           @media (max-width: 630px) {
             font-size: 0.9rem;
+            margin-top: 0.6rem;
           }
+        }
+
+        .image_wrapper2 {
+          margin-top: 2rem;
         }
       }
     }

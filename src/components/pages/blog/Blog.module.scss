@@ -246,6 +246,22 @@
         }
       }
 
+      &:hover {
+        .text {
+          .title {
+            background: -webkit-linear-gradient(
+              -70deg,
+              #38ff9f 0%,
+              #005eff 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, 0);
+            -webkit-box-decoration-break: clone;
+          }
+        }
+      }
+
       .text {
         line-height: 1.2;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import link_icon from "../../../assets/svg/link_icon.svg";
-import github_icon from "../../../assets/svg/github_icon.svg";
+import github_icon from "../../../assets/svg/githubicon.svg";
 import project_img from "../../../assets/ChatGPT-Telegram-Project.jpg";
 import project_img2 from "../../../assets/ChatGPT-Telegram.png";
 import project_img3 from "../../../assets/ChatGPT-Telegram-Mockup.png";

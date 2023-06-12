@@ -83,7 +83,7 @@ export const Blog = () => {
             {posts
               ? posts.map((post, i) => (
                   <div key={i} className={styles.post}>
-                    <Link to={`/post/${post.id}`}>
+                    <Link to={`/blog/post/${post.id}`}>
                       <div className={styles.image_wrapper}>
                         <img
                           src={post.img}
@@ -116,11 +116,13 @@ export const Blog = () => {
                         </div>
                       </div>
 
-                      <div className={styles.text}>
-                        <span className={styles.date}>{post.date}</span>
-                        <h3 className={styles.title}>{post.title}</h3>
-                        <p className={styles.desc}>{post.short_desc}</p>
-                      </div>
+                      <Link to={`/blog/post/${post.id}`}>
+                        <div className={styles.text}>
+                          <span className={styles.date}>{post.date}</span>
+                          <h3 className={styles.title}>{post.title}</h3>
+                          <p className={styles.desc}>{post.short_desc}</p>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 ))
