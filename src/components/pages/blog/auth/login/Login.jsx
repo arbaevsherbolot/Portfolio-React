@@ -93,7 +93,7 @@ export const Login = () => {
               },
             });
 
-            navigate("/");
+            navigate("/blog");
 
             notifySuccess();
 
