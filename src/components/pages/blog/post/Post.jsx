@@ -8,8 +8,13 @@ import styles from "./Post.module.scss";
 export const Post = () => {
   const { id } = useParams();
   const [post, setPost] = useState([{}]);
+
   const auth = useAuthUser();
   const navigate = useNavigate();
+
+  if (!post) {
+    return navigate("/blog");
+  }
 
   document.title = `Sherbolot Arbaev | ${
     post[0].title ? post[0].title : `Blog`

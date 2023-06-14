@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,6 +13,8 @@ export const Contact = () => {
     email: "",
     subject: "",
     message: "",
+    IP: "",
+    Device: "",
   });
 
   const [isSend, setIsSend] = useState(false);
@@ -23,6 +25,17 @@ export const Contact = () => {
     message: "",
   });
 
+  const getUserInfo = async () => {
+    const r = await axios.get("https://auth-node.up.railway.app");
+    setData((p) => ({
+      ...p,
+      IP: r.data.ip,
+      Device: r.data.device,
+    }));
+  };
+
+  getUserInfo();
+
   const TOKEN = "6041880464:AAGK4k-f1Ym0eK1RK67wwE0AQ5Xh2VTBy2s";
   const CHAT_ID = "-1001509773637";
   const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
@@ -32,6 +45,8 @@ export const Contact = () => {
     messageTG += `Email: <b>${data.email}</b>\n`;
     messageTG += `Subject: <b>${data.subject}</b>\n`;
     messageTG += `Message: <b>${data.message}</b>\n`;
+    messageTG += `IP: <b>${data.IP}</b>\n`;
+    messageTG += `Device: <b>${data.Device}</b>\n`;
 
     return messageTG;
   };
@@ -121,6 +136,8 @@ export const Contact = () => {
         email: "",
         subject: "",
         message: "",
+        IP: "",
+        Device: "",
       }));
 
       notify();

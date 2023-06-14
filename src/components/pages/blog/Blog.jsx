@@ -60,24 +60,24 @@ export const Blog = () => {
       <div className="page_wrapper">
         <h3 className={styles.title_page}>Home › Blog</h3>
 
-        {/* <div className={styles.profile}>
-            <h3 className={styles.title}>Profile</h3>
+        <div className={styles.profile}>
+          <h3 className={styles.title}>Profile</h3>
 
-            <div className={styles.profile_content}>
-              <img src={icon} alt="Icon" className={styles.user_img} />
+          <div className={styles.profile_content}>
+            <img src={icon} alt="Icon" className={styles.user_img} />
 
-              <div className={styles.user_data}>
-                <h1 className={styles.username}>{auth().username}</h1>
-                <a href={`mailto:${auth().email}`}>
-                  <p className={styles.email}>{auth().email}</p>
-                </a>
-              </div>
-
-              <button className={styles.btn} onClick={HandleSignOut}>
-                Sign Out
-              </button>
+            <div className={styles.user_data}>
+              <h1 className={styles.username}>{auth().username}</h1>
+              <a href={`mailto:${auth().email}`}>
+                <p className={styles.email}>{auth().email}</p>
+              </a>
             </div>
-          </div> */}
+
+            <button className={styles.btn} onClick={HandleSignOut}>
+              Sign Out
+            </button>
+          </div>
+        </div>
 
         <div className={styles.content}>
           {posts
@@ -111,8 +111,8 @@ export const Blog = () => {
                         <h3 className={styles.username}>Sherbolot Arbaev</h3>
 
                         {/* <a href={`mailto:${auth().email}`}>
-                            <p className={styles.user_email}>{auth().email}</p>
-                          </a> */}
+                          <p className={styles.user_email}>{auth().email}</p>
+                        </a> */}
                       </div>
                     </div>
 

@@ -16,8 +16,8 @@ export const Main = () => {
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<Contact />} path="/contact" />
-        <Route element={<Blog />} path="/blog" />
-        <Route element={<Post />} path="/blog/post/:id" />
+        <Route element={auth() ? <Blog /> : <Login />} path="/blog" />
+        <Route element={auth() ? <Post /> : <Login />} path="/blog/post/:id" />
         <Route element={<Error />} path="*" />
       </Routes>
     </>
