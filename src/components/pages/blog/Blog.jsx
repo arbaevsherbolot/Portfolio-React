@@ -4,7 +4,6 @@ import axios from "axios";
 import { useAuthUser } from "react-auth-kit";
 import { useSignOut } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
-import post_img from "../../../assets/full-stack.jpg";
 import styles from "./Blog.module.scss";
 
 export const Blog = () => {

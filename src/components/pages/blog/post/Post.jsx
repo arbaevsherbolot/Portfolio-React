@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
 import back_icon from "../../../../assets/svg/back.svg";
 import styles from "./Post.module.scss";
@@ -10,11 +10,6 @@ export const Post = () => {
   const [post, setPost] = useState([{}]);
 
   const auth = useAuthUser();
-  const navigate = useNavigate();
-
-  if (!post) {
-    return navigate("/blog");
-  }
 
   document.title = `Sherbolot Arbaev | ${
     post[0].title ? post[0].title : `Blog`
