@@ -9,7 +9,7 @@ import hide_icon from "../../../../../assets/svg/hide.svg";
 import styles from "./Login.module.scss";
 
 export const Login = () => {
-  document.title = "Login";
+  document.title = "Sherbolot Arbaev | Login";
 
   const [data, setData] = useState({
     username: "",
