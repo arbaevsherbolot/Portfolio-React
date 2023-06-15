@@ -9,10 +9,11 @@ import styles from "./Blog.module.scss";
 export const Blog = () => {
   const auth = useAuthUser();
   const signOut = useSignOut();
+  const [userinfo, setUserinfo] = useState({});
   const [posts, setPosts] = useState([{}]);
 
-  const icon =
-    "https://cdn3d.iconscout.com/3d/premium/thumb/account-5590849-4652485.png?f=webp";
+  const server_url = import.meta.env.VITE_SERVER_URL;
+  const icon = "https://img.freepik.com/free-icon/user_318-875902.jpg";
 
   document.title = "Sherbolot Arbaev | Blog";
 
@@ -30,7 +31,7 @@ export const Blog = () => {
   };
 
   const notifyError = (msg) => {
-    return toast.error("Server temporarily unavailable", {
+    return toast.error(msg ? msg : "Server temporarily unavailable", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: true,
@@ -42,13 +43,23 @@ export const Blog = () => {
     });
   };
 
-  const server_url = "https://auth-node.up.railway.app/auth/posts";
-
   useEffect(() => {
     try {
-      axios.get(`${server_url}`).then((res) => {
+      axios.get(`${server_url}/auth/posts`).then((res) => {
         setPosts(res.data.posts);
       });
+
+      const getUserInfo = async () => {
+        await axios
+          .post(`${server_url}/auth/profile`, {
+            username: auth().username,
+          })
+          .then((data) => {
+            setUserinfo(data.data.userinfo);
+          });
+      };
+
+      getUserInfo();
     } catch {
       notifyError();
     }
@@ -63,7 +74,9 @@ export const Blog = () => {
           <h3 className={styles.title}>Profile</h3>
 
           <div className={styles.profile_content}>
-            <img src={icon} alt="Icon" className={styles.user_img} />
+            <div className={styles.user_img}>
+              <img src={userinfo.photo ? userinfo.photo : icon} alt="Icon" />
+            </div>
 
             <div className={styles.user_data}>
               <h1 className={styles.username}>{auth().username}</h1>

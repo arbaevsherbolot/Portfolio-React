@@ -71,7 +71,7 @@ export const Register = () => {
       } else if (data.password.length < 8) {
         notifyError("Password must be at least 8 characters!");
       } else {
-        await axios.post(`${server_url}/register`, data);
+        await axios.post(`${server_url}/auth/register`, data);
 
         setData((prev) => ({
           ...prev,

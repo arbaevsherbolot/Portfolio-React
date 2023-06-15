@@ -77,7 +77,7 @@ export const Login = () => {
       if (!validateUsername(data.username)) {
         notifyError("Invalid Username!");
       } else {
-        await axios.post(`${server_url}/login`, data).then((res) => {
+        await axios.post(`${server_url}/auth/login`, data).then((res) => {
           if (res.data.auth === true) {
             const token = res.data.token;
             const username = res.data.data.username;
