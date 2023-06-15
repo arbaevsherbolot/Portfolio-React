@@ -43,7 +43,7 @@ export const Register = () => {
     setShowPassword(!showPassword);
   };
 
-  const server_url = import.meta.env.VITE_SERVER_URL;
+  const server_url = "https://auth-node.up.railway.app";
 
   const navigate = useNavigate();
 

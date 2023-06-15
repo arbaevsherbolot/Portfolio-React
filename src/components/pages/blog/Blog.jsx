@@ -12,8 +12,9 @@ export const Blog = () => {
   const [userinfo, setUserinfo] = useState({});
   const [posts, setPosts] = useState([{}]);
 
-  const server_url = import.meta.env.VITE_SERVER_URL;
-  const icon = "https://img.freepik.com/free-icon/user_318-875902.jpg";
+  const server_url = "https://auth-node.up.railway.app";
+  const icon =
+    "https://cdn3d.iconscout.com/3d/premium/thumb/account-5590849-4652485.png?f=webp";
 
   document.title = "Sherbolot Arbaev | Blog";
 
