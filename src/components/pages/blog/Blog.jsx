@@ -13,6 +13,10 @@ export const Blog = () => {
   const [userinfo, setUserinfo] = useState({});
   const [posts, setPosts] = useState([{}]);
 
+  const user_icon = auth().username[0];
+
+  console.log(user_icon);
+
   const server_url = "https://auth-node.up.railway.app";
 
   document.title = "Sherbolot Arbaev | Blog";
@@ -75,7 +79,11 @@ export const Blog = () => {
 
           <div className={styles.profile_content}>
             <div className={styles.user_img}>
-              <img src={userinfo.photo ? userinfo.photo : icon} alt="Icon" />
+              {userinfo.photo ? (
+                <img src={userinfo.photo} alt="Icon" />
+              ) : (
+                <span>{user_icon}</span>
+              )}
             </div>
 
             <div className={styles.user_data}>
