@@ -20,15 +20,33 @@
           width: 55px;
           height: 55px;
 
+          position: relative;
+
           @media (max-width: 515px) {
             width: 45px;
             height: 45px;
+          }
+
+          &::after {
+            content: "";
+
+            width: 13px;
+            height: 13px;
+
+            border-radius: 50%;
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            background-color: #54ffcf;
           }
 
           img {
             width: 100%;
             border-radius: 50%;
             object-fit: cover;
+            background-color: #7ea7e6;
           }
         }
 
@@ -146,7 +164,7 @@
       .desc {
         margin-top: 1rem;
 
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: #f2f6ff;
 

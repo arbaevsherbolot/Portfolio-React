@@ -1,7 +1,7 @@
 import React from 'react';
 import aboutImage from "../../../assets/sherbolot.png";
 import aboutElementImage from "../../../assets/about-element.png";
-import aboutElementIcon from "../../../assets/ios_programmer.png";
+import aboutElementIcon from "../../../assets/svg/IOS.svg";
 import scss from "./About.module.scss";
 
 export const About = () => {

@@ -230,6 +230,11 @@
             width: 100%;
             border-radius: 50%;
             object-fit: cover;
+            background-color: #7ea7e6;
+
+            &:hover {
+              background-color: #54ffcf;
+            }
           }
         }
 

@@ -100,6 +100,8 @@ export const Register = () => {
   return (
     <>
       <div className={styles.page}>
+        <div className={styles.left}></div>
+
         <form onSubmit={sendData} className={styles.form}>
           <h3 className={styles.title}>Welcome! 👋🏻</h3>
 
@@ -111,7 +113,6 @@ export const Register = () => {
             onChange={handleChangeUsername}
             className={styles.input}
           />
-
           <input
             required
             type="text"
@@ -120,7 +121,6 @@ export const Register = () => {
             onChange={handleChangeEmail}
             className={styles.input}
           />
-
           <div className={styles.password_wrapper}>
             <input
               required
@@ -146,11 +146,9 @@ export const Register = () => {
               </div>
             </div>
           </div>
-
           <button type="submit" className={styles.button}>
             Sign Up
           </button>
-
           <Link className={styles.link} to="/login">
             Already have an account? <span>Login</span>
           </Link>

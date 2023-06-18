@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
 import back_icon from "../../../../assets/svg/back.svg";
+import icon from "../../../../assets/svg/IOS.svg";
 import styles from "./Post.module.scss";
 
 export const Post = () => {
@@ -14,9 +15,6 @@ export const Post = () => {
   document.title = `Sherbolot Arbaev | ${
     post[0].title ? post[0].title : `Blog`
   }`;
-
-  const icon =
-    "https://cdn3d.iconscout.com/3d/premium/thumb/account-5590849-4652485.png?f=webp";
 
   const newDate = new Date();
   const months = [

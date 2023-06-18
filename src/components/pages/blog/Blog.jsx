@@ -4,6 +4,7 @@ import axios from "axios";
 import { useAuthUser } from "react-auth-kit";
 import { useSignOut } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
+import icon from "../../../assets/svg/IOS.svg";
 import styles from "./Blog.module.scss";
 
 export const Blog = () => {
@@ -13,8 +14,6 @@ export const Blog = () => {
   const [posts, setPosts] = useState([{}]);
 
   const server_url = "https://auth-node.up.railway.app";
-  const icon =
-    "https://cdn3d.iconscout.com/3d/premium/thumb/account-5590849-4652485.png?f=webp";
 
   document.title = "Sherbolot Arbaev | Blog";
 

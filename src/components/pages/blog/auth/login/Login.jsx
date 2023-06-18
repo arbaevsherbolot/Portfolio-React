@@ -120,6 +120,8 @@ export const Login = () => {
   return (
     <>
       <div className={styles.page}>
+        <div className={styles.left}></div>
+
         <form onSubmit={sendData} className={styles.form}>
           <h3 className={styles.title}>Welcome back! 👋🏻</h3>
 
@@ -163,7 +165,7 @@ export const Login = () => {
           </button>
 
           <Link className={styles.link} to="/register">
-            Do not have an account? <span>Register</span>
+            Do not have an account? <span>Sign Up</span>
           </Link>
         </form>
 
