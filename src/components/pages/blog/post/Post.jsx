@@ -4,6 +4,8 @@ import { useParams, Link } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
 import back_icon from "../../../../assets/svg/back.svg";
 import icon from "../../../../assets/svg/IOS.svg";
+import unliked_icon from "../../../../assets/svg/like1.svg";
+import liked_icon from "../../../../assets/svg/like2.svg";
 import styles from "./Post.module.scss";
 
 export const Post = () => {
@@ -11,6 +13,10 @@ export const Post = () => {
   const [post, setPost] = useState([{}]);
 
   const auth = useAuthUser();
+
+  if (!auth()) {
+    return null;
+  }
 
   document.title = `Sherbolot Arbaev | ${
     post[0].title ? post[0].title : `Blog`
@@ -50,19 +56,21 @@ export const Post = () => {
         {post ? (
           <div className={styles.post}>
             <div className={styles.post_author}>
-              <Link to="/blog">
-                <img src={back_icon} alt="Back-Icon" />
-              </Link>
+              <div className={styles.left}>
+                <Link to="/blog">
+                  <img src={back_icon} alt="Back-Icon" />
+                </Link>
 
-              <div className={styles.userdata}>
-                <div className={styles.user_logo}>
-                  <img src={icon} alt="User-Logo" />
-                </div>
+                <div className={styles.userdata}>
+                  <div className={styles.user_logo}>
+                    <img src={icon} alt="User-Logo" />
+                  </div>
 
-                <div className={styles.user_info}>
-                  <h3 className={styles.username}>Sherbolot Arbaev</h3>
+                  <div className={styles.user_info}>
+                    <h3 className={styles.username}>Sherbolot Arbaev</h3>
 
-                  <p className={styles.date}>{post[0].date}</p>
+                    <p className={styles.date}>{post[0].date}</p>
+                  </div>
                 </div>
               </div>
             </div>

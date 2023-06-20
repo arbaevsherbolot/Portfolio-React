@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
 import { Home } from "../../pages/home/Home";
 import { Contact } from "../../pages/contact/Contact";
@@ -11,17 +11,26 @@ import { Error } from "../../pages/error/Error";
 
 export const Main = () => {
   const auth = useAuthUser();
-  const navigate = useNavigate();
 
   return (
     <>
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<Contact />} path="/contact" />
-        <Route element={auth() ? <Blog /> : <Login />} path="/blog" />
-        <Route element={auth() ? <Post /> : <Login />} path="/blog/post/:id" />
-        <Route element={<Login />} path="/login" />
-        <Route element={<Register />} path="/register" />
+        <Route
+          element={
+            auth() ? <Blog /> : <Navigate to="/blog/login" replace={true} />
+          }
+          path="/blog"
+        />
+        <Route
+          element={
+            auth() ? <Post /> : <Navigate to="/blog/login" replace={true} />
+          }
+          path="/blog/post/:id"
+        />
+        <Route element={<Login />} path="/blog/login" />
+        <Route element={<Register />} path="/blog/register" />
         <Route element={<Error />} path="*" />
       </Routes>
     </>

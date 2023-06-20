@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { useAuthUser } from "react-auth-kit";
-import { useSignOut } from "react-auth-kit";
+import { useAuthUser, useSignOut } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
 import icon from "../../../assets/svg/IOS.svg";
 import styles from "./Blog.module.scss";
@@ -14,8 +13,6 @@ export const Blog = () => {
   const [posts, setPosts] = useState([{}]);
 
   const user_icon = auth().username[0];
-
-  console.log(user_icon);
 
   const server_url = "https://auth-node.up.railway.app";
 

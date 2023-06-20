@@ -48,6 +48,10 @@
       background-color: var(--nav-text-bg-active);
     }
 
+    .link:active {
+      background-color: #ffffff1b;
+    }
+
     .active_link {
       border-radius: 0.3rem;
       border: 1px solid var(--nav-border-color);

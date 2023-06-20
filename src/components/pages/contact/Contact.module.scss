@@ -140,6 +140,10 @@
           box-shadow: #bc8cff 0 0 0 1px inset;
           background: #8862f87b;
         }
+
+        &:active {
+          background-color: #8862f8b6;
+        }
       }
 
       .form_btn_send {
