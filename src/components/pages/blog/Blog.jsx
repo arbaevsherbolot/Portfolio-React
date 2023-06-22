@@ -112,7 +112,7 @@ export const Blog = () => {
             </button>
           </div>
         </div>
-
+        <Profile open={isOpen} close={HandleModal} />
         <div className={styles.content}>
           {posts
             ? posts.map((post, i) => (
@@ -162,8 +162,6 @@ export const Blog = () => {
               ))
             : null}
         </div>
-
-        <Profile open={isOpen} close={HandleModal} />
       </div>
 
       <ToastContainer />

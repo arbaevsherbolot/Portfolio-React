@@ -80,7 +80,7 @@ export const Register = () => {
           password: "",
         }));
 
-        navigate("/login");
+        navigate("/blog/login");
       }
     } catch {
       notifyError("Username already exists!");
