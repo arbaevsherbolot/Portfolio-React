@@ -29,8 +29,16 @@ export const Main = () => {
           }
           path="/blog/post/:id"
         />
-        <Route element={<Login />} path="/blog/login" />
-        <Route element={<Register />} path="/blog/register" />
+        <Route
+          element={auth() ? <Navigate to="/blog" replace={true} /> : <Login />}
+          path="/blog/login"
+        />
+        <Route
+          element={
+            auth() ? <Navigate to="/blog" replace={true} /> : <Register />
+          }
+          path="/blog/register"
+        />
         <Route element={<Error />} path="*" />
       </Routes>
     </>
