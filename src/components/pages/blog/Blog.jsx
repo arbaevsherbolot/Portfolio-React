@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useAuthUser, useSignOut } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
-import { Profile } from "../profile/Profile";
 import icon from "../../../assets/svg/IOS.svg";
 import setting_icon from "../../../assets/svg/setting.svg";
 import styles from "./Blog.module.scss";
@@ -15,7 +14,6 @@ export const Blog = () => {
     photo: "",
   });
   const [posts, setPosts] = useState([{}]);
-  const [isOpen, setIsOpen] = useState(false);
   const user_icon = auth().username[0];
 
   const server_url = "https://auth-node.up.railway.app";
@@ -33,10 +31,6 @@ export const Blog = () => {
 
   const HandleSignOut = () => {
     signOut();
-  };
-
-  const HandleModal = () => {
-    setIsOpen(!isOpen);
   };
 
   const notifyError = (msg) => {
@@ -86,9 +80,11 @@ export const Blog = () => {
           <div className={styles.profile_top}>
             <h3 className={styles.title}>Profile</h3>
 
-            <div onClick={HandleModal} className={styles.setting_icon}>
-              <img src={setting_icon} alt="Profile Setting" />
-            </div>
+            <Link to="/blog/profile">
+              <div className={styles.setting_icon}>
+                <img src={setting_icon} alt="Profile Setting" />
+              </div>
+            </Link>
           </div>
 
           <div className={styles.profile_content}>
@@ -112,7 +108,7 @@ export const Blog = () => {
             </button>
           </div>
         </div>
-        <Profile open={isOpen} close={HandleModal} />
+
         <div className={styles.content}>
           {posts
             ? posts.map((post, i) => (

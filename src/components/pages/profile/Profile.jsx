@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useAuthUser } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
 import styles from "./Profile.module.scss";
 
-export const Profile = ({ open, close }) => {
+export const Profile = () => {
   const [userinfo, setUserinfo] = useState({
     username: "",
     email: "",
@@ -29,7 +30,6 @@ export const Profile = ({ open, close }) => {
       theme: "colored",
     });
   };
-
   const notifySuccess = (msg) => {
     toast.success(msg ? msg : "Your profile updated successfully!", {
       position: "top-center",
@@ -110,13 +110,9 @@ export const Profile = ({ open, close }) => {
     }
   };
 
-  if (!open) {
-    return null;
-  }
-
   return (
     <>
-      <div className={open ? styles.modal_wrapper_open : styles.modal_wrapper}>
+      <div className={styles.modal_wrapper}>
         <div className={styles.modal_container}>
           <ToastContainer />
 
@@ -162,9 +158,9 @@ export const Profile = ({ open, close }) => {
             </div>
 
             <div className={styles.buttons}>
-              <div onClick={close} className={styles.close}>
-                Close
-              </div>
+              <Link to="/blog">
+                <div className={styles.close}>Close</div>
+              </Link>
 
               <button
                 disabled={sendButton}
