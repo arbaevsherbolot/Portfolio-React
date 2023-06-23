@@ -48,11 +48,7 @@ export const Main = () => {
 
         <Route
           element={
-            auth() ? (
-              <Profile />
-            ) : (
-              <Navigate to="/blog/register" replace={true} />
-            )
+            auth() ? <Profile /> : <Navigate to="/blog/login" replace={true} />
           }
           path="/blog/profile"
         />
