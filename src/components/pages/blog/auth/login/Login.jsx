@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import show_icon from "../../../../../assets/svg/show.svg";
 import hide_icon from "../../../../../assets/svg/hide.svg";
-import styles from "./Login.module.scss";
+import styles from "../Auth.module.scss";
 
 export const Login = () => {
   document.title = "Sherbolot Arbaev | Login";

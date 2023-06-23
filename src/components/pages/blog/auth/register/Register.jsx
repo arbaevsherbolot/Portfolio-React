@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import show_icon from "../../../../../assets/svg/show.svg";
 import hide_icon from "../../../../../assets/svg/hide.svg";
-import styles from "./Register.module.scss";
+import styles from "../Auth.module.scss";
 
 export const Register = () => {
   document.title = "Sherbolot Arbaev | Register";
@@ -148,7 +148,7 @@ export const Register = () => {
             Sign Up
           </button>
           <Link className={styles.link} to="/blog/login">
-            Already have an account? <span>Login</span>
+            Already have an account? <span>Log In</span>
           </Link>
         </form>
 

@@ -12,6 +12,8 @@ export const Blog = () => {
   const signOut = useSignOut();
   const [userinfo, setUserinfo] = useState({
     photo: "",
+    FirstName: "",
+    LastName: "",
   });
   const [posts, setPosts] = useState([{}]);
   const user_icon = auth().username[0];
@@ -61,6 +63,8 @@ export const Blog = () => {
             setUserinfo((prev) => ({
               ...prev,
               photo: data.data.userinfo.photo,
+              FirstName: data.data.userinfo.FirstName,
+              LastName: data.data.userinfo.LastName,
             }));
           });
       };
@@ -97,7 +101,11 @@ export const Blog = () => {
             </div>
 
             <div className={styles.user_data}>
-              <h1 className={styles.username}>{auth().username}</h1>
+              <h1 className={styles.username}>
+                {userinfo.FirstName
+                  ? `${userinfo.FirstName} ${userinfo.LastName[0]}`
+                  : auth().username}
+              </h1>
               <a href={`mailto:${auth().email}`}>
                 <p className={styles.email}>{auth().email}</p>
               </a>
