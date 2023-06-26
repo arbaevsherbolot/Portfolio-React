@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuthUser } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
@@ -14,7 +14,9 @@ export const Profile = () => {
     LastName: "",
   });
   const [sendButton, setSendButton] = useState(false);
+
   const auth = useAuthUser();
+  const navigate = useNavigate();
 
   const server_url = "https://auth-node.up.railway.app";
 
@@ -101,6 +103,9 @@ export const Profile = () => {
     try {
       notifySuccess();
 
+      setInterval(() => {
+        navigate("/blog");
+      }, 1450);
       await axios.post(`${server_url}/auth/edit/profile`, {
         username: auth().username,
         userinfo: userinfo,
