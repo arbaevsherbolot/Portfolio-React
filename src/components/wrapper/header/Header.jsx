@@ -44,19 +44,19 @@ export const Header = () => {
             </NavLink> */}
 
             <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive ? styles.active_link : styles.link
-              }>
-              Contact
-            </NavLink>
-
-            <NavLink
               to="/blog"
               className={({ isActive }) =>
                 isActive ? styles.active_link : styles.link
               }>
               Blog
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? styles.active_link : styles.link
+              }>
+              Contact
             </NavLink>
 
             <a
@@ -101,20 +101,20 @@ export const Header = () => {
               </NavLink> */}
 
               <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  isActive ? styles.active_link : styles.link
+                }>
+                Blog
+              </NavLink>
+
+              <NavLink
                 to="/contact"
                 className={({ isActive }) =>
                   isActive ? styles.active_link : styles.link
                 }
                 onClick={() => setIsOpen(!isOpen)}>
                 Contact
-              </NavLink>
-
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  isActive ? styles.active_link : styles.link
-                }>
-                Blog
               </NavLink>
 
               <a
