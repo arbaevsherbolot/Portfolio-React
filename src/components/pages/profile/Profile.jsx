@@ -196,7 +196,9 @@ export const Profile = () => {
 
               {userinfo.photo ? (
                 <div className={styles.photo}>
-                  <img src={userinfo.photo} alt="Icon" />
+                  <a href={userinfo.photo} target="_blank">
+                    <img src={userinfo.photo} alt="Icon" />
+                  </a>
                 </div>
               ) : null}
 
