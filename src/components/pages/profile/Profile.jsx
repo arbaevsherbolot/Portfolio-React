@@ -83,6 +83,7 @@ export const Profile = () => {
     } else if (validate(userinfo.LastName) || userinfo.LastName === "") {
       setError((prev) => ({
         ...prev,
+        FirstNameInput: false,
         LastNameInput: true,
       }));
       return false;
@@ -90,6 +91,8 @@ export const Profile = () => {
       setError((prev) => ({
         ...prev,
         photoUrlInput: true,
+        FirstNameInput: false,
+        LastNameInput: false,
       }));
       return false;
     } else {
