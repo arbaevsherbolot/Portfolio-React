@@ -86,7 +86,7 @@ export const Profile = () => {
         LastNameInput: true,
       }));
       return false;
-    } else if (validate(userinfo.photo) || userinfo.photo === "") {
+    } else if (validate(userinfo.photo)) {
       setError((prev) => ({
         ...prev,
         photoUrlInput: true,
