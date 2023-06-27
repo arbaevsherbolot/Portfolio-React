@@ -16,7 +16,6 @@ export const Profile = () => {
   const [sendButton, setSendButton] = useState(false);
 
   const auth = useAuthUser();
-  const navigate = useNavigate();
 
   const server_url = "https://auth-node.up.railway.app";
 
@@ -45,6 +44,48 @@ export const Profile = () => {
     });
   };
 
+  const editProfile = async (e) => {
+    e.preventDefault();
+
+    setSendButton(true);
+
+    setInterval(() => {
+      setSendButton(false);
+    }, 1000);
+
+    try {
+      notifySuccess();
+
+      await axios.post(`${server_url}/auth/edit/profile`, {
+        username: auth().username,
+        userinfo: userinfo,
+      });
+    } catch {
+      notifyError();
+    }
+  };
+
+  const handleChangePhoto = (e) => {
+    setUserinfo((prev) => ({
+      ...prev,
+      photo: e.target.value,
+    }));
+  };
+
+  const handleChangeFirstName = (e) => {
+    setUserinfo((prev) => ({
+      ...prev,
+      FirstName: e.target.value,
+    }));
+  };
+
+  const handleChangeLastName = (e) => {
+    setUserinfo((prev) => ({
+      ...prev,
+      LastName: e.target.value,
+    }));
+  };
+
   useEffect(() => {
     try {
       const getUserInfo = async () => {
@@ -69,51 +110,6 @@ export const Profile = () => {
       notifyError();
     }
   }, []);
-
-  const handleChangePhoto = (e) => {
-    setUserinfo((prev) => ({
-      ...prev,
-      photo: e.target.value,
-    }));
-  };
-
-  const handleChangeFirstName = (e) => {
-    setUserinfo((prev) => ({
-      ...prev,
-      FirstName: e.target.value,
-    }));
-  };
-
-  const handleChangeLastName = (e) => {
-    setUserinfo((prev) => ({
-      ...prev,
-      LastName: e.target.value,
-    }));
-  };
-
-  const editProfile = async (e) => {
-    e.preventDefault();
-
-    setSendButton(true);
-
-    setInterval(() => {
-      setSendButton(false);
-    }, 1000);
-
-    try {
-      notifySuccess();
-
-      setInterval(() => {
-        navigate("/blog");
-      }, 1450);
-      await axios.post(`${server_url}/auth/edit/profile`, {
-        username: auth().username,
-        userinfo: userinfo,
-      });
-    } catch {
-      notifyError();
-    }
-  };
 
   return (
     <>

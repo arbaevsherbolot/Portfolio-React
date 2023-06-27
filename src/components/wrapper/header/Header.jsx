@@ -35,13 +35,13 @@ export const Header = () => {
         </Link>
         <div className={styles.nav_right}>
           <div className={styles.links}>
-            <NavLink
+            {/* <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive ? styles.active_link : styles.link
               }>
               Home
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/contact"
@@ -91,14 +91,14 @@ export const Header = () => {
               isOpen ? `${styles.menu} ${styles.active}` : `${styles.menu}`
             }>
             <div className={styles.links}>
-              <NavLink
+              {/* <NavLink
                 to="/"
                 className={({ isActive }) =>
                   isActive ? styles.active_link : styles.link
                 }
                 onClick={() => setIsOpen(!isOpen)}>
                 Home
-              </NavLink>
+              </NavLink> */}
 
               <NavLink
                 to="/contact"
