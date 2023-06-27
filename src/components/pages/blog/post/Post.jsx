@@ -89,7 +89,7 @@ export const Post = () => {
 
                 {post[0].date === date ? (
                   <span className={`${styles.span} ${styles.today}`}>
-                    Today
+                    #Today
                   </span>
                 ) : (
                   <span className={styles.span}>#{post[0].type}</span>

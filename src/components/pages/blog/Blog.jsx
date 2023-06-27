@@ -23,13 +23,25 @@ export const Blog = () => {
   document.title = "Sherbolot Arbaev | Blog";
 
   const newDate = new Date();
-  const date = `${
-    newDate.getDate() < 10 ? `0${newDate.getDate()}` : newDate.getDate()
-  }-${
-    newDate.getMonth() + 1 < 10
-      ? `0${newDate.getMonth() + 1}`
-      : newDate.getMonth() + 1
-  }-${newDate.getFullYear()}`;
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const day = newDate.getDate();
+  const month = months[newDate.getMonth()];
+  const year = newDate.getFullYear();
+
+  const date = `${day} ${month}, ${year}`;
 
   const HandleSignOut = () => {
     signOut();
@@ -51,7 +63,9 @@ export const Blog = () => {
   useEffect(() => {
     try {
       axios.get(`${server_url}/auth/posts`).then((res) => {
-        setPosts(res.data.posts);
+        setPosts(
+          res.data.posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+        );
       });
 
       const getUserInfo = async () => {
@@ -135,7 +149,7 @@ export const Blog = () => {
 
                   <div className={styles.post_content}>
                     {post.date === date ? (
-                      <span className={styles.span}>Today</span>
+                      <span className={styles.span_today}>Today</span>
                     ) : (
                       <span className={styles.span}>{post.type}</span>
                     )}
