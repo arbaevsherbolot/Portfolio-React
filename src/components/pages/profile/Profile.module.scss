@@ -1,4 +1,4 @@
-.modal_wrapper {
+.page_wrapper {
   position: absolute;
   left: 0;
   top: 0;
@@ -16,9 +16,9 @@
   align-items: center;
   justify-content: center;
 
-  .modal_container {
+  .page_container {
     width: 100%;
-    max-width: 500px;
+    max-width: 900px;
 
     padding: 1rem;
 
@@ -30,10 +30,42 @@
     flex-direction: column;
     gap: 1.5rem;
 
+    .title_wrapper {
+      position: relative;
+      padding-bottom: 2rem;
+      text-align: center;
+
+      // &::after {
+      //   content: "";
+
+      //   position: absolute;
+      //   left: 0;
+      //   bottom: 0;
+
+      //   width: 100%;
+      //   height: 1px;
+
+      //   background-color: #c7daff30;
+      //   border-radius: 0.3rem;
+      // }
+
+      .title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #fff;
+      }
+    }
+
     .form {
-      display: flex;
-      flex-direction: column;
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
+
+      @media (max-width: 715px) {
+        grid-template-columns: 1fr;
+      }
 
       .input_container {
         display: flex;
@@ -43,10 +75,12 @@
         .span {
           color: #00ffa6;
           font-size: 1rem;
-          padding-left: 0.3rem;
+          padding-left: 0.5rem;
         }
 
         .photo {
+          margin-left: 0.4rem;
+
           width: 120px;
           height: 120px;
 
@@ -57,7 +91,8 @@
           }
         }
 
-        .input {
+        .input,
+        .input_error {
           width: 100%;
 
           padding: 0.9rem 1rem;
@@ -84,10 +119,19 @@
             color: #414d5a;
           }
         }
+
+        .input_error {
+          border-color: #ff0000;
+
+          &:focus {
+            border-color: #ff000063;
+          }
+        }
       }
     }
 
     .buttons {
+      margin-top: auto;
       margin-left: auto;
 
       display: flex;
@@ -139,9 +183,9 @@
       }
 
       .submited {
-        color: rgb(136, 255, 172);
+        color: rgba(161, 255, 189, 0.484);
         cursor: not-allowed;
-        background-color: rgba(78, 255, 131, 0.1);
+        background-color: rgba(161, 255, 189, 0.1);
 
         &:hover {
           background-color: rgba(78, 255, 131, 0.1);

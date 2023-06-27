@@ -15,6 +15,12 @@ export const Profile = () => {
   });
   const [sendButton, setSendButton] = useState(false);
 
+  const [error, setError] = useState({
+    photoUrlInput: false,
+    FirstNameInput: false,
+    LastNameInput: false,
+  });
+
   const auth = useAuthUser();
 
   const server_url = "https://auth-node.up.railway.app";
@@ -47,29 +53,54 @@ export const Profile = () => {
   const editProfile = async (e) => {
     e.preventDefault();
 
-    setSendButton(true);
-
-    setInterval(() => {
-      setSendButton(false);
-    }, 1000);
-
     try {
-      notifySuccess();
+      if (checkValidate()) {
+        setSendButton(true);
 
-      await axios.post(`${server_url}/auth/edit/profile`, {
-        username: auth().username,
-        userinfo: userinfo,
-      });
+        setInterval(() => {
+          setSendButton(false);
+        }, 1000);
+
+        notifySuccess();
+
+        await axios.post(`${server_url}/auth/edit/profile`, {
+          username: auth().username,
+          userinfo: userinfo,
+        });
+      }
     } catch {
       notifyError();
     }
   };
 
-  const handleChangePhoto = (e) => {
-    setUserinfo((prev) => ({
-      ...prev,
-      photo: e.target.value,
-    }));
+  const checkValidate = () => {
+    if (validate(userinfo.FirstName) || userinfo.FirstName === "") {
+      setError((prev) => ({
+        ...prev,
+        FirstNameInput: true,
+      }));
+      return false;
+    } else if (validate(userinfo.LastName) || userinfo.LastName === "") {
+      setError((prev) => ({
+        ...prev,
+        LastNameInput: true,
+      }));
+      return false;
+    } else if (validate(userinfo.photo) || userinfo.photo === "") {
+      setError((prev) => ({
+        ...prev,
+        photoUrlInput: true,
+      }));
+      return false;
+    } else {
+      setError((prev) => ({
+        ...prev,
+        photoUrlInput: false,
+        FirstNameInput: false,
+        LastNameInput: false,
+      }));
+      return true;
+    }
   };
 
   const handleChangeFirstName = (e) => {
@@ -84,6 +115,18 @@ export const Profile = () => {
       ...prev,
       LastName: e.target.value,
     }));
+  };
+
+  const handleChangePhoto = (e) => {
+    setUserinfo((prev) => ({
+      ...prev,
+      photo: e.target.value,
+    }));
+  };
+
+  const validate = (i) => {
+    const regex = /[!@#$%^&*()+[\]{};'"\\?|,<>]/;
+    return regex.test(i);
   };
 
   useEffect(() => {
@@ -113,48 +156,58 @@ export const Profile = () => {
 
   return (
     <>
-      <div className={styles.modal_wrapper}>
-        <div className={styles.modal_container}>
+      <div className={styles.page_wrapper}>
+        <div className={styles.page_container}>
           <ToastContainer />
+
+          <div className={styles.title_wrapper}>
+            <h3 className={styles.title}>Profile Information</h3>
+          </div>
 
           <form onSubmit={editProfile} className={styles.form}>
             <div className={styles.input_container}>
               <span className={styles.span}>First Name</span>
               <input
-                required
                 type="text"
                 placeholder="First Name"
                 value={userinfo.FirstName ? userinfo.FirstName : ""}
                 onChange={handleChangeFirstName}
-                className={styles.input}
+                className={
+                  error.FirstNameInput ? styles.input_error : styles.input
+                }
               />
             </div>
 
             <div className={styles.input_container}>
               <span className={styles.span}>Last Name</span>
               <input
-                required
                 type="text"
                 placeholder="Last Name"
                 value={userinfo.LastName ? userinfo.LastName : ""}
                 onChange={handleChangeLastName}
-                className={styles.input}
+                className={
+                  error.LastNameInput ? styles.input_error : styles.input
+                }
               />
             </div>
 
             <div className={styles.input_container}>
               <span className={styles.span}>Photo URL</span>
+
               {userinfo.photo ? (
                 <div className={styles.photo}>
                   <img src={userinfo.photo} alt="Icon" />
                 </div>
               ) : null}
+
               <input
                 type="text"
                 placeholder="Photo URL"
                 onChange={handleChangePhoto}
                 value={userinfo.photo ? userinfo.photo : ""}
-                className={styles.input}
+                className={
+                  error.photoUrlInput ? styles.input_error : styles.input
+                }
               />
             </div>
 
@@ -167,7 +220,7 @@ export const Profile = () => {
                 disabled={sendButton}
                 className={sendButton ? styles.submited : styles.submit}
                 type="submit">
-                {sendButton ? "Sending..." : "Submit"}
+                Update Profile
               </button>
             </div>
           </form>
