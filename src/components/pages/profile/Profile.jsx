@@ -125,7 +125,7 @@ export const Profile = () => {
   };
 
   const validate = (i) => {
-    const regex = /[!@#$%^&*()+[\]{};'"\\?|,<>]/;
+    const regex = /[!@#$%^*()+[\]{};'"\\?|,<>]/;
     return regex.test(i);
   };
 
