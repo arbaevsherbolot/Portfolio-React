@@ -58,7 +58,11 @@ export const Post = () => {
             <div className={styles.post_author}>
               <div className={styles.left}>
                 <Link to="/blog">
-                  <img src={back_icon} alt="Back-Icon" />
+                  <img
+                    className={styles.back_icon}
+                    src={back_icon}
+                    alt="Back-Icon"
+                  />
                 </Link>
 
                 <div className={styles.userdata}>

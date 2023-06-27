@@ -115,6 +115,14 @@
           gap: 0.8rem;
         }
 
+        .back_icon {
+          cursor: pointer;
+
+          @media (max-width: 520px) {
+            cursor: default;
+          }
+        }
+
         .title {
           font-size: 2.6rem;
           font-weight: 700;

@@ -56,13 +56,21 @@
     }
 
     .setting_icon {
-      border-radius: 50%;
+      padding: 0.2rem;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.2rem;
+
+      border-radius: 50%;
+
+      cursor: pointer;
 
       transition: 0.4s;
+
+      @media (max-width: 520px) {
+        cursor: default;
+      }
 
       &:hover {
         background-color: #dbefff47;
@@ -126,13 +134,10 @@
 
       width: 50%;
 
-      @media (max-width: 520px) {
-        width: 65%;
-      }
-
       border: none;
       border-radius: 7px;
       outline: none;
+      cursor: pointer;
 
       font-size: 1rem;
       font-weight: 500;
@@ -141,6 +146,11 @@
       background-color: transparent;
 
       transition: 0.4s;
+
+      @media (max-width: 520px) {
+        width: 65%;
+        cursor: default;
+      }
 
       &:hover {
         color: rgb(255, 78, 78);
