@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
 
-    background-color: #1c242e;
+    background-color: #1e2530;
 
     gap: 1rem;
 
@@ -53,34 +53,44 @@
       }
     }
 
-    .input {
-      width: 100%;
-      padding: 1.1rem 1.3rem;
+    .input_wrapper {
+      position: relative;
+
+      display: flex;
+      align-items: center;
 
       background-color: #080d172b;
       backdrop-filter: blur(4px);
       border: 1px solid #c7daff52;
       border-radius: 0.455rem;
+      padding-left: 0.8rem;
 
-      background: transparent;
+      .input {
+        width: 100%;
+        margin-left: 0.8rem;
+        padding: 1.1rem 0.9rem 1.1rem 0.8rem;
 
-      font-size: 1rem;
-      color: #fff;
+        background: #c7daff07;
+        border: none;
+        border-radius: 0 0.455rem 0.455rem 0;
 
-      &:focus {
-        outline: 0;
-        border-color: #6dffda9f;
-      }
-
-      &::placeholder {
         font-size: 1rem;
-        letter-spacing: 0.03rem;
-        color: #ffffff38;
-      }
-    }
+        color: #fff;
 
-    .password_wrapper {
-      position: relative;
+        &:focus {
+          outline: 0;
+        }
+
+        &::placeholder {
+          font-size: 1rem;
+          letter-spacing: 0.03rem;
+          color: #c7daff52;
+        }
+
+        &:focus::placeholder {
+          color: #c7daff2a;
+        }
+      }
 
       .password_btn_wrapper {
         .password_btn {
@@ -108,18 +118,18 @@
             visibility: visible;
 
             position: absolute;
-            right: -11px;
+            right: 2.5%;
             top: 70%;
 
             .hint_title {
               display: block;
 
-              text-transform: lowercase;
-              font-size: 0.65rem;
+              text-transform: uppercase;
+              font-size: 0.6rem;
               font-weight: 500;
 
-              background-color: #fff;
-              color: #030508;
+              background-color: #191d23b1;
+              color: #fff;
               border-radius: 2px;
               padding: 0.3rem;
             }

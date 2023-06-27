@@ -5,6 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import show_icon from "../../../../../assets/svg/show.svg";
 import hide_icon from "../../../../../assets/svg/hide.svg";
+import username_icon from "../../../../../assets/svg/username.svg";
+import email_icon from "../../../../../assets/svg/email.svg";
+import password_icon from "../../../../../assets/svg/password.svg";
 import styles from "../Auth.module.scss";
 
 export const Register = () => {
@@ -103,23 +106,35 @@ export const Register = () => {
         <form onSubmit={sendData} className={styles.form}>
           <h3 className={styles.title}>Welcome! 👋🏻</h3>
 
-          <input
-            required
-            type="text"
-            value={data.username}
-            placeholder="Username"
-            onChange={handleChangeUsername}
-            className={styles.input}
-          />
-          <input
-            required
-            type="text"
-            value={data.email}
-            placeholder="Email"
-            onChange={handleChangeEmail}
-            className={styles.input}
-          />
-          <div className={styles.password_wrapper}>
+          <div className={styles.input_wrapper}>
+            <img src={username_icon} alt="Username" />
+
+            <input
+              required
+              type="text"
+              value={data.username}
+              placeholder="Username"
+              onChange={handleChangeUsername}
+              className={styles.input}
+            />
+          </div>
+
+          <div className={styles.input_wrapper}>
+            <img src={email_icon} alt="Email" />
+
+            <input
+              required
+              type="text"
+              value={data.email}
+              placeholder="Email"
+              onChange={handleChangeEmail}
+              className={styles.input}
+            />
+          </div>
+
+          <div className={styles.input_wrapper}>
+            <img src={password_icon} alt="Password" />
+
             <input
               required
               type={showPassword ? "text" : "password"}
@@ -139,7 +154,7 @@ export const Register = () => {
 
               <div className={styles.hint_container}>
                 <p className={styles.hint_title}>
-                  {showPassword ? "Hide password" : "Show password"}
+                  {showPassword ? "Hide" : "Show"}
                 </p>
               </div>
             </div>
