@@ -78,29 +78,32 @@ export const Profile = () => {
       setError((prev) => ({
         ...prev,
         FirstNameInput: true,
+        LastNameInput: false ? true : false,
+        photoUrlInput: false ? true : false,
       }));
       return false;
     } else if (validate(userinfo.LastName) || userinfo.LastName === "") {
       setError((prev) => ({
         ...prev,
-        FirstNameInput: false,
+        FirstNameInput: false ? true : false,
         LastNameInput: true,
+        photoUrlInput: false ? true : false,
       }));
       return false;
     } else if (validate(userinfo.photo)) {
       setError((prev) => ({
         ...prev,
+        FirstNameInput: false ? true : false,
+        LastNameInput: false ? true : false,
         photoUrlInput: true,
-        FirstNameInput: false,
-        LastNameInput: false,
       }));
       return false;
     } else {
       setError((prev) => ({
         ...prev,
-        photoUrlInput: false,
         FirstNameInput: false,
         LastNameInput: false,
+        photoUrlInput: false,
       }));
       return true;
     }
