@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuthUser, useSignOut } from "react-auth-kit";
 import { ToastContainer, toast } from "react-toastify";
@@ -17,6 +17,7 @@ export const Blog = () => {
   });
   const [posts, setPosts] = useState([{}]);
   const user_icon = auth().username[0];
+  const navigate = useNavigate();
 
   const server_url = "https://auth-node.up.railway.app";
 
@@ -43,7 +44,8 @@ export const Blog = () => {
 
   const date = `${day} ${month}, ${year}`;
 
-  const HandleSignOut = () => {
+  const HandleSignOut = async () => {
+    navigate("/");
     signOut();
   };
 
