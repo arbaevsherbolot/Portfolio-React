@@ -6,8 +6,8 @@ import { Contact } from "../../pages/contact/Contact";
 import { Blog } from "../../pages/blog/Blog";
 import { Profile } from "../../pages/profile/Profile";
 import { Post } from "../../pages/blog/post/Post";
-import { Login } from "../../pages/blog/auth/login/Login";
-import { Register } from "../../pages/blog/auth/register/Register";
+import { Login } from "../../pages/auth/login/Login";
+import { Register } from "../../pages/auth/register/Register";
 import { Error } from "../../pages/error/Error";
 
 export const Main = () => {
