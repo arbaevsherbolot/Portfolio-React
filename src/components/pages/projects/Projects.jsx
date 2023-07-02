@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import link_icon from "../../../assets/svg/link_icon.svg";
 import github_icon from "../../../assets/svg/githubicon.svg";
 import project_img from "../../../assets/ChatGPT-Telegram-Project.jpg";
@@ -9,17 +9,37 @@ import project_img5 from "../../../assets/matrade_project.png";
 import scss from "./Projects.module.scss";
 
 export const Projects = () => {
+  const titles = [
+    "Projects",
+    "Projects",
+    "Projects",
+    "Projects",
+    "Projects",
+    "Projects",
+  ];
+
+  const boxes = [
+    {
+      title: "M-A Trade",
+      desc: `I <span>develop</span> the user interface,
+    <span> Web page development</span>, I create
+    <span> UX element</span> interactions, Design and mockups of
+    <span> products</span> for companies.`,
+      img: project_img5,
+      github_link: "https://github.com/arbaevsherbolot/M-A-trade-website",
+      demo_link: "https://ma-trade.netlify.app",
+    },
+  ];
+
   return (
     <>
       <div className={scss.boxes_container}>
         <div className={scss.page_title}>
-          <h2 className={scss.title}>Projects</h2>
-          <h2 className={scss.title}>Projects</h2>
-          <h2 className={scss.title}>Projects</h2>
-          <h2 className={scss.title}>Projects</h2>
-          <h2 className={scss.title}>Projects</h2>
-          <h2 className={scss.title}>Projects</h2>
-          <h2 className={scss.title}>Projects</h2>
+          {titles.map((t, i) => (
+            <h2 key={i} className={scss.title}>
+              {t}
+            </h2>
+          ))}
         </div>
 
         <div className={scss.big_box}>
@@ -73,78 +93,38 @@ export const Projects = () => {
           </div>
         </div>
 
-        <div className={scss.box}>
-          <div className={scss.left_content}>
-            <div className={scss.box_text}>
-              <h3 className={scss.title}>Project</h3>
+        {boxes.map((d, i) => (
+          <div key={i} className={scss.box}>
+            <div className={scss.left_content}>
+              <div className={scss.box_text}>
+                <h3 className={scss.title}>{d.title}</h3>
 
-              <p className={scss.desc}>
-                I <span>develop</span> the user interface,
-                <span> Web page development</span>, I create
-                <span> UX element</span> interactions, Design and mockups of
-                <span> products</span> for companies.
-              </p>
-            </div>
-
-            <div className={scss.box_icons}>
-              <a
-                href="https://github.com/arbaevsherbolot?tab=repositories"
-                target="_blank">
-                <img
-                  src={github_icon}
-                  alt="Github-Icon"
-                  className={scss.icon}
+                <p
+                  className={scss.desc}
+                  dangerouslySetInnerHTML={{ __html: d.desc }}
                 />
-              </a>
+              </div>
 
-              <a href="https://next-dentist911.vercel.app/" target="_blank">
-                <img src={link_icon} alt="Link-Icon" className={scss.icon} />
-              </a>
-            </div>
-          </div>
+              <div className={scss.box_icons}>
+                <a href={d.github_link} target="_blank">
+                  <img
+                    src={github_icon}
+                    alt="Github-Icon"
+                    className={scss.icon}
+                  />
+                </a>
 
-          <div className={scss.right_content}>
-            <img
-              src="https://assets-global.website-files.com/5d3e265ac89f6a3e64292efc/638787a7bce3cec952ae47fa_hero.webp"
-              alt="Project-Image"
-            />
-          </div>
-        </div>
-
-        <div className={scss.box}>
-          <div className={scss.left_content}>
-            <div className={scss.box_text}>
-              <h3 className={scss.title}>M-A Trade</h3>
-
-              <p className={scss.desc}>
-                I <span>develop</span> the user interface,
-                <span> Web page development</span>, I create
-                <span> UX element</span> interactions, Design and mockups of
-                <span> products</span> for companies.
-              </p>
+                <a href={d.demo_link} target="_blank">
+                  <img src={link_icon} alt="Link-Icon" className={scss.icon} />
+                </a>
+              </div>
             </div>
 
-            <div className={scss.box_icons}>
-              <a
-                href="https://github.com/arbaevsherbolot/M-A-trade-website"
-                target="_blank">
-                <img
-                  src={github_icon}
-                  alt="Github-Icon"
-                  className={scss.icon}
-                />
-              </a>
-
-              <a href="https://ma-trade.netlify.app/" target="_blank">
-                <img src={link_icon} alt="Link-Icon" className={scss.icon} />
-              </a>
+            <div className={scss.right_content}>
+              <img src={d.img} alt="Project-Image" />
             </div>
           </div>
-
-          <div className={scss.right_content}>
-            <img src={project_img5} alt="M-A Trade" />
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

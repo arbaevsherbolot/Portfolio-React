@@ -130,24 +130,26 @@
         font-size: 1rem;
         font-weight: 600;
         letter-spacing: 0.04rem;
-        color: #ffffff;
+        color: #11151a;
 
-        background: #8862f8;
+        border: 1px solid #00ffdd;
+        background: #00ffdd;
 
         transition: all 0.4s;
 
         &:hover {
-          box-shadow: #bc8cff 0 0 0 1px inset;
-          background: #8862f87b;
+          background-color: #00ffdd34;
+          color: #00ffdd;
         }
 
         &:active {
-          background-color: #8862f8b6;
+          background-color: #00ffdd82;
         }
       }
 
       .form_btn_send {
-        background: rgb(199, 160, 254);
+        background-color: #a1fff282;
+        border-color: #a1fff282;
         cursor: not-allowed;
       }
     }

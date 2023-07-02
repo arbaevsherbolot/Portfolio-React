@@ -9,8 +9,8 @@
   list-style: none;
 
   &::selection {
-    color: #171c24;
-    background-color: #00ffbbeb;
+    color: #11151a;
+    background-color: #00ffdd;
   }
 }
 
@@ -22,10 +22,10 @@ body {
   min-height: 100vh;
 
   font-family: "Proxima Nova", sans-serif;
-  background: #161b22;
+  background: #11151a;
 
-  background-image: radial-gradient(#acccff8b, 0.5px, transparent 0);
-  background-size: 20px 20px;
+  // background-image: radial-gradient(#acccff8b, 0.5px, transparent 0);
+  // background-size: 20px 20px;
 
   // font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }

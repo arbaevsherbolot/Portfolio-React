@@ -38,7 +38,7 @@
       border-radius: 0.3rem;
 
       font-size: 1.1rem;
-      font-weight: 600;
+      font-weight: 500;
       color: var(--nav-text-color);
 
       transition: 0.5s;
@@ -67,8 +67,9 @@
 .navbar_active {
   padding: 1.4rem 5%;
 
-  background: var(--nav-bg);
-  backdrop-filter: blur(4px);
+  // background: var(--nav-bg);
+  background: url("../../../assets/noice.png");
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(4px);
 
   border-bottom: 1px solid var(--nav-border-color);

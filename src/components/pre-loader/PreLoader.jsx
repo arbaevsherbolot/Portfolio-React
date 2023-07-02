@@ -6,9 +6,7 @@ export const PreLoader = () => {
   return (
     <>
       <div className={scss.container}>
-        <div className={scss.load_title}>loading...</div>
-        {/* 
-        <img src={load_svg} alt="Loading" /> */}
+        <div className={scss.load}></div>
       </div>
     </>
   );

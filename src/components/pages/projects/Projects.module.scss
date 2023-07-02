@@ -30,19 +30,19 @@
 
     &::before {
       left: 0;
-      background: linear-gradient(to right, #161b22 0%, transparent 100%);
+      background: linear-gradient(to right, #11151a 0%, transparent 100%);
     }
 
     &::after {
       right: 0;
-      background: linear-gradient(to left, #161b22 0%, transparent 100%);
+      background: linear-gradient(to left, #11151a 0%, transparent 100%);
     }
 
     .title {
       padding: 0 15px;
 
       color: transparent;
-      -webkit-text-stroke: 1px rgba(0, 255, 208, 0.975);
+      -webkit-text-stroke: 1px #00ffdd;
       font-size: 3.6rem;
       font-weight: 800;
       text-transform: uppercase;

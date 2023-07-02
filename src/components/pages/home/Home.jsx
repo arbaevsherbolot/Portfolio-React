@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { About } from "../about/About";

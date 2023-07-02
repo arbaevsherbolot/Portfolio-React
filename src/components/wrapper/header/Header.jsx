@@ -43,13 +43,13 @@ export const Header = () => {
               Home
             </NavLink> */}
 
-            <NavLink
+            {/* <NavLink
               to="/blog"
               className={({ isActive }) =>
                 isActive ? styles.active_link : styles.link
               }>
               Blog
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/contact"
@@ -100,13 +100,13 @@ export const Header = () => {
                 Home
               </NavLink> */}
 
-              <NavLink
+              {/* <NavLink
                 to="/blog"
                 className={({ isActive }) =>
                   isActive ? styles.active_link : styles.link
                 }>
                 Blog
-              </NavLink>
+              </NavLink> */}
 
               <NavLink
                 to="/contact"

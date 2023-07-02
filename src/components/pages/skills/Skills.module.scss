@@ -2,58 +2,63 @@
   width: 100%;
   max-width: 100%;
 
-  margin-top: 8rem;
-  padding: 1rem;
+  margin-top: 9rem;
 
-  overflow: hidden;
-
-  background-color: #0d1117;
-
-  border: 1px solid #232930;
-  border-radius: 0.75rem;
-
-  @media (max-width: 590px) {
-    padding: 0.8rem;
-  }
+  // overflow: hidden;
 
   .title {
-    padding: 1rem 2rem 2rem 2rem;
+    padding-bottom: 4rem;
+    text-align: center;
 
-    @media (max-width: 590px) {
-      padding: 1rem 1rem 1rem 1rem;
-    }
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+  }
 
-    h1 {
-      font-size: 3rem;
-      font-family: "PP Neue Machina, Ultrabold";
-      background: -webkit-linear-gradient(-70deg, #a2facf 0%, #0077ff 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: rgba(0, 0, 0, 0);
-      -webkit-box-decoration-break: clone;
-    }
+  .skills {
+    width: 100%;
 
-    p {
-      color: #8b949e;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      font-size: 1.2rem;
-      font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 52px;
 
-      padding-bottom: 1rem;
+    .skill_wrapper {
+      width: 100%;
 
-      border-bottom: 1px solid #232930;
+      padding: 1.8rem;
 
-      @media (max-width: 1325px) {
-        font-size: 1rem;
-      }
+      background: #0d1117;
+      // border: 1px solid #232930;
+      border: 1px solid #00ffdd38;
+      box-shadow: 0 0 20px #00ffd021;
+      border-radius: 0.75rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      transition: 0.4s;
 
       &:hover {
-        background-color: #9d9d9d12;
+        border: 1px solid #73ffde36;
+        box-shadow: 0 0 20px #00ffdd51;
       }
 
-      span {
-        color: #fff;
+      .skill_title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #88ffef;
+      }
+
+      .desc {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.02rem;
+        color: #8b949e;
+
+        span {
+          color: #fff;
+        }
       }
     }
   }

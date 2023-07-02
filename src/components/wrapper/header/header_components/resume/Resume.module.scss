@@ -9,25 +9,33 @@
 
     background: none;
 
-    box-shadow: #bc8cff 0 0 0 1px inset;
+    border: 1px solid #00ffdd;
 
     border-radius: 0.375rem;
 
     transition: 0.4s;
 
+    .title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #00ffdd;
+    }
+
     &:hover {
-      background: rgba(145, 67, 255, 0.401);
+      background: #00ffdd;
+
+      .title {
+        color: #11151a;
+      }
     }
 
     &:active {
-      background-color: rgba(145, 67, 255, 0.662);
-    }
-  }
+      background-color: #00ffdd82;
 
-  .title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
+      .title {
+        color: #00ffdd;
+      }
+    }
   }
 
   .dropdown_menu,
@@ -66,8 +74,8 @@
       }
 
       &:hover {
-        background-color: #00ffb3;
-        color: #0d1117;
+        background-color: #00ffdd1b;
+        color: #00ffdd;
       }
     }
   }
