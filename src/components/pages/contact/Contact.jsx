@@ -179,7 +179,7 @@ export const Contact = () => {
               required
               className={styles.input}
               type="text"
-              placeholder="Name"
+              placeholder="Sherbolot Arbaev"
               value={data.name}
               onChange={handleChangeName}
             />
@@ -188,12 +188,12 @@ export const Contact = () => {
               <span className={styles.error}>{errors.message}</span>
             ) : null}
 
-            <div className={styles.label}>Email*</div>
+            <div className={styles.label}>Work Email*</div>
             <input
               required
               className={styles.input}
               type="text"
-              placeholder="Email"
+              placeholder="sherbolot@wedevx.co"
               value={data.email}
               onChange={handleChangeEmail}
             />
@@ -206,7 +206,7 @@ export const Contact = () => {
               required
               className={styles.input}
               type="text"
-              placeholder="Subject"
+              placeholder="Your subject"
               value={data.subject}
               onChange={handleChangeSubject}
             />
@@ -215,6 +215,7 @@ export const Contact = () => {
             <textarea
               rows={8}
               className={styles.textarea}
+              placeholder="Your message"
               value={data.message}
               onChange={handleChangeMessage}></textarea>
 
@@ -222,7 +223,7 @@ export const Contact = () => {
               disabled={sendButton}
               className={sendButton ? styles.form_btn_send : styles.form_btn}
               type="submit">
-              {sendButton ? "Sending..." : "Submit"}
+              {sendButton ? "Sending..." : "Send"}
             </button>
           </form>
           <ToastContainer />
