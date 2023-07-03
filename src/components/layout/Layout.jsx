@@ -1,17 +1,17 @@
 import React from "react";
 import { Header } from "./header/Header";
-import { Main } from "./main/Main";
+import { Router } from "./router/Router";
 import { Footer } from "./footer/Footer";
-import "./Wrapper.scss";
+import "./Layout.scss";
 
-export const Wrapper = () => {
+export const Layout = () => {
   return (
     <div className="wrapper">
       <header>
         <Header />
       </header>
       <main>
-        <Main />
+        <Router />
       </main>
       <footer>
         <Footer />
