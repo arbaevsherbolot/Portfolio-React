@@ -37,8 +37,8 @@
 
       background: #0d1117;
       // border: 1px solid #232930;
-      border: 1px solid #00ffdd38;
-      box-shadow: 0 0 20px #00ffd00f;
+      border: 1px solid #232930;
+      box-shadow: 0 0 20px #232930;
       border-radius: 0.75rem;
 
       display: flex;
@@ -48,14 +48,13 @@
       transition: 0.4s;
 
       &:hover {
-        border: 1px solid #73ffde36;
-        box-shadow: 0 0 20px #00ffdd51;
+        box-shadow: 0 0 20px #333b44;
       }
 
       .skill_name {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
 
         .skill_icon {
           width: 30px;
@@ -64,7 +63,7 @@
         .skill_title {
           font-size: 2rem;
           font-weight: 600;
-          color: #88ffef;
+          color: #fff;
         }
       }
 
